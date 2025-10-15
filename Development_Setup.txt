@@ -1,0 +1,1 @@
+Built on Google Colab with GPU acceleration for efficient PCB defect detection using EfficientNet-B4.
