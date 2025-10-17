@@ -1,0 +1,13 @@
+Will use Jupyter Notebook for:
+
+Prototyping image processing and model training
+
+Visual debugging and experimentation
+
+Then will switch to VS Code or PyCharm for:
+
+Building the web app
+
+Integrating backend logic
+
+Finalizing and deploying the full system
