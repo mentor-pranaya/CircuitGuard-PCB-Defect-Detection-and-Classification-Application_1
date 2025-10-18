@@ -1,0 +1,2 @@
+Hello Mam'm 👋,
+Today, I have reviewed the provided PCB dataset and understood the various types of defects present in different kinds of PCB boards.
