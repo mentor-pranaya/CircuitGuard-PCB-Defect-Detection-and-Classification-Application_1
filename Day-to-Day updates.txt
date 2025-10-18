@@ -1,0 +1,10 @@
+Hello Mam'm,
+
+15-10-2025 
+Today, I have downloaded the PCB dataset and understood the data present in it.
+
+17-10-2025
+Today, I have reviewed the PCB dataset and understood the various types of defects present in multipule different kind of PCB boards.
+
+18-10-2025
+Today, I have done the preprocessing of the PCB dataset by alinging the given models.
