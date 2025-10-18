@@ -3,4 +3,4 @@ Hello Mam'm 👋,
   a template-matching approach for PCB 
   defect detection using two test images.
   I used ORB to register (align) the defective image to the reference image,
-  followed by image subtraction and Otsu's thresholding to generate the final defect mask.
+  followed by image subtraction and Otsu's thresholding to generate the final defect mask.😊
