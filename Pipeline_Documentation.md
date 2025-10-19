@@ -1,14 +1,17 @@
-Initial Image Processing Pipeline
+# My Project Learning Log 📝
 
-Objective - To preprocess and compare a test PCB image against a "golden" template to isolate potential manufacturing defects.
-  
-Step 1: Image Alignment
-The test image is aligned with the template to correct for any minor shifts or rotations during image capture.
-This is done using the ORB feature detection algorithm to find and match key points between the two images.
+## October 19, 2025
 
-Step 2: Image Subtraction
-An absolute difference is calculated between the template and the newly aligned test image.
-This step effectively removes all matching areas, leaving behind only the pixels that differ.
+* **Objective:** Learned to clean and refine the initial "Difference Map" from the subtraction step.
+* **Key Learnings:**
+    * **Thresholding:** Applied Otsu's Thresholding to convert the grayscale map into a clean black-and-white (binary) image.
+    * **Filtering:** Used Morphological Operations to remove noise and produce a "Final Cleaned Mask."
+    * **Debugging:** Realized the importance of restarting the Colab session to clear old variables and always verifying file paths.
 
-Output: Difference Map
-The result is a "Difference Map"—a mostly black image where any bright pixels or spots represent the locations of potential defects.
+## October 18, 2025
+
+* **Objective:** Set up the initial image processing pipeline.
+* **Key Learnings:**
+    * Set up the project in Google Colab and loaded the dataset.
+    * Wrote a function to align a test image with a template.
+    * Performed image subtraction to create a "Difference Map" and find potential defects.
