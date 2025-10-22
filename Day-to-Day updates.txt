@@ -11,3 +11,7 @@ Today, I have done the preprocessing of the PCB dataset by alinging the given mo
 
 21-10-2025
 Today, I have done the code compares of defect images to golden images, detects visual differences, processes the result using image operations, and saves binary defect masks for each image.
+
+22-10-2025
+Today, I have done loading mask images, detecting defect contours using OpenCV, and visualizing them to verify the defect regions clearly and accurately.
+
