@@ -9,3 +9,5 @@ Today, I have reviewed the PCB dataset and understood the various types of defec
 18-10-2025
 Today, I have done the preprocessing of the PCB dataset by alinging the given models.
 
+21-10-2025
+Today, I have done the code compares defect images to golden images, detects visual differences, processes the result using image operations, and saves binary defect masks for each image.
