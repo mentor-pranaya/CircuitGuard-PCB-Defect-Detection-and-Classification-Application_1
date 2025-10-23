@@ -1,2 +1,5 @@
 VS Code - editor
 Anaconda - Python management
+---------------------------------------
+22/10/2025 - performed preprocessing and image subtraction on the faulty circuit images and compared them to PCB_used.
+---------------------------------------
