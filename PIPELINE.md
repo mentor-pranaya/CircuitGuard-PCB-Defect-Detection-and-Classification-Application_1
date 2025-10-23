@@ -1,5 +1,15 @@
 # My Project Learning Log 📝
 
+## October 23, 2025
+
+* **Objective:** Finalized processing outputs and uploaded notebook to repository.
+* **Key Learnings:**
+    * **Downloaded Outputs:** Successfully downloaded 3 ZIP files containing all batch processing results: difference_maps.zip (visual heatmaps), defect_masks.zip (binary masks), and reports.zip (JSON statistics).
+    * **Studied ROI Concepts:** Learned about Region of Interest (ROI) - the process of isolating specific defect areas from the normal PCB background for targeted analysis in future steps.
+    * **Contour Detection Research:** Explored cv2.findContours() function to understand how to detect and extract boundaries around defect regions in binary masks for the next phase.
+    * **Documentation Complete:** Organized all outputs with proper folder structure and reviewed processing statistics from generated reports showing successful batch execution.
+    * **GitHub Upload:** Committed complete Colab notebook (CircuitGuard_Image_Subtraction_and_Thresholding.ipynb) to repository with clean code structure and detailed inline comments.
+
 ## October 22, 2025
 
 * **Objective:** Scaled up image processing to handle the complete PCB defect dataset.
