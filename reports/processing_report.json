@@ -1,0 +1,4871 @@
+{
+  "total_processed": 693,
+  "total_successful": 693,
+  "total_failed": 0,
+  "success_rate": 100.0,
+  "category_results": {
+    "Short": [
+      {
+        "test_image": "01_short_01.jpg",
+        "defect_type": "Short",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.3247991863545643
+      },
+      {
+        "test_image": "01_short_02.jpg",
+        "defect_type": "Short",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.3253183134230715
+      },
+      {
+        "test_image": "01_short_03.jpg",
+        "defect_type": "Short",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.3250300711316305
+      },
+      {
+        "test_image": "01_short_04.jpg",
+        "defect_type": "Short",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.325338263862854
+      },
+      {
+        "test_image": "01_short_05.jpg",
+        "defect_type": "Short",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.3260375683406471
+      },
+      {
+        "test_image": "01_short_06.jpg",
+        "defect_type": "Short",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.3256612116068334
+      },
+      {
+        "test_image": "01_short_07.jpg",
+        "defect_type": "Short",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.3286789234410186
+      },
+      {
+        "test_image": "01_short_08.jpg",
+        "defect_type": "Short",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.3268983466904298
+      },
+      {
+        "test_image": "01_short_09.jpg",
+        "defect_type": "Short",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.3310823279835675
+      },
+      {
+        "test_image": "01_short_10.jpg",
+        "defect_type": "Short",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.3256023993728911
+      },
+      {
+        "test_image": "01_short_11.jpg",
+        "defect_type": "Short",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.3302616583304308
+      },
+      {
+        "test_image": "01_short_12.jpg",
+        "defect_type": "Short",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.3271192562476049
+      },
+      {
+        "test_image": "01_short_13.jpg",
+        "defect_type": "Short",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.3303150673202653
+      },
+      {
+        "test_image": "01_short_14.jpg",
+        "defect_type": "Short",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.3305486537193854
+      },
+      {
+        "test_image": "01_short_15.jpg",
+        "defect_type": "Short",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.3279835674877658
+      },
+      {
+        "test_image": "01_short_16.jpg",
+        "defect_type": "Short",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.3315299659761874
+      },
+      {
+        "test_image": "01_short_17.jpg",
+        "defect_type": "Short",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.3265055724072117
+      },
+      {
+        "test_image": "01_short_18.jpg",
+        "defect_type": "Short",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.326328720071223
+      },
+      {
+        "test_image": "01_short_19.jpg",
+        "defect_type": "Short",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.328014740049926
+      },
+      {
+        "test_image": "01_short_20.jpg",
+        "defect_type": "Short",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.327932028851661
+      },
+      {
+        "test_image": "04_short_01.jpg",
+        "defect_type": "Short",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.0905728352145236
+      },
+      {
+        "test_image": "04_short_02.jpg",
+        "defect_type": "Short",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.0907477359845652
+      },
+      {
+        "test_image": "04_short_03.jpg",
+        "defect_type": "Short",
+        "status": "success",
+        "otsu_threshold": 13.0,
+        "mean_difference": 1.0943003331746788
+      },
+      {
+        "test_image": "04_short_04.jpg",
+        "defect_type": "Short",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.0889579579451962
+      },
+      {
+        "test_image": "04_short_05.jpg",
+        "defect_type": "Short",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.0914553072091522
+      },
+      {
+        "test_image": "04_short_06.jpg",
+        "defect_type": "Short",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.088387970014279
+      },
+      {
+        "test_image": "04_short_07.jpg",
+        "defect_type": "Short",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.0901276815462024
+      },
+      {
+        "test_image": "04_short_08.jpg",
+        "defect_type": "Short",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.0891813315937988
+      },
+      {
+        "test_image": "04_short_09.jpg",
+        "defect_type": "Short",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.089127812223771
+      },
+      {
+        "test_image": "04_short_10.jpg",
+        "defect_type": "Short",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.0900173227459713
+      },
+      {
+        "test_image": "04_short_11.jpg",
+        "defect_type": "Short",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.0908173244458421
+      },
+      {
+        "test_image": "04_short_12.jpg",
+        "defect_type": "Short",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.0900865128000272
+      },
+      {
+        "test_image": "04_short_13.jpg",
+        "defect_type": "Short",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.0902819979431564
+      },
+      {
+        "test_image": "04_short_14.jpg",
+        "defect_type": "Short",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.0901757560175427
+      },
+      {
+        "test_image": "04_short_15.jpg",
+        "defect_type": "Short",
+        "status": "success",
+        "otsu_threshold": 15.0,
+        "mean_difference": 1.0923458801506085
+      },
+      {
+        "test_image": "04_short_16.jpg",
+        "defect_type": "Short",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.0911554393741076
+      },
+      {
+        "test_image": "04_short_17.jpg",
+        "defect_type": "Short",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.0906409628493234
+      },
+      {
+        "test_image": "04_short_18.jpg",
+        "defect_type": "Short",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.0915190523645204
+      },
+      {
+        "test_image": "04_short_19.jpg",
+        "defect_type": "Short",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.090887444116747
+      },
+      {
+        "test_image": "04_short_20.jpg",
+        "defect_type": "Short",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.0908774839362207
+      },
+      {
+        "test_image": "05_short_01.jpg",
+        "defect_type": "Short",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.1215629047502362
+      },
+      {
+        "test_image": "05_short_02.jpg",
+        "defect_type": "Short",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.1250601655756642
+      },
+      {
+        "test_image": "05_short_03.jpg",
+        "defect_type": "Short",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.1261482508955554
+      },
+      {
+        "test_image": "05_short_04.jpg",
+        "defect_type": "Short",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.1257861635220126
+      },
+      {
+        "test_image": "05_short_05.jpg",
+        "defect_type": "Short",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.1242667092566014
+      },
+      {
+        "test_image": "05_short_06.jpg",
+        "defect_type": "Short",
+        "status": "success",
+        "otsu_threshold": 13.0,
+        "mean_difference": 1.127790041831484
+      },
+      {
+        "test_image": "05_short_07.jpg",
+        "defect_type": "Short",
+        "status": "success",
+        "otsu_threshold": 14.0,
+        "mean_difference": 1.1332727666538314
+      },
+      {
+        "test_image": "05_short_08.jpg",
+        "defect_type": "Short",
+        "status": "success",
+        "otsu_threshold": 15.0,
+        "mean_difference": 1.1268786245201339
+      },
+      {
+        "test_image": "05_short_09.jpg",
+        "defect_type": "Short",
+        "status": "success",
+        "otsu_threshold": 13.0,
+        "mean_difference": 1.13078883997853
+      },
+      {
+        "test_image": "05_short_10.jpg",
+        "defect_type": "Short",
+        "status": "success",
+        "otsu_threshold": 15.0,
+        "mean_difference": 1.1284166754180232
+      },
+      {
+        "test_image": "06_short_01.jpg",
+        "defect_type": "Short",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.195107318442079
+      },
+      {
+        "test_image": "06_short_02.jpg",
+        "defect_type": "Short",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.1958770833182784
+      },
+      {
+        "test_image": "06_short_03.jpg",
+        "defect_type": "Short",
+        "status": "success",
+        "otsu_threshold": 13.0,
+        "mean_difference": 1.1994549167395332
+      },
+      {
+        "test_image": "06_short_04.jpg",
+        "defect_type": "Short",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.1974893289782076
+      },
+      {
+        "test_image": "06_short_05.jpg",
+        "defect_type": "Short",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.1976734522802985
+      },
+      {
+        "test_image": "06_short_06.jpg",
+        "defect_type": "Short",
+        "status": "success",
+        "otsu_threshold": 15.0,
+        "mean_difference": 1.1976788720994935
+      },
+      {
+        "test_image": "06_short_07.jpg",
+        "defect_type": "Short",
+        "status": "success",
+        "otsu_threshold": 13.0,
+        "mean_difference": 1.201305032241902
+      },
+      {
+        "test_image": "06_short_08.jpg",
+        "defect_type": "Short",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.198172677848356
+      },
+      {
+        "test_image": "06_short_09.jpg",
+        "defect_type": "Short",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.1978068400527047
+      },
+      {
+        "test_image": "06_short_10.jpg",
+        "defect_type": "Short",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.1960649703836992
+      },
+      {
+        "test_image": "06_short_11.jpg",
+        "defect_type": "Short",
+        "status": "success",
+        "otsu_threshold": 15.0,
+        "mean_difference": 1.1970778743709998
+      },
+      {
+        "test_image": "07_short_01.jpg",
+        "defect_type": "Short",
+        "status": "success",
+        "otsu_threshold": 13.0,
+        "mean_difference": 1.016217197769183
+      },
+      {
+        "test_image": "07_short_02.jpg",
+        "defect_type": "Short",
+        "status": "success",
+        "otsu_threshold": 12.0,
+        "mean_difference": 1.0190188047719637
+      },
+      {
+        "test_image": "07_short_03.jpg",
+        "defect_type": "Short",
+        "status": "success",
+        "otsu_threshold": 13.0,
+        "mean_difference": 1.01481110618752
+      },
+      {
+        "test_image": "07_short_04.jpg",
+        "defect_type": "Short",
+        "status": "success",
+        "otsu_threshold": 13.0,
+        "mean_difference": 1.0122656573782882
+      },
+      {
+        "test_image": "07_short_05.jpg",
+        "defect_type": "Short",
+        "status": "success",
+        "otsu_threshold": 13.0,
+        "mean_difference": 1.0207267650715666
+      },
+      {
+        "test_image": "07_short_06.jpg",
+        "defect_type": "Short",
+        "status": "success",
+        "otsu_threshold": 13.0,
+        "mean_difference": 1.0218001557384455
+      },
+      {
+        "test_image": "07_short_07.jpg",
+        "defect_type": "Short",
+        "status": "success",
+        "otsu_threshold": 13.0,
+        "mean_difference": 1.0143643978471957
+      },
+      {
+        "test_image": "07_short_08.jpg",
+        "defect_type": "Short",
+        "status": "success",
+        "otsu_threshold": 12.0,
+        "mean_difference": 1.0172692568580126
+      },
+      {
+        "test_image": "07_short_09.jpg",
+        "defect_type": "Short",
+        "status": "success",
+        "otsu_threshold": 12.0,
+        "mean_difference": 1.022751830930573
+      },
+      {
+        "test_image": "07_short_10.jpg",
+        "defect_type": "Short",
+        "status": "success",
+        "otsu_threshold": 12.0,
+        "mean_difference": 1.0197084062909154
+      },
+      {
+        "test_image": "08_short_01.jpg",
+        "defect_type": "Short",
+        "status": "success",
+        "otsu_threshold": 14.0,
+        "mean_difference": 1.140433452702946
+      },
+      {
+        "test_image": "08_short_02.jpg",
+        "defect_type": "Short",
+        "status": "success",
+        "otsu_threshold": 12.0,
+        "mean_difference": 1.14244695254124
+      },
+      {
+        "test_image": "08_short_03.jpg",
+        "defect_type": "Short",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.1416439756710797
+      },
+      {
+        "test_image": "08_short_04.jpg",
+        "defect_type": "Short",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.1379952433884817
+      },
+      {
+        "test_image": "08_short_05.jpg",
+        "defect_type": "Short",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.1401285503373277
+      },
+      {
+        "test_image": "08_short_06.jpg",
+        "defect_type": "Short",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.1403360252914156
+      },
+      {
+        "test_image": "08_short_07.jpg",
+        "defect_type": "Short",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.1399251138251685
+      },
+      {
+        "test_image": "08_short_08.jpg",
+        "defect_type": "Short",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.1424040440957475
+      },
+      {
+        "test_image": "08_short_09.jpg",
+        "defect_type": "Short",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.1424311353103527
+      },
+      {
+        "test_image": "08_short_10.jpg",
+        "defect_type": "Short",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.1384586545998021
+      },
+      {
+        "test_image": "09_short_01.jpg",
+        "defect_type": "Short",
+        "status": "success",
+        "otsu_threshold": 12.0,
+        "mean_difference": 1.0850784271997798
+      },
+      {
+        "test_image": "09_short_02.jpg",
+        "defect_type": "Short",
+        "status": "success",
+        "otsu_threshold": 14.0,
+        "mean_difference": 1.0825655855021301
+      },
+      {
+        "test_image": "09_short_03.jpg",
+        "defect_type": "Short",
+        "status": "success",
+        "otsu_threshold": 12.0,
+        "mean_difference": 1.0785023096278308
+      },
+      {
+        "test_image": "09_short_04.jpg",
+        "defect_type": "Short",
+        "status": "success",
+        "otsu_threshold": 11.0,
+        "mean_difference": 1.0772716764935384
+      },
+      {
+        "test_image": "09_short_05.jpg",
+        "defect_type": "Short",
+        "status": "success",
+        "otsu_threshold": 11.0,
+        "mean_difference": 1.0798479442851838
+      },
+      {
+        "test_image": "09_short_06.jpg",
+        "defect_type": "Short",
+        "status": "success",
+        "otsu_threshold": 12.0,
+        "mean_difference": 1.079848778839052
+      },
+      {
+        "test_image": "09_short_07.jpg",
+        "defect_type": "Short",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.0772299488001202
+      },
+      {
+        "test_image": "09_short_08.jpg",
+        "defect_type": "Short",
+        "status": "success",
+        "otsu_threshold": 11.0,
+        "mean_difference": 1.0779553430225037
+      },
+      {
+        "test_image": "09_short_09.jpg",
+        "defect_type": "Short",
+        "status": "success",
+        "otsu_threshold": 12.0,
+        "mean_difference": 1.0849258707526424
+      },
+      {
+        "test_image": "09_short_10.jpg",
+        "defect_type": "Short",
+        "status": "success",
+        "otsu_threshold": 11.0,
+        "mean_difference": 1.0787278060830632
+      },
+      {
+        "test_image": "10_short_01.jpg",
+        "defect_type": "Short",
+        "status": "success",
+        "otsu_threshold": 14.0,
+        "mean_difference": 1.1540298150510204
+      },
+      {
+        "test_image": "10_short_02.jpg",
+        "defect_type": "Short",
+        "status": "success",
+        "otsu_threshold": 13.0,
+        "mean_difference": 1.1603172388747165
+      },
+      {
+        "test_image": "10_short_03.jpg",
+        "defect_type": "Short",
+        "status": "success",
+        "otsu_threshold": 13.0,
+        "mean_difference": 1.159253870819161
+      },
+      {
+        "test_image": "10_short_04.jpg",
+        "defect_type": "Short",
+        "status": "success",
+        "otsu_threshold": 14.0,
+        "mean_difference": 1.1542335423752834
+      },
+      {
+        "test_image": "10_short_05.jpg",
+        "defect_type": "Short",
+        "status": "success",
+        "otsu_threshold": 13.0,
+        "mean_difference": 1.1576404389880952
+      },
+      {
+        "test_image": "11_short_01.jpg",
+        "defect_type": "Short",
+        "status": "success",
+        "otsu_threshold": 16.0,
+        "mean_difference": 0.9506818408650712
+      },
+      {
+        "test_image": "11_short_02.jpg",
+        "defect_type": "Short",
+        "status": "success",
+        "otsu_threshold": 16.0,
+        "mean_difference": 0.9552401823336587
+      },
+      {
+        "test_image": "11_short_03.jpg",
+        "defect_type": "Short",
+        "status": "success",
+        "otsu_threshold": 15.0,
+        "mean_difference": 0.953255752118545
+      },
+      {
+        "test_image": "11_short_04.jpg",
+        "defect_type": "Short",
+        "status": "success",
+        "otsu_threshold": 16.0,
+        "mean_difference": 0.9557756665970102
+      },
+      {
+        "test_image": "11_short_05.jpg",
+        "defect_type": "Short",
+        "status": "success",
+        "otsu_threshold": 15.0,
+        "mean_difference": 0.9498689652268566
+      },
+      {
+        "test_image": "11_short_06.jpg",
+        "defect_type": "Short",
+        "status": "success",
+        "otsu_threshold": 16.0,
+        "mean_difference": 0.9475268307440873
+      },
+      {
+        "test_image": "11_short_07.jpg",
+        "defect_type": "Short",
+        "status": "success",
+        "otsu_threshold": 15.0,
+        "mean_difference": 0.9573830940580935
+      },
+      {
+        "test_image": "11_short_08.jpg",
+        "defect_type": "Short",
+        "status": "success",
+        "otsu_threshold": 16.0,
+        "mean_difference": 0.9526785519351508
+      },
+      {
+        "test_image": "11_short_09.jpg",
+        "defect_type": "Short",
+        "status": "success",
+        "otsu_threshold": 16.0,
+        "mean_difference": 0.9595240564404702
+      },
+      {
+        "test_image": "11_short_10.jpg",
+        "defect_type": "Short",
+        "status": "success",
+        "otsu_threshold": 15.0,
+        "mean_difference": 0.9684623745793319
+      },
+      {
+        "test_image": "12_short_01.jpg",
+        "defect_type": "Short",
+        "status": "success",
+        "otsu_threshold": 12.0,
+        "mean_difference": 1.0580282165614054
+      },
+      {
+        "test_image": "12_short_02.jpg",
+        "defect_type": "Short",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.0564764150869674
+      },
+      {
+        "test_image": "12_short_03.jpg",
+        "defect_type": "Short",
+        "status": "success",
+        "otsu_threshold": 11.0,
+        "mean_difference": 1.0581129256357478
+      },
+      {
+        "test_image": "12_short_04.jpg",
+        "defect_type": "Short",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.0574896418931696
+      },
+      {
+        "test_image": "12_short_05.jpg",
+        "defect_type": "Short",
+        "status": "success",
+        "otsu_threshold": 11.0,
+        "mean_difference": 1.0572108208809432
+      },
+      {
+        "test_image": "12_short_06.jpg",
+        "defect_type": "Short",
+        "status": "success",
+        "otsu_threshold": 12.0,
+        "mean_difference": 1.056266205299162
+      },
+      {
+        "test_image": "12_short_07.jpg",
+        "defect_type": "Short",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.0565909755140763
+      },
+      {
+        "test_image": "12_short_08.jpg",
+        "defect_type": "Short",
+        "status": "success",
+        "otsu_threshold": 11.0,
+        "mean_difference": 1.0569896708067836
+      },
+      {
+        "test_image": "12_short_09.jpg",
+        "defect_type": "Short",
+        "status": "success",
+        "otsu_threshold": 11.0,
+        "mean_difference": 1.0570381206463522
+      },
+      {
+        "test_image": "12_short_10.jpg",
+        "defect_type": "Short",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.0564162435120195
+      }
+    ],
+    "Open_circuit": [
+      {
+        "test_image": "01_open_circuit_01.jpg",
+        "defect_type": "Open_circuit",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.3245876285660372
+      },
+      {
+        "test_image": "01_open_circuit_02.jpg",
+        "defect_type": "Open_circuit",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.3247977316349968
+      },
+      {
+        "test_image": "01_open_circuit_03.jpg",
+        "defect_type": "Open_circuit",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.3248490624540206
+      },
+      {
+        "test_image": "01_open_circuit_04.jpg",
+        "defect_type": "Open_circuit",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.324593239627226
+      },
+      {
+        "test_image": "01_open_circuit_05.jpg",
+        "defect_type": "Open_circuit",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.3242721622369764
+      },
+      {
+        "test_image": "01_open_circuit_06.jpg",
+        "defect_type": "Open_circuit",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.3238417730620848
+      },
+      {
+        "test_image": "01_open_circuit_07.jpg",
+        "defect_type": "Open_circuit",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.3237324612774433
+      },
+      {
+        "test_image": "01_open_circuit_08.jpg",
+        "defect_type": "Open_circuit",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.3250606202425474
+      },
+      {
+        "test_image": "01_open_circuit_09.jpg",
+        "defect_type": "Open_circuit",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.323884999014947
+      },
+      {
+        "test_image": "01_open_circuit_10.jpg",
+        "defect_type": "Open_circuit",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.3242813061885432
+      },
+      {
+        "test_image": "01_open_circuit_11.jpg",
+        "defect_type": "Open_circuit",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.3253553048635016
+      },
+      {
+        "test_image": "01_open_circuit_12.jpg",
+        "defect_type": "Open_circuit",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.3235745202958318
+      },
+      {
+        "test_image": "01_open_circuit_13.jpg",
+        "defect_type": "Open_circuit",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.325062282779196
+      },
+      {
+        "test_image": "01_open_circuit_14.jpg",
+        "defect_type": "Open_circuit",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.324887508614018
+      },
+      {
+        "test_image": "01_open_circuit_15.jpg",
+        "defect_type": "Open_circuit",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.3243463529349175
+      },
+      {
+        "test_image": "01_open_circuit_16.jpg",
+        "defect_type": "Open_circuit",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.3250822332189784
+      },
+      {
+        "test_image": "01_open_circuit_17.jpg",
+        "defect_type": "Open_circuit",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.3243459373007553
+      },
+      {
+        "test_image": "01_open_circuit_18.jpg",
+        "defect_type": "Open_circuit",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.3264461367220264
+      },
+      {
+        "test_image": "01_open_circuit_19.jpg",
+        "defect_type": "Open_circuit",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.324534843027446
+      },
+      {
+        "test_image": "01_open_circuit_20.jpg",
+        "defect_type": "Open_circuit",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.3257590934520163
+      },
+      {
+        "test_image": "04_open_circuit_01.jpg",
+        "defect_type": "Open_circuit",
+        "status": "success",
+        "otsu_threshold": 13.0,
+        "mean_difference": 1.0935348601006323
+      },
+      {
+        "test_image": "04_open_circuit_02.jpg",
+        "defect_type": "Open_circuit",
+        "status": "success",
+        "otsu_threshold": 15.0,
+        "mean_difference": 1.0947023260607194
+      },
+      {
+        "test_image": "04_open_circuit_03.jpg",
+        "defect_type": "Open_circuit",
+        "status": "success",
+        "otsu_threshold": 17.0,
+        "mean_difference": 1.0955198576783165
+      },
+      {
+        "test_image": "04_open_circuit_04.jpg",
+        "defect_type": "Open_circuit",
+        "status": "success",
+        "otsu_threshold": 16.0,
+        "mean_difference": 1.0951133495104373
+      },
+      {
+        "test_image": "04_open_circuit_05.jpg",
+        "defect_type": "Open_circuit",
+        "status": "success",
+        "otsu_threshold": 16.0,
+        "mean_difference": 1.099656652656898
+      },
+      {
+        "test_image": "04_open_circuit_06.jpg",
+        "defect_type": "Open_circuit",
+        "status": "success",
+        "otsu_threshold": 15.0,
+        "mean_difference": 1.0963318115948189
+      },
+      {
+        "test_image": "04_open_circuit_07.jpg",
+        "defect_type": "Open_circuit",
+        "status": "success",
+        "otsu_threshold": 16.0,
+        "mean_difference": 1.0964496073298429
+      },
+      {
+        "test_image": "04_open_circuit_08.jpg",
+        "defect_type": "Open_circuit",
+        "status": "success",
+        "otsu_threshold": 16.0,
+        "mean_difference": 1.0961158748810091
+      },
+      {
+        "test_image": "04_open_circuit_09.jpg",
+        "defect_type": "Open_circuit",
+        "status": "success",
+        "otsu_threshold": 15.0,
+        "mean_difference": 1.0977064493098525
+      },
+      {
+        "test_image": "04_open_circuit_10.jpg",
+        "defect_type": "Open_circuit",
+        "status": "success",
+        "otsu_threshold": 14.0,
+        "mean_difference": 1.0976802872356701
+      },
+      {
+        "test_image": "04_open_circuit_11.jpg",
+        "defect_type": "Open_circuit",
+        "status": "success",
+        "otsu_threshold": 13.0,
+        "mean_difference": 1.0975051208608146
+      },
+      {
+        "test_image": "04_open_circuit_12.jpg",
+        "defect_type": "Open_circuit",
+        "status": "success",
+        "otsu_threshold": 13.0,
+        "mean_difference": 1.0949060449530836
+      },
+      {
+        "test_image": "04_open_circuit_13.jpg",
+        "defect_type": "Open_circuit",
+        "status": "success",
+        "otsu_threshold": 11.0,
+        "mean_difference": 1.0945723125042497
+      },
+      {
+        "test_image": "04_open_circuit_14.jpg",
+        "defect_type": "Open_circuit",
+        "status": "success",
+        "otsu_threshold": 15.0,
+        "mean_difference": 1.095408569261236
+      },
+      {
+        "test_image": "04_open_circuit_15.jpg",
+        "defect_type": "Open_circuit",
+        "status": "success",
+        "otsu_threshold": 14.0,
+        "mean_difference": 1.0981732497705174
+      },
+      {
+        "test_image": "04_open_circuit_16.jpg",
+        "defect_type": "Open_circuit",
+        "status": "success",
+        "otsu_threshold": 15.0,
+        "mean_difference": 1.098457314119127
+      },
+      {
+        "test_image": "04_open_circuit_17.jpg",
+        "defect_type": "Open_circuit",
+        "status": "success",
+        "otsu_threshold": 14.0,
+        "mean_difference": 1.0960246396273883
+      },
+      {
+        "test_image": "04_open_circuit_18.jpg",
+        "defect_type": "Open_circuit",
+        "status": "success",
+        "otsu_threshold": 16.0,
+        "mean_difference": 1.0964671372475692
+      },
+      {
+        "test_image": "04_open_circuit_19.jpg",
+        "defect_type": "Open_circuit",
+        "status": "success",
+        "otsu_threshold": 14.0,
+        "mean_difference": 1.0961010010114232
+      },
+      {
+        "test_image": "04_open_circuit_20.jpg",
+        "defect_type": "Open_circuit",
+        "status": "success",
+        "otsu_threshold": 15.0,
+        "mean_difference": 1.0975521329128985
+      },
+      {
+        "test_image": "05_open_circuit_01.jpg",
+        "defect_type": "Open_circuit",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.1267475364931565
+      },
+      {
+        "test_image": "05_open_circuit_02.jpg",
+        "defect_type": "Open_circuit",
+        "status": "success",
+        "otsu_threshold": 13.0,
+        "mean_difference": 1.129902400497077
+      },
+      {
+        "test_image": "05_open_circuit_03.jpg",
+        "defect_type": "Open_circuit",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.1265263824226088
+      },
+      {
+        "test_image": "05_open_circuit_04.jpg",
+        "defect_type": "Open_circuit",
+        "status": "success",
+        "otsu_threshold": 13.0,
+        "mean_difference": 1.136106200627764
+      },
+      {
+        "test_image": "05_open_circuit_05.jpg",
+        "defect_type": "Open_circuit",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.1264146203078145
+      },
+      {
+        "test_image": "05_open_circuit_06.jpg",
+        "defect_type": "Open_circuit",
+        "status": "success",
+        "otsu_threshold": 13.0,
+        "mean_difference": 1.132228255796315
+      },
+      {
+        "test_image": "05_open_circuit_07.jpg",
+        "defect_type": "Open_circuit",
+        "status": "success",
+        "otsu_threshold": 13.0,
+        "mean_difference": 1.1281645269600122
+      },
+      {
+        "test_image": "05_open_circuit_08.jpg",
+        "defect_type": "Open_circuit",
+        "status": "success",
+        "otsu_threshold": 12.0,
+        "mean_difference": 1.1277247712978844
+      },
+      {
+        "test_image": "05_open_circuit_09.jpg",
+        "defect_type": "Open_circuit",
+        "status": "success",
+        "otsu_threshold": 12.0,
+        "mean_difference": 1.1284655371582595
+      },
+      {
+        "test_image": "05_open_circuit_10.jpg",
+        "defect_type": "Open_circuit",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.1275989705487683
+      },
+      {
+        "test_image": "06_open_circuit_01.jpg",
+        "defect_type": "Open_circuit",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.1964427016714723
+      },
+      {
+        "test_image": "06_open_circuit_02.jpg",
+        "defect_type": "Open_circuit",
+        "status": "success",
+        "otsu_threshold": 13.0,
+        "mean_difference": 1.1981207379144054
+      },
+      {
+        "test_image": "06_open_circuit_03.jpg",
+        "defect_type": "Open_circuit",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.195386589681146
+      },
+      {
+        "test_image": "06_open_circuit_04.jpg",
+        "defect_type": "Open_circuit",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.1951887662805347
+      },
+      {
+        "test_image": "06_open_circuit_05.jpg",
+        "defect_type": "Open_circuit",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.1954495198040194
+      },
+      {
+        "test_image": "06_open_circuit_06.jpg",
+        "defect_type": "Open_circuit",
+        "status": "success",
+        "otsu_threshold": 15.0,
+        "mean_difference": 1.1972090038854082
+      },
+      {
+        "test_image": "06_open_circuit_07.jpg",
+        "defect_type": "Open_circuit",
+        "status": "success",
+        "otsu_threshold": 15.0,
+        "mean_difference": 1.20497409928627
+      },
+      {
+        "test_image": "06_open_circuit_08.jpg",
+        "defect_type": "Open_circuit",
+        "status": "success",
+        "otsu_threshold": 14.0,
+        "mean_difference": 1.2032316274151316
+      },
+      {
+        "test_image": "06_open_circuit_09.jpg",
+        "defect_type": "Open_circuit",
+        "status": "success",
+        "otsu_threshold": 15.0,
+        "mean_difference": 1.2058084503412076
+      },
+      {
+        "test_image": "06_open_circuit_10.jpg",
+        "defect_type": "Open_circuit",
+        "status": "success",
+        "otsu_threshold": 14.0,
+        "mean_difference": 1.2057181200212939
+      },
+      {
+        "test_image": "07_open_circuit_01.jpg",
+        "defect_type": "Open_circuit",
+        "status": "success",
+        "otsu_threshold": 14.0,
+        "mean_difference": 1.0217825885565226
+      },
+      {
+        "test_image": "07_open_circuit_02.jpg",
+        "defect_type": "Open_circuit",
+        "status": "success",
+        "otsu_threshold": 13.0,
+        "mean_difference": 1.0166915116811004
+      },
+      {
+        "test_image": "07_open_circuit_03.jpg",
+        "defect_type": "Open_circuit",
+        "status": "success",
+        "otsu_threshold": 12.0,
+        "mean_difference": 1.0142512867064473
+      },
+      {
+        "test_image": "07_open_circuit_04.jpg",
+        "defect_type": "Open_circuit",
+        "status": "success",
+        "otsu_threshold": 14.0,
+        "mean_difference": 1.0215151371745947
+      },
+      {
+        "test_image": "07_open_circuit_05.jpg",
+        "defect_type": "Open_circuit",
+        "status": "success",
+        "otsu_threshold": 11.0,
+        "mean_difference": 1.0134349505179092
+      },
+      {
+        "test_image": "07_open_circuit_06.jpg",
+        "defect_type": "Open_circuit",
+        "status": "success",
+        "otsu_threshold": 12.0,
+        "mean_difference": 1.014187829743175
+      },
+      {
+        "test_image": "07_open_circuit_07.jpg",
+        "defect_type": "Open_circuit",
+        "status": "success",
+        "otsu_threshold": 12.0,
+        "mean_difference": 1.0165156606049133
+      },
+      {
+        "test_image": "07_open_circuit_08.jpg",
+        "defect_type": "Open_circuit",
+        "status": "success",
+        "otsu_threshold": 12.0,
+        "mean_difference": 1.0160664426671715
+      },
+      {
+        "test_image": "07_open_circuit_09.jpg",
+        "defect_type": "Open_circuit",
+        "status": "success",
+        "otsu_threshold": 14.0,
+        "mean_difference": 1.0180027763317716
+      },
+      {
+        "test_image": "07_open_circuit_10.jpg",
+        "defect_type": "Open_circuit",
+        "status": "success",
+        "otsu_threshold": 14.0,
+        "mean_difference": 1.0168044435648902
+      },
+      {
+        "test_image": "08_open_circuit_01.jpg",
+        "defect_type": "Open_circuit",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.1388843736864547
+      },
+      {
+        "test_image": "08_open_circuit_02.jpg",
+        "defect_type": "Open_circuit",
+        "status": "success",
+        "otsu_threshold": 14.0,
+        "mean_difference": 1.1413141695802342
+      },
+      {
+        "test_image": "08_open_circuit_03.jpg",
+        "defect_type": "Open_circuit",
+        "status": "success",
+        "otsu_threshold": 15.0,
+        "mean_difference": 1.1444182170076962
+      },
+      {
+        "test_image": "08_open_circuit_04.jpg",
+        "defect_type": "Open_circuit",
+        "status": "success",
+        "otsu_threshold": 14.0,
+        "mean_difference": 1.1407642684042736
+      },
+      {
+        "test_image": "08_open_circuit_05.jpg",
+        "defect_type": "Open_circuit",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.1409113349978446
+      },
+      {
+        "test_image": "08_open_circuit_06.jpg",
+        "defect_type": "Open_circuit",
+        "status": "success",
+        "otsu_threshold": 13.0,
+        "mean_difference": 1.1434962743690524
+      },
+      {
+        "test_image": "08_open_circuit_07.jpg",
+        "defect_type": "Open_circuit",
+        "status": "success",
+        "otsu_threshold": 13.0,
+        "mean_difference": 1.1430123344112608
+      },
+      {
+        "test_image": "08_open_circuit_08.jpg",
+        "defect_type": "Open_circuit",
+        "status": "success",
+        "otsu_threshold": 13.0,
+        "mean_difference": 1.1432327660332033
+      },
+      {
+        "test_image": "08_open_circuit_09.jpg",
+        "defect_type": "Open_circuit",
+        "status": "success",
+        "otsu_threshold": 13.0,
+        "mean_difference": 1.1422921456006392
+      },
+      {
+        "test_image": "08_open_circuit_10.jpg",
+        "defect_type": "Open_circuit",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.1410849880007794
+      },
+      {
+        "test_image": "09_open_circuit_01.jpg",
+        "defect_type": "Open_circuit",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.0760987944869371
+      },
+      {
+        "test_image": "09_open_circuit_02.jpg",
+        "defect_type": "Open_circuit",
+        "status": "success",
+        "otsu_threshold": 15.0,
+        "mean_difference": 1.079626620599293
+      },
+      {
+        "test_image": "09_open_circuit_03.jpg",
+        "defect_type": "Open_circuit",
+        "status": "success",
+        "otsu_threshold": 13.0,
+        "mean_difference": 1.07941063805816
+      },
+      {
+        "test_image": "09_open_circuit_04.jpg",
+        "defect_type": "Open_circuit",
+        "status": "success",
+        "otsu_threshold": 13.0,
+        "mean_difference": 1.0781933577857616
+      },
+      {
+        "test_image": "09_open_circuit_05.jpg",
+        "defect_type": "Open_circuit",
+        "status": "success",
+        "otsu_threshold": 13.0,
+        "mean_difference": 1.0768231872446787
+      },
+      {
+        "test_image": "09_open_circuit_06.jpg",
+        "defect_type": "Open_circuit",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.0763171137789016
+      },
+      {
+        "test_image": "09_open_circuit_07.jpg",
+        "defect_type": "Open_circuit",
+        "status": "success",
+        "otsu_threshold": 12.0,
+        "mean_difference": 1.079643478587434
+      },
+      {
+        "test_image": "09_open_circuit_08.jpg",
+        "defect_type": "Open_circuit",
+        "status": "success",
+        "otsu_threshold": 16.0,
+        "mean_difference": 1.0793154989171663
+      },
+      {
+        "test_image": "09_open_circuit_09.jpg",
+        "defect_type": "Open_circuit",
+        "status": "success",
+        "otsu_threshold": 16.0,
+        "mean_difference": 1.0790744797599823
+      },
+      {
+        "test_image": "09_open_circuit_10.jpg",
+        "defect_type": "Open_circuit",
+        "status": "success",
+        "otsu_threshold": 15.0,
+        "mean_difference": 1.0826747451481125
+      },
+      {
+        "test_image": "10_open_circuit_01.jpg",
+        "defect_type": "Open_circuit",
+        "status": "success",
+        "otsu_threshold": 13.0,
+        "mean_difference": 1.1435907826672336
+      },
+      {
+        "test_image": "10_open_circuit_02.jpg",
+        "defect_type": "Open_circuit",
+        "status": "success",
+        "otsu_threshold": 13.0,
+        "mean_difference": 1.142884158871882
+      },
+      {
+        "test_image": "10_open_circuit_03.jpg",
+        "defect_type": "Open_circuit",
+        "status": "success",
+        "otsu_threshold": 14.0,
+        "mean_difference": 1.148637462797619
+      },
+      {
+        "test_image": "10_open_circuit_04.jpg",
+        "defect_type": "Open_circuit",
+        "status": "success",
+        "otsu_threshold": 14.0,
+        "mean_difference": 1.1498370181405895
+      },
+      {
+        "test_image": "10_open_circuit_05.jpg",
+        "defect_type": "Open_circuit",
+        "status": "success",
+        "otsu_threshold": 14.0,
+        "mean_difference": 1.1452810551303856
+      },
+      {
+        "test_image": "10_open_circuit_06.jpg",
+        "defect_type": "Open_circuit",
+        "status": "success",
+        "otsu_threshold": 12.0,
+        "mean_difference": 1.1460567690617913
+      },
+      {
+        "test_image": "11_open_circuit_01.jpg",
+        "defect_type": "Open_circuit",
+        "status": "success",
+        "otsu_threshold": 17.0,
+        "mean_difference": 0.9497050255597731
+      },
+      {
+        "test_image": "11_open_circuit_02.jpg",
+        "defect_type": "Open_circuit",
+        "status": "success",
+        "otsu_threshold": 15.0,
+        "mean_difference": 0.9624570365010402
+      },
+      {
+        "test_image": "11_open_circuit_03.jpg",
+        "defect_type": "Open_circuit",
+        "status": "success",
+        "otsu_threshold": 15.0,
+        "mean_difference": 0.9499767638426678
+      },
+      {
+        "test_image": "11_open_circuit_04.jpg",
+        "defect_type": "Open_circuit",
+        "status": "success",
+        "otsu_threshold": 16.0,
+        "mean_difference": 0.9538023476316274
+      },
+      {
+        "test_image": "11_open_circuit_05.jpg",
+        "defect_type": "Open_circuit",
+        "status": "success",
+        "otsu_threshold": 17.0,
+        "mean_difference": 0.9558306380430477
+      },
+      {
+        "test_image": "11_open_circuit_06.jpg",
+        "defect_type": "Open_circuit",
+        "status": "success",
+        "otsu_threshold": 12.0,
+        "mean_difference": 0.9449597421878168
+      },
+      {
+        "test_image": "11_open_circuit_07.jpg",
+        "defect_type": "Open_circuit",
+        "status": "success",
+        "otsu_threshold": 15.0,
+        "mean_difference": 0.9492570667548289
+      },
+      {
+        "test_image": "11_open_circuit_08.jpg",
+        "defect_type": "Open_circuit",
+        "status": "success",
+        "otsu_threshold": 15.0,
+        "mean_difference": 0.9477786857379897
+      },
+      {
+        "test_image": "11_open_circuit_09.jpg",
+        "defect_type": "Open_circuit",
+        "status": "success",
+        "otsu_threshold": 17.0,
+        "mean_difference": 0.9503295947551782
+      },
+      {
+        "test_image": "11_open_circuit_10.jpg",
+        "defect_type": "Open_circuit",
+        "status": "success",
+        "otsu_threshold": 14.0,
+        "mean_difference": 0.94678939464352
+      },
+      {
+        "test_image": "12_open_circuit_01.jpg",
+        "defect_type": "Open_circuit",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.0542986729432653
+      },
+      {
+        "test_image": "12_open_circuit_02.jpg",
+        "defect_type": "Open_circuit",
+        "status": "success",
+        "otsu_threshold": 15.0,
+        "mean_difference": 1.0594723343601573
+      },
+      {
+        "test_image": "12_open_circuit_03.jpg",
+        "defect_type": "Open_circuit",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.0556363573847714
+      },
+      {
+        "test_image": "12_open_circuit_04.jpg",
+        "defect_type": "Open_circuit",
+        "status": "success",
+        "otsu_threshold": 17.0,
+        "mean_difference": 1.0577062595629825
+      },
+      {
+        "test_image": "12_open_circuit_05.jpg",
+        "defect_type": "Open_circuit",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.054996663212662
+      },
+      {
+        "test_image": "12_open_circuit_06.jpg",
+        "defect_type": "Open_circuit",
+        "status": "success",
+        "otsu_threshold": 16.0,
+        "mean_difference": 1.0583440782574312
+      },
+      {
+        "test_image": "12_open_circuit_07.jpg",
+        "defect_type": "Open_circuit",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.0562138482144672
+      },
+      {
+        "test_image": "12_open_circuit_08.jpg",
+        "defect_type": "Open_circuit",
+        "status": "success",
+        "otsu_threshold": 14.0,
+        "mean_difference": 1.0580666638534502
+      },
+      {
+        "test_image": "12_open_circuit_09.jpg",
+        "defect_type": "Open_circuit",
+        "status": "success",
+        "otsu_threshold": 15.0,
+        "mean_difference": 1.060065141590749
+      },
+      {
+        "test_image": "12_open_circuit_10.jpg",
+        "defect_type": "Open_circuit",
+        "status": "success",
+        "otsu_threshold": 15.0,
+        "mean_difference": 1.0582767173514505
+      }
+    ],
+    "Mouse_bite": [
+      {
+        "test_image": "01_mouse_bite_01.jpg",
+        "defect_type": "Mouse_bite",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.3241090258283381
+      },
+      {
+        "test_image": "01_mouse_bite_02.jpg",
+        "defect_type": "Mouse_bite",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.324314141287352
+      },
+      {
+        "test_image": "01_mouse_bite_03.jpg",
+        "defect_type": "Mouse_bite",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.3254858139904122
+      },
+      {
+        "test_image": "01_mouse_bite_04.jpg",
+        "defect_type": "Mouse_bite",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.324258861943788
+      },
+      {
+        "test_image": "01_mouse_bite_05.jpg",
+        "defect_type": "Mouse_bite",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.3241325091584988
+      },
+      {
+        "test_image": "01_mouse_bite_06.jpg",
+        "defect_type": "Mouse_bite",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.3254918406857632
+      },
+      {
+        "test_image": "01_mouse_bite_07.jpg",
+        "defect_type": "Mouse_bite",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.325166606953892
+      },
+      {
+        "test_image": "01_mouse_bite_08.jpg",
+        "defect_type": "Mouse_bite",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.3243885398023743
+      },
+      {
+        "test_image": "01_mouse_bite_09.jpg",
+        "defect_type": "Mouse_bite",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.3250329805707655
+      },
+      {
+        "test_image": "01_mouse_bite_10.jpg",
+        "defect_type": "Mouse_bite",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.3256859418394804
+      },
+      {
+        "test_image": "01_mouse_bite_11.jpg",
+        "defect_type": "Mouse_bite",
+        "status": "success",
+        "otsu_threshold": 25.0,
+        "mean_difference": 1.3880967363574321
+      },
+      {
+        "test_image": "01_mouse_bite_12.jpg",
+        "defect_type": "Mouse_bite",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.3245331804907974
+      },
+      {
+        "test_image": "01_mouse_bite_13.jpg",
+        "defect_type": "Mouse_bite",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.3243430278616204
+      },
+      {
+        "test_image": "01_mouse_bite_14.jpg",
+        "defect_type": "Mouse_bite",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.3244124387666971
+      },
+      {
+        "test_image": "01_mouse_bite_15.jpg",
+        "defect_type": "Mouse_bite",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.324525699075879
+      },
+      {
+        "test_image": "01_mouse_bite_16.jpg",
+        "defect_type": "Mouse_bite",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.3241231573898506
+      },
+      {
+        "test_image": "01_mouse_bite_17.jpg",
+        "defect_type": "Mouse_bite",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.3247917049396458
+      },
+      {
+        "test_image": "01_mouse_bite_18.jpg",
+        "defect_type": "Mouse_bite",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.3231983713790991
+      },
+      {
+        "test_image": "01_mouse_bite_19.jpg",
+        "defect_type": "Mouse_bite",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.325648119130726
+      },
+      {
+        "test_image": "01_mouse_bite_20.jpg",
+        "defect_type": "Mouse_bite",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.3247655199874313
+      },
+      {
+        "test_image": "04_mouse_bite_01.jpg",
+        "defect_type": "Mouse_bite",
+        "status": "success",
+        "otsu_threshold": 13.0,
+        "mean_difference": 1.0945456192204392
+      },
+      {
+        "test_image": "04_mouse_bite_02.jpg",
+        "defect_type": "Mouse_bite",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.0932126814612089
+      },
+      {
+        "test_image": "04_mouse_bite_03.jpg",
+        "defect_type": "Mouse_bite",
+        "status": "success",
+        "otsu_threshold": 16.0,
+        "mean_difference": 1.0942853265026857
+      },
+      {
+        "test_image": "04_mouse_bite_04.jpg",
+        "defect_type": "Mouse_bite",
+        "status": "success",
+        "otsu_threshold": 15.0,
+        "mean_difference": 1.095461557421636
+      },
+      {
+        "test_image": "04_mouse_bite_05.jpg",
+        "defect_type": "Mouse_bite",
+        "status": "success",
+        "otsu_threshold": 17.0,
+        "mean_difference": 1.0993899854236078
+      },
+      {
+        "test_image": "04_mouse_bite_06.jpg",
+        "defect_type": "Mouse_bite",
+        "status": "success",
+        "otsu_threshold": 12.0,
+        "mean_difference": 1.0977559846076699
+      },
+      {
+        "test_image": "04_mouse_bite_07.jpg",
+        "defect_type": "Mouse_bite",
+        "status": "success",
+        "otsu_threshold": 15.0,
+        "mean_difference": 1.0974676705820359
+      },
+      {
+        "test_image": "04_mouse_bite_08.jpg",
+        "defect_type": "Mouse_bite",
+        "status": "success",
+        "otsu_threshold": 15.0,
+        "mean_difference": 1.0970385860049636
+      },
+      {
+        "test_image": "04_mouse_bite_09.jpg",
+        "defect_type": "Mouse_bite",
+        "status": "success",
+        "otsu_threshold": 14.0,
+        "mean_difference": 1.0968729814034133
+      },
+      {
+        "test_image": "04_mouse_bite_10.jpg",
+        "defect_type": "Mouse_bite",
+        "status": "success",
+        "otsu_threshold": 12.0,
+        "mean_difference": 1.096326632300945
+      },
+      {
+        "test_image": "04_mouse_bite_11.jpg",
+        "defect_type": "Mouse_bite",
+        "status": "success",
+        "otsu_threshold": 15.0,
+        "mean_difference": 1.1002245157493031
+      },
+      {
+        "test_image": "04_mouse_bite_12.jpg",
+        "defect_type": "Mouse_bite",
+        "status": "success",
+        "otsu_threshold": 14.0,
+        "mean_difference": 1.0974363292139797
+      },
+      {
+        "test_image": "04_mouse_bite_13.jpg",
+        "defect_type": "Mouse_bite",
+        "status": "success",
+        "otsu_threshold": 13.0,
+        "mean_difference": 1.0961355296372475
+      },
+      {
+        "test_image": "04_mouse_bite_14.jpg",
+        "defect_type": "Mouse_bite",
+        "status": "success",
+        "otsu_threshold": 14.0,
+        "mean_difference": 1.0976299551234106
+      },
+      {
+        "test_image": "04_mouse_bite_15.jpg",
+        "defect_type": "Mouse_bite",
+        "status": "success",
+        "otsu_threshold": 14.0,
+        "mean_difference": 1.0972395160467805
+      },
+      {
+        "test_image": "04_mouse_bite_16.jpg",
+        "defect_type": "Mouse_bite",
+        "status": "success",
+        "otsu_threshold": 16.0,
+        "mean_difference": 1.0958612926667572
+      },
+      {
+        "test_image": "04_mouse_bite_17.jpg",
+        "defect_type": "Mouse_bite",
+        "status": "success",
+        "otsu_threshold": 14.0,
+        "mean_difference": 1.0968132203202556
+      },
+      {
+        "test_image": "04_mouse_bite_18.jpg",
+        "defect_type": "Mouse_bite",
+        "status": "success",
+        "otsu_threshold": 15.0,
+        "mean_difference": 1.0975339389831373
+      },
+      {
+        "test_image": "04_mouse_bite_19.jpg",
+        "defect_type": "Mouse_bite",
+        "status": "success",
+        "otsu_threshold": 13.0,
+        "mean_difference": 1.0935833329791935
+      },
+      {
+        "test_image": "04_mouse_bite_20.jpg",
+        "defect_type": "Mouse_bite",
+        "status": "success",
+        "otsu_threshold": 14.0,
+        "mean_difference": 1.097040843645883
+      },
+      {
+        "test_image": "05_mouse_bite_01.jpg",
+        "defect_type": "Mouse_bite",
+        "status": "success",
+        "otsu_threshold": 16.0,
+        "mean_difference": 1.1319297980770353
+      },
+      {
+        "test_image": "05_mouse_bite_02.jpg",
+        "defect_type": "Mouse_bite",
+        "status": "success",
+        "otsu_threshold": 16.0,
+        "mean_difference": 1.1351242255049532
+      },
+      {
+        "test_image": "05_mouse_bite_03.jpg",
+        "defect_type": "Mouse_bite",
+        "status": "success",
+        "otsu_threshold": 17.0,
+        "mean_difference": 1.1372150704192483
+      },
+      {
+        "test_image": "05_mouse_bite_04.jpg",
+        "defect_type": "Mouse_bite",
+        "status": "success",
+        "otsu_threshold": 14.0,
+        "mean_difference": 1.1310656016265854
+      },
+      {
+        "test_image": "05_mouse_bite_05.jpg",
+        "defect_type": "Mouse_bite",
+        "status": "success",
+        "otsu_threshold": 12.0,
+        "mean_difference": 1.1324288077151958
+      },
+      {
+        "test_image": "05_mouse_bite_06.jpg",
+        "defect_type": "Mouse_bite",
+        "status": "success",
+        "otsu_threshold": 12.0,
+        "mean_difference": 1.1348323313030186
+      },
+      {
+        "test_image": "05_mouse_bite_07.jpg",
+        "defect_type": "Mouse_bite",
+        "status": "success",
+        "otsu_threshold": 11.0,
+        "mean_difference": 1.137028374814763
+      },
+      {
+        "test_image": "05_mouse_bite_08.jpg",
+        "defect_type": "Mouse_bite",
+        "status": "success",
+        "otsu_threshold": 12.0,
+        "mean_difference": 1.136890540950514
+      },
+      {
+        "test_image": "05_mouse_bite_09.jpg",
+        "defect_type": "Mouse_bite",
+        "status": "success",
+        "otsu_threshold": 12.0,
+        "mean_difference": 1.1289395689665231
+      },
+      {
+        "test_image": "05_mouse_bite_10.jpg",
+        "defect_type": "Mouse_bite",
+        "status": "success",
+        "otsu_threshold": 12.0,
+        "mean_difference": 1.1358722841623785
+      },
+      {
+        "test_image": "06_mouse_bite_01.jpg",
+        "defect_type": "Mouse_bite",
+        "status": "success",
+        "otsu_threshold": 13.0,
+        "mean_difference": 1.1981802053750155
+      },
+      {
+        "test_image": "06_mouse_bite_02.jpg",
+        "defect_type": "Mouse_bite",
+        "status": "success",
+        "otsu_threshold": 13.0,
+        "mean_difference": 1.198018213001303
+      },
+      {
+        "test_image": "06_mouse_bite_03.jpg",
+        "defect_type": "Mouse_bite",
+        "status": "success",
+        "otsu_threshold": 14.0,
+        "mean_difference": 1.2003360890102928
+      },
+      {
+        "test_image": "06_mouse_bite_04.jpg",
+        "defect_type": "Mouse_bite",
+        "status": "success",
+        "otsu_threshold": 13.0,
+        "mean_difference": 1.1998513162934217
+      },
+      {
+        "test_image": "06_mouse_bite_05.jpg",
+        "defect_type": "Mouse_bite",
+        "status": "success",
+        "otsu_threshold": 13.0,
+        "mean_difference": 1.1999886183796908
+      },
+      {
+        "test_image": "06_mouse_bite_06.jpg",
+        "defect_type": "Mouse_bite",
+        "status": "success",
+        "otsu_threshold": 13.0,
+        "mean_difference": 1.2023498529422392
+      },
+      {
+        "test_image": "06_mouse_bite_07.jpg",
+        "defect_type": "Mouse_bite",
+        "status": "success",
+        "otsu_threshold": 14.0,
+        "mean_difference": 1.1996346740761616
+      },
+      {
+        "test_image": "06_mouse_bite_08.jpg",
+        "defect_type": "Mouse_bite",
+        "status": "success",
+        "otsu_threshold": 13.0,
+        "mean_difference": 1.2040676345259345
+      },
+      {
+        "test_image": "06_mouse_bite_09.jpg",
+        "defect_type": "Mouse_bite",
+        "status": "success",
+        "otsu_threshold": 12.0,
+        "mean_difference": 1.1997167241167501
+      },
+      {
+        "test_image": "06_mouse_bite_10.jpg",
+        "defect_type": "Mouse_bite",
+        "status": "success",
+        "otsu_threshold": 13.0,
+        "mean_difference": 1.199467562984321
+      },
+      {
+        "test_image": "07_mouse_bite_01.jpg",
+        "defect_type": "Mouse_bite",
+        "status": "success",
+        "otsu_threshold": 14.0,
+        "mean_difference": 1.01978279792865
+      },
+      {
+        "test_image": "07_mouse_bite_02.jpg",
+        "defect_type": "Mouse_bite",
+        "status": "success",
+        "otsu_threshold": 14.0,
+        "mean_difference": 1.019427152123191
+      },
+      {
+        "test_image": "07_mouse_bite_03.jpg",
+        "defect_type": "Mouse_bite",
+        "status": "success",
+        "otsu_threshold": 14.0,
+        "mean_difference": 1.0216339845380118
+      },
+      {
+        "test_image": "07_mouse_bite_04.jpg",
+        "defect_type": "Mouse_bite",
+        "status": "success",
+        "otsu_threshold": 15.0,
+        "mean_difference": 1.0292619058886627
+      },
+      {
+        "test_image": "07_mouse_bite_05.jpg",
+        "defect_type": "Mouse_bite",
+        "status": "success",
+        "otsu_threshold": 14.0,
+        "mean_difference": 1.0198259988556235
+      },
+      {
+        "test_image": "07_mouse_bite_06.jpg",
+        "defect_type": "Mouse_bite",
+        "status": "success",
+        "otsu_threshold": 14.0,
+        "mean_difference": 1.0251899048217255
+      },
+      {
+        "test_image": "07_mouse_bite_07.jpg",
+        "defect_type": "Mouse_bite",
+        "status": "success",
+        "otsu_threshold": 15.0,
+        "mean_difference": 1.025593412235076
+      },
+      {
+        "test_image": "07_mouse_bite_08.jpg",
+        "defect_type": "Mouse_bite",
+        "status": "success",
+        "otsu_threshold": 14.0,
+        "mean_difference": 1.0228416386667298
+      },
+      {
+        "test_image": "07_mouse_bite_09.jpg",
+        "defect_type": "Mouse_bite",
+        "status": "success",
+        "otsu_threshold": 15.0,
+        "mean_difference": 1.0261365608190178
+      },
+      {
+        "test_image": "07_mouse_bite_10.jpg",
+        "defect_type": "Mouse_bite",
+        "status": "success",
+        "otsu_threshold": 15.0,
+        "mean_difference": 1.02083593255923
+      },
+      {
+        "test_image": "08_mouse_bite_01.jpg",
+        "defect_type": "Mouse_bite",
+        "status": "success",
+        "otsu_threshold": 16.0,
+        "mean_difference": 1.144856051420135
+      },
+      {
+        "test_image": "08_mouse_bite_02.jpg",
+        "defect_type": "Mouse_bite",
+        "status": "success",
+        "otsu_threshold": 15.0,
+        "mean_difference": 1.1458846762330626
+      },
+      {
+        "test_image": "08_mouse_bite_03.jpg",
+        "defect_type": "Mouse_bite",
+        "status": "success",
+        "otsu_threshold": 13.0,
+        "mean_difference": 1.1426678889684239
+      },
+      {
+        "test_image": "08_mouse_bite_04.jpg",
+        "defect_type": "Mouse_bite",
+        "status": "success",
+        "otsu_threshold": 20.0,
+        "mean_difference": 1.147679931938792
+      },
+      {
+        "test_image": "08_mouse_bite_05.jpg",
+        "defect_type": "Mouse_bite",
+        "status": "success",
+        "otsu_threshold": 14.0,
+        "mean_difference": 1.1428407006292902
+      },
+      {
+        "test_image": "08_mouse_bite_06.jpg",
+        "defect_type": "Mouse_bite",
+        "status": "success",
+        "otsu_threshold": 15.0,
+        "mean_difference": 1.14821468895752
+      },
+      {
+        "test_image": "08_mouse_bite_07.jpg",
+        "defect_type": "Mouse_bite",
+        "status": "success",
+        "otsu_threshold": 14.0,
+        "mean_difference": 1.141752003992673
+      },
+      {
+        "test_image": "08_mouse_bite_08.jpg",
+        "defect_type": "Mouse_bite",
+        "status": "success",
+        "otsu_threshold": 13.0,
+        "mean_difference": 1.1398209556770902
+      },
+      {
+        "test_image": "08_mouse_bite_09.jpg",
+        "defect_type": "Mouse_bite",
+        "status": "success",
+        "otsu_threshold": 13.0,
+        "mean_difference": 1.1408457103165028
+      },
+      {
+        "test_image": "08_mouse_bite_10.jpg",
+        "defect_type": "Mouse_bite",
+        "status": "success",
+        "otsu_threshold": 14.0,
+        "mean_difference": 1.1436155766743632
+      },
+      {
+        "test_image": "09_mouse_bite_01.jpg",
+        "defect_type": "Mouse_bite",
+        "status": "success",
+        "otsu_threshold": 13.0,
+        "mean_difference": 1.07894896285818
+      },
+      {
+        "test_image": "09_mouse_bite_02.jpg",
+        "defect_type": "Mouse_bite",
+        "status": "success",
+        "otsu_threshold": 13.0,
+        "mean_difference": 1.0821130903947023
+      },
+      {
+        "test_image": "09_mouse_bite_03.jpg",
+        "defect_type": "Mouse_bite",
+        "status": "success",
+        "otsu_threshold": 11.0,
+        "mean_difference": 1.07934020171167
+      },
+      {
+        "test_image": "09_mouse_bite_04.jpg",
+        "defect_type": "Mouse_bite",
+        "status": "success",
+        "otsu_threshold": 15.0,
+        "mean_difference": 1.0808320502067608
+      },
+      {
+        "test_image": "09_mouse_bite_05.jpg",
+        "defect_type": "Mouse_bite",
+        "status": "success",
+        "otsu_threshold": 16.0,
+        "mean_difference": 1.0826759135235282
+      },
+      {
+        "test_image": "09_mouse_bite_06.jpg",
+        "defect_type": "Mouse_bite",
+        "status": "success",
+        "otsu_threshold": 13.0,
+        "mean_difference": 1.0808971454084932
+      },
+      {
+        "test_image": "09_mouse_bite_07.jpg",
+        "defect_type": "Mouse_bite",
+        "status": "success",
+        "otsu_threshold": 16.0,
+        "mean_difference": 1.082715304466115
+      },
+      {
+        "test_image": "09_mouse_bite_08.jpg",
+        "defect_type": "Mouse_bite",
+        "status": "success",
+        "otsu_threshold": 12.0,
+        "mean_difference": 1.0802904247461913
+      },
+      {
+        "test_image": "09_mouse_bite_09.jpg",
+        "defect_type": "Mouse_bite",
+        "status": "success",
+        "otsu_threshold": 11.0,
+        "mean_difference": 1.0773773310132735
+      },
+      {
+        "test_image": "09_mouse_bite_10.jpg",
+        "defect_type": "Mouse_bite",
+        "status": "success",
+        "otsu_threshold": 15.0,
+        "mean_difference": 1.0795201315256897
+      },
+      {
+        "test_image": "10_mouse_bite_01.jpg",
+        "defect_type": "Mouse_bite",
+        "status": "success",
+        "otsu_threshold": 15.0,
+        "mean_difference": 1.1500287875566892
+      },
+      {
+        "test_image": "10_mouse_bite_02.jpg",
+        "defect_type": "Mouse_bite",
+        "status": "success",
+        "otsu_threshold": 14.0,
+        "mean_difference": 1.1584487050028345
+      },
+      {
+        "test_image": "10_mouse_bite_03.jpg",
+        "defect_type": "Mouse_bite",
+        "status": "success",
+        "otsu_threshold": 16.0,
+        "mean_difference": 1.151397303713152
+      },
+      {
+        "test_image": "10_mouse_bite_04.jpg",
+        "defect_type": "Mouse_bite",
+        "status": "success",
+        "otsu_threshold": 13.0,
+        "mean_difference": 1.1537073944160998
+      },
+      {
+        "test_image": "10_mouse_bite_05.jpg",
+        "defect_type": "Mouse_bite",
+        "status": "success",
+        "otsu_threshold": 14.0,
+        "mean_difference": 1.1514349489795919
+      },
+      {
+        "test_image": "11_mouse_bite_01.jpg",
+        "defect_type": "Mouse_bite",
+        "status": "success",
+        "otsu_threshold": 15.0,
+        "mean_difference": 0.9538177474338861
+      },
+      {
+        "test_image": "11_mouse_bite_02.jpg",
+        "defect_type": "Mouse_bite",
+        "status": "success",
+        "otsu_threshold": 17.0,
+        "mean_difference": 0.960370070893672
+      },
+      {
+        "test_image": "11_mouse_bite_03.jpg",
+        "defect_type": "Mouse_bite",
+        "status": "success",
+        "otsu_threshold": 15.0,
+        "mean_difference": 0.9598340018277031
+      },
+      {
+        "test_image": "11_mouse_bite_04.jpg",
+        "defect_type": "Mouse_bite",
+        "status": "success",
+        "otsu_threshold": 14.0,
+        "mean_difference": 0.9516898456432985
+      },
+      {
+        "test_image": "11_mouse_bite_05.jpg",
+        "defect_type": "Mouse_bite",
+        "status": "success",
+        "otsu_threshold": 14.0,
+        "mean_difference": 0.9602710443171221
+      },
+      {
+        "test_image": "11_mouse_bite_06.jpg",
+        "defect_type": "Mouse_bite",
+        "status": "success",
+        "otsu_threshold": 15.0,
+        "mean_difference": 0.9618724288178254
+      },
+      {
+        "test_image": "11_mouse_bite_07.jpg",
+        "defect_type": "Mouse_bite",
+        "status": "success",
+        "otsu_threshold": 15.0,
+        "mean_difference": 0.9595702558472464
+      },
+      {
+        "test_image": "11_mouse_bite_08.jpg",
+        "defect_type": "Mouse_bite",
+        "status": "success",
+        "otsu_threshold": 14.0,
+        "mean_difference": 0.9521130478041051
+      },
+      {
+        "test_image": "11_mouse_bite_09.jpg",
+        "defect_type": "Mouse_bite",
+        "status": "success",
+        "otsu_threshold": 13.0,
+        "mean_difference": 0.9548444658958708
+      },
+      {
+        "test_image": "11_mouse_bite_10.jpg",
+        "defect_type": "Mouse_bite",
+        "status": "success",
+        "otsu_threshold": 13.0,
+        "mean_difference": 0.952453402927444
+      },
+      {
+        "test_image": "12_mouse_bite_01.jpg",
+        "defect_type": "Mouse_bite",
+        "status": "success",
+        "otsu_threshold": 15.0,
+        "mean_difference": 1.0598057005143497
+      },
+      {
+        "test_image": "12_mouse_bite_02.jpg",
+        "defect_type": "Mouse_bite",
+        "status": "success",
+        "otsu_threshold": 13.0,
+        "mean_difference": 1.0601586028941745
+      },
+      {
+        "test_image": "12_mouse_bite_03.jpg",
+        "defect_type": "Mouse_bite",
+        "status": "success",
+        "otsu_threshold": 13.0,
+        "mean_difference": 1.0618130867705369
+      },
+      {
+        "test_image": "12_mouse_bite_04.jpg",
+        "defect_type": "Mouse_bite",
+        "status": "success",
+        "otsu_threshold": 16.0,
+        "mean_difference": 1.0606557607640696
+      },
+      {
+        "test_image": "12_mouse_bite_05.jpg",
+        "defect_type": "Mouse_bite",
+        "status": "success",
+        "otsu_threshold": 12.0,
+        "mean_difference": 1.057244892058446
+      },
+      {
+        "test_image": "12_mouse_bite_06.jpg",
+        "defect_type": "Mouse_bite",
+        "status": "success",
+        "otsu_threshold": 13.0,
+        "mean_difference": 1.0611468233315673
+      },
+      {
+        "test_image": "12_mouse_bite_07.jpg",
+        "defect_type": "Mouse_bite",
+        "status": "success",
+        "otsu_threshold": 12.0,
+        "mean_difference": 1.0564559411225047
+      },
+      {
+        "test_image": "12_mouse_bite_08.jpg",
+        "defect_type": "Mouse_bite",
+        "status": "success",
+        "otsu_threshold": 13.0,
+        "mean_difference": 1.059053165102987
+      },
+      {
+        "test_image": "12_mouse_bite_09.jpg",
+        "defect_type": "Mouse_bite",
+        "status": "success",
+        "otsu_threshold": 13.0,
+        "mean_difference": 1.0587012004619927
+      },
+      {
+        "test_image": "12_mouse_bite_10.jpg",
+        "defect_type": "Mouse_bite",
+        "status": "success",
+        "otsu_threshold": 14.0,
+        "mean_difference": 1.058283125233458
+      }
+    ],
+    "Spur": [
+      {
+        "test_image": "01_spur_01.jpg",
+        "defect_type": "Spur",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.3239496301271592
+      },
+      {
+        "test_image": "01_spur_02.jpg",
+        "defect_type": "Spur",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.3240113518002363
+      },
+      {
+        "test_image": "01_spur_03.jpg",
+        "defect_type": "Spur",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.3238737768925695
+      },
+      {
+        "test_image": "01_spur_04.jpg",
+        "defect_type": "Spur",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.3236036146871812
+      },
+      {
+        "test_image": "01_spur_05.jpg",
+        "defect_type": "Spur",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.324081178339475
+      },
+      {
+        "test_image": "01_spur_06.jpg",
+        "defect_type": "Spur",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.3243216227022705
+      },
+      {
+        "test_image": "01_spur_07.jpg",
+        "defect_type": "Spur",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.3246431157266823
+      },
+      {
+        "test_image": "01_spur_08.jpg",
+        "defect_type": "Spur",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.3247536744138104
+      },
+      {
+        "test_image": "01_spur_09.jpg",
+        "defect_type": "Spur",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.3246098649937115
+      },
+      {
+        "test_image": "01_spur_10.jpg",
+        "defect_type": "Spur",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.325116938671517
+      },
+      {
+        "test_image": "01_spur_11.jpg",
+        "defect_type": "Spur",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.3252472399813464
+      },
+      {
+        "test_image": "01_spur_12.jpg",
+        "defect_type": "Spur",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.3244016322784815
+      },
+      {
+        "test_image": "01_spur_13.jpg",
+        "defect_type": "Spur",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.3235892753085876
+      },
+      {
+        "test_image": "01_spur_14.jpg",
+        "defect_type": "Spur",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.324596149066361
+      },
+      {
+        "test_image": "01_spur_15.jpg",
+        "defect_type": "Spur",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.3255643688470558
+      },
+      {
+        "test_image": "01_spur_16.jpg",
+        "defect_type": "Spur",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.324583887858578
+      },
+      {
+        "test_image": "01_spur_17.jpg",
+        "defect_type": "Spur",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.3247813140855924
+      },
+      {
+        "test_image": "01_spur_18.jpg",
+        "defect_type": "Spur",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.3243929039610767
+      },
+      {
+        "test_image": "01_spur_19.jpg",
+        "defect_type": "Spur",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.3239909857262917
+      },
+      {
+        "test_image": "01_spur_20.jpg",
+        "defect_type": "Spur",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.325429911195605
+      },
+      {
+        "test_image": "04_spur_01.jpg",
+        "defect_type": "Spur",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.0928664655861156
+      },
+      {
+        "test_image": "04_spur_02.jpg",
+        "defect_type": "Spur",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.090908426897056
+      },
+      {
+        "test_image": "04_spur_03.jpg",
+        "defect_type": "Spur",
+        "status": "success",
+        "otsu_threshold": 13.0,
+        "mean_difference": 1.0941733740735704
+      },
+      {
+        "test_image": "04_spur_04.jpg",
+        "defect_type": "Spur",
+        "status": "success",
+        "otsu_threshold": 14.0,
+        "mean_difference": 1.0942296822941457
+      },
+      {
+        "test_image": "04_spur_05.jpg",
+        "defect_type": "Spur",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.0918375125365472
+      },
+      {
+        "test_image": "04_spur_06.jpg",
+        "defect_type": "Spur",
+        "status": "success",
+        "otsu_threshold": 13.0,
+        "mean_difference": 1.0939800137689535
+      },
+      {
+        "test_image": "04_spur_07.jpg",
+        "defect_type": "Spur",
+        "status": "success",
+        "otsu_threshold": 13.0,
+        "mean_difference": 1.0942963491024682
+      },
+      {
+        "test_image": "04_spur_08.jpg",
+        "defect_type": "Spur",
+        "status": "success",
+        "otsu_threshold": 14.0,
+        "mean_difference": 1.0948526583854628
+      },
+      {
+        "test_image": "04_spur_09.jpg",
+        "defect_type": "Spur",
+        "status": "success",
+        "otsu_threshold": 15.0,
+        "mean_difference": 1.0941582345991705
+      },
+      {
+        "test_image": "04_spur_10.jpg",
+        "defect_type": "Spur",
+        "status": "success",
+        "otsu_threshold": 13.0,
+        "mean_difference": 1.094348142041205
+      },
+      {
+        "test_image": "04_spur_11.jpg",
+        "defect_type": "Spur",
+        "status": "success",
+        "otsu_threshold": 14.0,
+        "mean_difference": 1.0962913068606785
+      },
+      {
+        "test_image": "04_spur_12.jpg",
+        "defect_type": "Spur",
+        "status": "success",
+        "otsu_threshold": 14.0,
+        "mean_difference": 1.095654917726253
+      },
+      {
+        "test_image": "04_spur_13.jpg",
+        "defect_type": "Spur",
+        "status": "success",
+        "otsu_threshold": 13.0,
+        "mean_difference": 1.0934822703474536
+      },
+      {
+        "test_image": "04_spur_14.jpg",
+        "defect_type": "Spur",
+        "status": "success",
+        "otsu_threshold": 13.0,
+        "mean_difference": 1.0961578404416263
+      },
+      {
+        "test_image": "04_spur_15.jpg",
+        "defect_type": "Spur",
+        "status": "success",
+        "otsu_threshold": 14.0,
+        "mean_difference": 1.093726892381179
+      },
+      {
+        "test_image": "04_spur_16.jpg",
+        "defect_type": "Spur",
+        "status": "success",
+        "otsu_threshold": 13.0,
+        "mean_difference": 1.0950721807642618
+      },
+      {
+        "test_image": "04_spur_17.jpg",
+        "defect_type": "Spur",
+        "status": "success",
+        "otsu_threshold": 14.0,
+        "mean_difference": 1.0955187952590604
+      },
+      {
+        "test_image": "04_spur_18.jpg",
+        "defect_type": "Spur",
+        "status": "success",
+        "otsu_threshold": 12.0,
+        "mean_difference": 1.0956387158325966
+      },
+      {
+        "test_image": "04_spur_19.jpg",
+        "defect_type": "Spur",
+        "status": "success",
+        "otsu_threshold": 11.0,
+        "mean_difference": 1.0961375216733529
+      },
+      {
+        "test_image": "04_spur_20.jpg",
+        "defect_type": "Spur",
+        "status": "success",
+        "otsu_threshold": 13.0,
+        "mean_difference": 1.0960125546083497
+      },
+      {
+        "test_image": "05_spur_01.jpg",
+        "defect_type": "Spur",
+        "status": "success",
+        "otsu_threshold": 12.0,
+        "mean_difference": 1.1317751907795708
+      },
+      {
+        "test_image": "05_spur_02.jpg",
+        "defect_type": "Spur",
+        "status": "success",
+        "otsu_threshold": 13.0,
+        "mean_difference": 1.1333662967760003
+      },
+      {
+        "test_image": "05_spur_03.jpg",
+        "defect_type": "Spur",
+        "status": "success",
+        "otsu_threshold": 13.0,
+        "mean_difference": 1.1302435210791006
+      },
+      {
+        "test_image": "05_spur_04.jpg",
+        "defect_type": "Spur",
+        "status": "success",
+        "otsu_threshold": 13.0,
+        "mean_difference": 1.1356866824774507
+      },
+      {
+        "test_image": "05_spur_05.jpg",
+        "defect_type": "Spur",
+        "status": "success",
+        "otsu_threshold": 12.0,
+        "mean_difference": 1.137805604660389
+      },
+      {
+        "test_image": "05_spur_06.jpg",
+        "defect_type": "Spur",
+        "status": "success",
+        "otsu_threshold": 13.0,
+        "mean_difference": 1.1333630150173277
+      },
+      {
+        "test_image": "05_spur_07.jpg",
+        "defect_type": "Spur",
+        "status": "success",
+        "otsu_threshold": 14.0,
+        "mean_difference": 1.1332186176357335
+      },
+      {
+        "test_image": "05_spur_08.jpg",
+        "defect_type": "Spur",
+        "status": "success",
+        "otsu_threshold": 12.0,
+        "mean_difference": 1.132506658323707
+      },
+      {
+        "test_image": "05_spur_09.jpg",
+        "defect_type": "Spur",
+        "status": "success",
+        "otsu_threshold": 12.0,
+        "mean_difference": 1.129378777668872
+      },
+      {
+        "test_image": "05_spur_10.jpg",
+        "defect_type": "Spur",
+        "status": "success",
+        "otsu_threshold": 12.0,
+        "mean_difference": 1.1311941371745955
+      },
+      {
+        "test_image": "06_spur_01.jpg",
+        "defect_type": "Spur",
+        "status": "success",
+        "otsu_threshold": 15.0,
+        "mean_difference": 1.2008530795412664
+      },
+      {
+        "test_image": "06_spur_02.jpg",
+        "defect_type": "Spur",
+        "status": "success",
+        "otsu_threshold": 12.0,
+        "mean_difference": 1.2008116781446394
+      },
+      {
+        "test_image": "06_spur_03.jpg",
+        "defect_type": "Spur",
+        "status": "success",
+        "otsu_threshold": 13.0,
+        "mean_difference": 1.2043175484110296
+      },
+      {
+        "test_image": "06_spur_04.jpg",
+        "defect_type": "Spur",
+        "status": "success",
+        "otsu_threshold": 14.0,
+        "mean_difference": 1.201327765372414
+      },
+      {
+        "test_image": "06_spur_05.jpg",
+        "defect_type": "Spur",
+        "status": "success",
+        "otsu_threshold": 12.0,
+        "mean_difference": 1.2021312535680477
+      },
+      {
+        "test_image": "06_spur_06.jpg",
+        "defect_type": "Spur",
+        "status": "success",
+        "otsu_threshold": 11.0,
+        "mean_difference": 1.2028213772121896
+      },
+      {
+        "test_image": "06_spur_07.jpg",
+        "defect_type": "Spur",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.198834497992258
+      },
+      {
+        "test_image": "06_spur_08.jpg",
+        "defect_type": "Spur",
+        "status": "success",
+        "otsu_threshold": 62.0,
+        "mean_difference": 3.246517916717854
+      },
+      {
+        "test_image": "06_spur_09.jpg",
+        "defect_type": "Spur",
+        "status": "success",
+        "otsu_threshold": 12.0,
+        "mean_difference": 1.2041286074918762
+      },
+      {
+        "test_image": "06_spur_10.jpg",
+        "defect_type": "Spur",
+        "status": "success",
+        "otsu_threshold": 12.0,
+        "mean_difference": 1.2052736948473177
+      },
+      {
+        "test_image": "07_spur_01.jpg",
+        "defect_type": "Spur",
+        "status": "success",
+        "otsu_threshold": 11.0,
+        "mean_difference": 1.0164790921854006
+      },
+      {
+        "test_image": "07_spur_02.jpg",
+        "defect_type": "Spur",
+        "status": "success",
+        "otsu_threshold": 12.0,
+        "mean_difference": 1.018868049669952
+      },
+      {
+        "test_image": "07_spur_03.jpg",
+        "defect_type": "Spur",
+        "status": "success",
+        "otsu_threshold": 11.0,
+        "mean_difference": 1.0164231640143808
+      },
+      {
+        "test_image": "07_spur_04.jpg",
+        "defect_type": "Spur",
+        "status": "success",
+        "otsu_threshold": 11.0,
+        "mean_difference": 1.016785800841217
+      },
+      {
+        "test_image": "07_spur_05.jpg",
+        "defect_type": "Spur",
+        "status": "success",
+        "otsu_threshold": 11.0,
+        "mean_difference": 1.0182591137822787
+      },
+      {
+        "test_image": "07_spur_06.jpg",
+        "defect_type": "Spur",
+        "status": "success",
+        "otsu_threshold": 11.0,
+        "mean_difference": 1.016225802103186
+      },
+      {
+        "test_image": "07_spur_07.jpg",
+        "defect_type": "Spur",
+        "status": "success",
+        "otsu_threshold": 11.0,
+        "mean_difference": 1.01597269127793
+      },
+      {
+        "test_image": "07_spur_08.jpg",
+        "defect_type": "Spur",
+        "status": "success",
+        "otsu_threshold": 10.0,
+        "mean_difference": 1.0153119501292802
+      },
+      {
+        "test_image": "07_spur_09.jpg",
+        "defect_type": "Spur",
+        "status": "success",
+        "otsu_threshold": 13.0,
+        "mean_difference": 1.0226525225756213
+      },
+      {
+        "test_image": "07_spur_10.jpg",
+        "defect_type": "Spur",
+        "status": "success",
+        "otsu_threshold": 12.0,
+        "mean_difference": 1.0177853376412365
+      },
+      {
+        "test_image": "08_spur_01.jpg",
+        "defect_type": "Spur",
+        "status": "success",
+        "otsu_threshold": 15.0,
+        "mean_difference": 1.1458769358860326
+      },
+      {
+        "test_image": "08_spur_02.jpg",
+        "defect_type": "Spur",
+        "status": "success",
+        "otsu_threshold": 16.0,
+        "mean_difference": 1.1507425853364848
+      },
+      {
+        "test_image": "08_spur_03.jpg",
+        "defect_type": "Spur",
+        "status": "success",
+        "otsu_threshold": 14.0,
+        "mean_difference": 1.144571509532574
+      },
+      {
+        "test_image": "08_spur_04.jpg",
+        "defect_type": "Spur",
+        "status": "success",
+        "otsu_threshold": 16.0,
+        "mean_difference": 1.1498860991107687
+      },
+      {
+        "test_image": "08_spur_05.jpg",
+        "defect_type": "Spur",
+        "status": "success",
+        "otsu_threshold": 15.0,
+        "mean_difference": 1.145668114784635
+      },
+      {
+        "test_image": "08_spur_06.jpg",
+        "defect_type": "Spur",
+        "status": "success",
+        "otsu_threshold": 14.0,
+        "mean_difference": 1.147377553599379
+      },
+      {
+        "test_image": "08_spur_07.jpg",
+        "defect_type": "Spur",
+        "status": "success",
+        "otsu_threshold": 14.0,
+        "mean_difference": 1.1467423403376744
+      },
+      {
+        "test_image": "08_spur_08.jpg",
+        "defect_type": "Spur",
+        "status": "success",
+        "otsu_threshold": 15.0,
+        "mean_difference": 1.1469375316975625
+      },
+      {
+        "test_image": "08_spur_09.jpg",
+        "defect_type": "Spur",
+        "status": "success",
+        "otsu_threshold": 17.0,
+        "mean_difference": 1.1522336117502507
+      },
+      {
+        "test_image": "08_spur_10.jpg",
+        "defect_type": "Spur",
+        "status": "success",
+        "otsu_threshold": 14.0,
+        "mean_difference": 1.1443891065721268
+      },
+      {
+        "test_image": "09_spur_01.jpg",
+        "defect_type": "Spur",
+        "status": "success",
+        "otsu_threshold": 11.0,
+        "mean_difference": 1.07832187908149
+      },
+      {
+        "test_image": "09_spur_02.jpg",
+        "defect_type": "Spur",
+        "status": "success",
+        "otsu_threshold": 11.0,
+        "mean_difference": 1.0777896006242462
+      },
+      {
+        "test_image": "09_spur_03.jpg",
+        "defect_type": "Spur",
+        "status": "success",
+        "otsu_threshold": 11.0,
+        "mean_difference": 1.0787842219245647
+      },
+      {
+        "test_image": "09_spur_04.jpg",
+        "defect_type": "Spur",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.0771142796339648
+      },
+      {
+        "test_image": "09_spur_05.jpg",
+        "defect_type": "Spur",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.076189760858589
+      },
+      {
+        "test_image": "09_spur_06.jpg",
+        "defect_type": "Spur",
+        "status": "success",
+        "otsu_threshold": 13.0,
+        "mean_difference": 1.0820838810093094
+      },
+      {
+        "test_image": "09_spur_07.jpg",
+        "defect_type": "Spur",
+        "status": "success",
+        "otsu_threshold": 12.0,
+        "mean_difference": 1.0839122216241253
+      },
+      {
+        "test_image": "09_spur_08.jpg",
+        "defect_type": "Spur",
+        "status": "success",
+        "otsu_threshold": 12.0,
+        "mean_difference": 1.0809120004673503
+      },
+      {
+        "test_image": "09_spur_09.jpg",
+        "defect_type": "Spur",
+        "status": "success",
+        "otsu_threshold": 12.0,
+        "mean_difference": 1.0853508255824142
+      },
+      {
+        "test_image": "09_spur_10.jpg",
+        "defect_type": "Spur",
+        "status": "success",
+        "otsu_threshold": 11.0,
+        "mean_difference": 1.0774068742202136
+      },
+      {
+        "test_image": "10_spur_01.jpg",
+        "defect_type": "Spur",
+        "status": "success",
+        "otsu_threshold": 13.0,
+        "mean_difference": 1.14910049957483
+      },
+      {
+        "test_image": "10_spur_02.jpg",
+        "defect_type": "Spur",
+        "status": "success",
+        "otsu_threshold": 14.0,
+        "mean_difference": 1.1483378507653061
+      },
+      {
+        "test_image": "10_spur_03.jpg",
+        "defect_type": "Spur",
+        "status": "success",
+        "otsu_threshold": 14.0,
+        "mean_difference": 1.1481215012046486
+      },
+      {
+        "test_image": "10_spur_04.jpg",
+        "defect_type": "Spur",
+        "status": "success",
+        "otsu_threshold": 10.0,
+        "mean_difference": 1.14654438598356
+      },
+      {
+        "test_image": "10_spur_05.jpg",
+        "defect_type": "Spur",
+        "status": "success",
+        "otsu_threshold": 12.0,
+        "mean_difference": 1.1572225765306123
+      },
+      {
+        "test_image": "11_spur_01.jpg",
+        "defect_type": "Spur",
+        "status": "success",
+        "otsu_threshold": 12.0,
+        "mean_difference": 0.9577320262864878
+      },
+      {
+        "test_image": "11_spur_02.jpg",
+        "defect_type": "Spur",
+        "status": "success",
+        "otsu_threshold": 13.0,
+        "mean_difference": 0.9567259708503186
+      },
+      {
+        "test_image": "11_spur_03.jpg",
+        "defect_type": "Spur",
+        "status": "success",
+        "otsu_threshold": 12.0,
+        "mean_difference": 0.9548082081335908
+      },
+      {
+        "test_image": "11_spur_04.jpg",
+        "defect_type": "Spur",
+        "status": "success",
+        "otsu_threshold": 13.0,
+        "mean_difference": 0.9611143296914425
+      },
+      {
+        "test_image": "11_spur_05.jpg",
+        "defect_type": "Spur",
+        "status": "success",
+        "otsu_threshold": 15.0,
+        "mean_difference": 0.9612381129121299
+      },
+      {
+        "test_image": "11_spur_06.jpg",
+        "defect_type": "Spur",
+        "status": "success",
+        "otsu_threshold": 14.0,
+        "mean_difference": 0.963062697078482
+      },
+      {
+        "test_image": "11_spur_07.jpg",
+        "defect_type": "Spur",
+        "status": "success",
+        "otsu_threshold": 12.0,
+        "mean_difference": 0.9671060223753278
+      },
+      {
+        "test_image": "11_spur_08.jpg",
+        "defect_type": "Spur",
+        "status": "success",
+        "otsu_threshold": 13.0,
+        "mean_difference": 0.966472096338044
+      },
+      {
+        "test_image": "11_spur_09.jpg",
+        "defect_type": "Spur",
+        "status": "success",
+        "otsu_threshold": 15.0,
+        "mean_difference": 0.9735515218903316
+      },
+      {
+        "test_image": "11_spur_10.jpg",
+        "defect_type": "Spur",
+        "status": "success",
+        "otsu_threshold": 13.0,
+        "mean_difference": 0.9677703581487176
+      },
+      {
+        "test_image": "12_spur_01.jpg",
+        "defect_type": "Spur",
+        "status": "success",
+        "otsu_threshold": 13.0,
+        "mean_difference": 1.0674596811375396
+      },
+      {
+        "test_image": "12_spur_02.jpg",
+        "defect_type": "Spur",
+        "status": "success",
+        "otsu_threshold": 8.0,
+        "mean_difference": 1.0612763875799618
+      },
+      {
+        "test_image": "12_spur_03.jpg",
+        "defect_type": "Spur",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.0595503229728822
+      },
+      {
+        "test_image": "12_spur_04.jpg",
+        "defect_type": "Spur",
+        "status": "success",
+        "otsu_threshold": 16.0,
+        "mean_difference": 1.0669426744624022
+      },
+      {
+        "test_image": "12_spur_05.jpg",
+        "defect_type": "Spur",
+        "status": "success",
+        "otsu_threshold": 17.0,
+        "mean_difference": 1.0695760013878535
+      },
+      {
+        "test_image": "12_spur_06.jpg",
+        "defect_type": "Spur",
+        "status": "success",
+        "otsu_threshold": 16.0,
+        "mean_difference": 1.0683299027721123
+      },
+      {
+        "test_image": "12_spur_07.jpg",
+        "defect_type": "Spur",
+        "status": "success",
+        "otsu_threshold": 18.0,
+        "mean_difference": 1.0704421594874944
+      },
+      {
+        "test_image": "12_spur_08.jpg",
+        "defect_type": "Spur",
+        "status": "success",
+        "otsu_threshold": 13.0,
+        "mean_difference": 1.066756689594381
+      },
+      {
+        "test_image": "12_spur_09.jpg",
+        "defect_type": "Spur",
+        "status": "success",
+        "otsu_threshold": 15.0,
+        "mean_difference": 1.0688731661345
+      },
+      {
+        "test_image": "12_spur_10.jpg",
+        "defect_type": "Spur",
+        "status": "success",
+        "otsu_threshold": 15.0,
+        "mean_difference": 1.0658355174833591
+      }
+    ],
+    "Spurious_copper": [
+      {
+        "test_image": "01_spurious_copper_01.jpg",
+        "defect_type": "Spurious_copper",
+        "status": "success",
+        "otsu_threshold": 32.0,
+        "mean_difference": 1.3339192389572239
+      },
+      {
+        "test_image": "01_spurious_copper_02.jpg",
+        "defect_type": "Spurious_copper",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.3296629373198745
+      },
+      {
+        "test_image": "01_spurious_copper_03.jpg",
+        "defect_type": "Spurious_copper",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.3303591245414517
+      },
+      {
+        "test_image": "01_spurious_copper_04.jpg",
+        "defect_type": "Spurious_copper",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.3322650149919242
+      },
+      {
+        "test_image": "01_spurious_copper_05.jpg",
+        "defect_type": "Spurious_copper",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.330299065405023
+      },
+      {
+        "test_image": "01_spurious_copper_06.jpg",
+        "defect_type": "Spurious_copper",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.3318285991216818
+      },
+      {
+        "test_image": "01_spurious_copper_07.jpg",
+        "defect_type": "Spurious_copper",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.3317174169833106
+      },
+      {
+        "test_image": "01_spurious_copper_08.jpg",
+        "defect_type": "Spurious_copper",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.3327398770221641
+      },
+      {
+        "test_image": "01_spurious_copper_09.jpg",
+        "defect_type": "Spurious_copper",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.3344150905126515
+      },
+      {
+        "test_image": "01_spurious_copper_10.jpg",
+        "defect_type": "Spurious_copper",
+        "status": "success",
+        "otsu_threshold": 12.0,
+        "mean_difference": 1.337013219660161
+      },
+      {
+        "test_image": "01_spurious_copper_11.jpg",
+        "defect_type": "Spurious_copper",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.3329840620924187
+      },
+      {
+        "test_image": "01_spurious_copper_12.jpg",
+        "defect_type": "Spurious_copper",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.3316220289431004
+      },
+      {
+        "test_image": "01_spurious_copper_13.jpg",
+        "defect_type": "Spurious_copper",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.3333473263501252
+      },
+      {
+        "test_image": "01_spurious_copper_14.jpg",
+        "defect_type": "Spurious_copper",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.3336987450342108
+      },
+      {
+        "test_image": "01_spurious_copper_15.jpg",
+        "defect_type": "Spurious_copper",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.3302697631965925
+      },
+      {
+        "test_image": "01_spurious_copper_16.jpg",
+        "defect_type": "Spurious_copper",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.3290827120295332
+      },
+      {
+        "test_image": "01_spurious_copper_17.jpg",
+        "defect_type": "Spurious_copper",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.3335202301615736
+      },
+      {
+        "test_image": "01_spurious_copper_18.jpg",
+        "defect_type": "Spurious_copper",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.336014035134387
+      },
+      {
+        "test_image": "01_spurious_copper_19.jpg",
+        "defect_type": "Spurious_copper",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.3319341701988643
+      },
+      {
+        "test_image": "01_spurious_copper_20.jpg",
+        "defect_type": "Spurious_copper",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.332997362385607
+      },
+      {
+        "test_image": "04_spurious_copper_01.jpg",
+        "defect_type": "Spurious_copper",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.0912025842285986
+      },
+      {
+        "test_image": "04_spurious_copper_02.jpg",
+        "defect_type": "Spurious_copper",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.0909298080845855
+      },
+      {
+        "test_image": "04_spurious_copper_03.jpg",
+        "defect_type": "Spurious_copper",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.0913092245614333
+      },
+      {
+        "test_image": "04_spurious_copper_04.jpg",
+        "defect_type": "Spurious_copper",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.0914820004929626
+      },
+      {
+        "test_image": "04_spurious_copper_05.jpg",
+        "defect_type": "Spurious_copper",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.090886912907119
+      },
+      {
+        "test_image": "04_spurious_copper_06.jpg",
+        "defect_type": "Spurious_copper",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.090115994934385
+      },
+      {
+        "test_image": "04_spurious_copper_07.jpg",
+        "defect_type": "Spurious_copper",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.0927578332171755
+      },
+      {
+        "test_image": "04_spurious_copper_08.jpg",
+        "defect_type": "Spurious_copper",
+        "status": "success",
+        "otsu_threshold": 12.0,
+        "mean_difference": 1.0945164026908956
+      },
+      {
+        "test_image": "04_spurious_copper_09.jpg",
+        "defect_type": "Spurious_copper",
+        "status": "success",
+        "otsu_threshold": 13.0,
+        "mean_difference": 1.0959002037720134
+      },
+      {
+        "test_image": "04_spurious_copper_10.jpg",
+        "defect_type": "Spurious_copper",
+        "status": "success",
+        "otsu_threshold": 14.0,
+        "mean_difference": 1.0942440249541034
+      },
+      {
+        "test_image": "04_spurious_copper_11.jpg",
+        "defect_type": "Spurious_copper",
+        "status": "success",
+        "otsu_threshold": 55.0,
+        "mean_difference": 2.9812992962534848
+      },
+      {
+        "test_image": "04_spurious_copper_12.jpg",
+        "defect_type": "Spurious_copper",
+        "status": "success",
+        "otsu_threshold": 13.0,
+        "mean_difference": 1.1004767075202284
+      },
+      {
+        "test_image": "04_spurious_copper_13.jpg",
+        "defect_type": "Spurious_copper",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.092870184053512
+      },
+      {
+        "test_image": "04_spurious_copper_14.jpg",
+        "defect_type": "Spurious_copper",
+        "status": "success",
+        "otsu_threshold": 11.0,
+        "mean_difference": 1.0938867864792277
+      },
+      {
+        "test_image": "04_spurious_copper_15.jpg",
+        "defect_type": "Spurious_copper",
+        "status": "success",
+        "otsu_threshold": 14.0,
+        "mean_difference": 1.0971454919426125
+      },
+      {
+        "test_image": "04_spurious_copper_16.jpg",
+        "defect_type": "Spurious_copper",
+        "status": "success",
+        "otsu_threshold": 15.0,
+        "mean_difference": 1.0973384538400082
+      },
+      {
+        "test_image": "04_spurious_copper_17.jpg",
+        "defect_type": "Spurious_copper",
+        "status": "success",
+        "otsu_threshold": 12.0,
+        "mean_difference": 1.0940108239273816
+      },
+      {
+        "test_image": "04_spurious_copper_18.jpg",
+        "defect_type": "Spurious_copper",
+        "status": "success",
+        "otsu_threshold": 1.0,
+        "mean_difference": 1.093197807591623
+      },
+      {
+        "test_image": "04_spurious_copper_19.jpg",
+        "defect_type": "Spurious_copper",
+        "status": "success",
+        "otsu_threshold": 13.0,
+        "mean_difference": 1.0936704513581967
+      },
+      {
+        "test_image": "04_spurious_copper_20.jpg",
+        "defect_type": "Spurious_copper",
+        "status": "success",
+        "otsu_threshold": 12.0,
+        "mean_difference": 1.0959010005864553
+      },
+      {
+        "test_image": "05_spurious_copper_01.jpg",
+        "defect_type": "Spurious_copper",
+        "status": "success",
+        "otsu_threshold": 15.0,
+        "mean_difference": 1.1426642483751648
+      },
+      {
+        "test_image": "05_spurious_copper_02.jpg",
+        "defect_type": "Spurious_copper",
+        "status": "success",
+        "otsu_threshold": 15.0,
+        "mean_difference": 1.1453749810387277
+      },
+      {
+        "test_image": "05_spurious_copper_03.jpg",
+        "defect_type": "Spurious_copper",
+        "status": "success",
+        "otsu_threshold": 15.0,
+        "mean_difference": 1.1465400053674986
+      },
+      {
+        "test_image": "05_spurious_copper_04.jpg",
+        "defect_type": "Spurious_copper",
+        "status": "success",
+        "otsu_threshold": 15.0,
+        "mean_difference": 1.147098815941471
+      },
+      {
+        "test_image": "05_spurious_copper_05.jpg",
+        "defect_type": "Spurious_copper",
+        "status": "success",
+        "otsu_threshold": 14.0,
+        "mean_difference": 1.150864087058494
+      },
+      {
+        "test_image": "05_spurious_copper_06.jpg",
+        "defect_type": "Spurious_copper",
+        "status": "success",
+        "otsu_threshold": 15.0,
+        "mean_difference": 1.1443016636328631
+      },
+      {
+        "test_image": "05_spurious_copper_07.jpg",
+        "defect_type": "Spurious_copper",
+        "status": "success",
+        "otsu_threshold": 15.0,
+        "mean_difference": 1.1490751639420778
+      },
+      {
+        "test_image": "05_spurious_copper_08.jpg",
+        "defect_type": "Spurious_copper",
+        "status": "success",
+        "otsu_threshold": 14.0,
+        "mean_difference": 1.1463957903058308
+      },
+      {
+        "test_image": "05_spurious_copper_09.jpg",
+        "defect_type": "Spurious_copper",
+        "status": "success",
+        "otsu_threshold": 16.0,
+        "mean_difference": 1.1514471461826583
+      },
+      {
+        "test_image": "05_spurious_copper_10.jpg",
+        "defect_type": "Spurious_copper",
+        "status": "success",
+        "otsu_threshold": 15.0,
+        "mean_difference": 1.1527350541417254
+      },
+      {
+        "test_image": "06_spurious_copper_01.jpg",
+        "defect_type": "Spurious_copper",
+        "status": "success",
+        "otsu_threshold": 16.0,
+        "mean_difference": 1.2043979423957527
+      },
+      {
+        "test_image": "06_spurious_copper_02.jpg",
+        "defect_type": "Spurious_copper",
+        "status": "success",
+        "otsu_threshold": 16.0,
+        "mean_difference": 1.2035924970431875
+      },
+      {
+        "test_image": "06_spurious_copper_03.jpg",
+        "defect_type": "Spurious_copper",
+        "status": "success",
+        "otsu_threshold": 15.0,
+        "mean_difference": 1.2076394459258617
+      },
+      {
+        "test_image": "06_spurious_copper_04.jpg",
+        "defect_type": "Spurious_copper",
+        "status": "success",
+        "otsu_threshold": 56.0,
+        "mean_difference": 1.787265472379397
+      },
+      {
+        "test_image": "06_spurious_copper_05.jpg",
+        "defect_type": "Spurious_copper",
+        "status": "success",
+        "otsu_threshold": 16.0,
+        "mean_difference": 1.2060421047687182
+      },
+      {
+        "test_image": "06_spurious_copper_06.jpg",
+        "defect_type": "Spurious_copper",
+        "status": "success",
+        "otsu_threshold": 16.0,
+        "mean_difference": 1.2071888481800248
+      },
+      {
+        "test_image": "06_spurious_copper_07.jpg",
+        "defect_type": "Spurious_copper",
+        "status": "success",
+        "otsu_threshold": 16.0,
+        "mean_difference": 1.2095031109762178
+      },
+      {
+        "test_image": "06_spurious_copper_08.jpg",
+        "defect_type": "Spurious_copper",
+        "status": "success",
+        "otsu_threshold": 16.0,
+        "mean_difference": 1.2045707744078546
+      },
+      {
+        "test_image": "06_spurious_copper_09.jpg",
+        "defect_type": "Spurious_copper",
+        "status": "success",
+        "otsu_threshold": 15.0,
+        "mean_difference": 1.2060818501094803
+      },
+      {
+        "test_image": "06_spurious_copper_10.jpg",
+        "defect_type": "Spurious_copper",
+        "status": "success",
+        "otsu_threshold": 16.0,
+        "mean_difference": 1.208663039001019
+      },
+      {
+        "test_image": "07_spurious_copper_01.jpg",
+        "defect_type": "Spurious_copper",
+        "status": "success",
+        "otsu_threshold": 10.0,
+        "mean_difference": 1.0204698898501843
+      },
+      {
+        "test_image": "07_spurious_copper_02.jpg",
+        "defect_type": "Spurious_copper",
+        "status": "success",
+        "otsu_threshold": 12.0,
+        "mean_difference": 1.0239331342864066
+      },
+      {
+        "test_image": "07_spurious_copper_03.jpg",
+        "defect_type": "Spurious_copper",
+        "status": "success",
+        "otsu_threshold": 11.0,
+        "mean_difference": 1.0204361895420055
+      },
+      {
+        "test_image": "07_spurious_copper_04.jpg",
+        "defect_type": "Spurious_copper",
+        "status": "success",
+        "otsu_threshold": 11.0,
+        "mean_difference": 1.0224938801674404
+      },
+      {
+        "test_image": "07_spurious_copper_05.jpg",
+        "defect_type": "Spurious_copper",
+        "status": "success",
+        "otsu_threshold": 10.0,
+        "mean_difference": 1.021587556985787
+      },
+      {
+        "test_image": "07_spurious_copper_06.jpg",
+        "defect_type": "Spurious_copper",
+        "status": "success",
+        "otsu_threshold": 11.0,
+        "mean_difference": 1.0219978761635569
+      },
+      {
+        "test_image": "07_spurious_copper_07.jpg",
+        "defect_type": "Spurious_copper",
+        "status": "success",
+        "otsu_threshold": 11.0,
+        "mean_difference": 1.024181405173786
+      },
+      {
+        "test_image": "07_spurious_copper_08.jpg",
+        "defect_type": "Spurious_copper",
+        "status": "success",
+        "otsu_threshold": 11.0,
+        "mean_difference": 1.0231954919026047
+      },
+      {
+        "test_image": "07_spurious_copper_09.jpg",
+        "defect_type": "Spurious_copper",
+        "status": "success",
+        "otsu_threshold": 11.0,
+        "mean_difference": 1.0230909850958594
+      },
+      {
+        "test_image": "07_spurious_copper_10.jpg",
+        "defect_type": "Spurious_copper",
+        "status": "success",
+        "otsu_threshold": 11.0,
+        "mean_difference": 1.0171647500512675
+      },
+      {
+        "test_image": "08_spurious_copper_01.jpg",
+        "defect_type": "Spurious_copper",
+        "status": "success",
+        "otsu_threshold": 16.0,
+        "mean_difference": 1.1539560072328494
+      },
+      {
+        "test_image": "08_spurious_copper_02.jpg",
+        "defect_type": "Spurious_copper",
+        "status": "success",
+        "otsu_threshold": 17.0,
+        "mean_difference": 1.154927589053534
+      },
+      {
+        "test_image": "08_spurious_copper_03.jpg",
+        "defect_type": "Spurious_copper",
+        "status": "success",
+        "otsu_threshold": 16.0,
+        "mean_difference": 1.1552303039297742
+      },
+      {
+        "test_image": "08_spurious_copper_04.jpg",
+        "defect_type": "Spurious_copper",
+        "status": "success",
+        "otsu_threshold": 15.0,
+        "mean_difference": 1.1537862244034296
+      },
+      {
+        "test_image": "08_spurious_copper_05.jpg",
+        "defect_type": "Spurious_copper",
+        "status": "success",
+        "otsu_threshold": 16.0,
+        "mean_difference": 1.1551742705480132
+      },
+      {
+        "test_image": "08_spurious_copper_06.jpg",
+        "defect_type": "Spurious_copper",
+        "status": "success",
+        "otsu_threshold": 18.0,
+        "mean_difference": 1.1561596503786207
+      },
+      {
+        "test_image": "08_spurious_copper_07.jpg",
+        "defect_type": "Spurious_copper",
+        "status": "success",
+        "otsu_threshold": 17.0,
+        "mean_difference": 1.1518879884285178
+      },
+      {
+        "test_image": "08_spurious_copper_08.jpg",
+        "defect_type": "Spurious_copper",
+        "status": "success",
+        "otsu_threshold": 15.0,
+        "mean_difference": 1.1525060383120256
+      },
+      {
+        "test_image": "08_spurious_copper_09.jpg",
+        "defect_type": "Spurious_copper",
+        "status": "success",
+        "otsu_threshold": 16.0,
+        "mean_difference": 1.148209640905109
+      },
+      {
+        "test_image": "08_spurious_copper_10.jpg",
+        "defect_type": "Spurious_copper",
+        "status": "success",
+        "otsu_threshold": 16.0,
+        "mean_difference": 1.1496029033705173
+      },
+      {
+        "test_image": "09_spurious_copper_01.jpg",
+        "defect_type": "Spurious_copper",
+        "status": "success",
+        "otsu_threshold": 13.0,
+        "mean_difference": 1.0907178415098748
+      },
+      {
+        "test_image": "09_spurious_copper_02.jpg",
+        "defect_type": "Spurious_copper",
+        "status": "success",
+        "otsu_threshold": 15.0,
+        "mean_difference": 1.0902040901485088
+      },
+      {
+        "test_image": "09_spurious_copper_03.jpg",
+        "defect_type": "Spurious_copper",
+        "status": "success",
+        "otsu_threshold": 14.0,
+        "mean_difference": 1.0926917283193336
+      },
+      {
+        "test_image": "09_spurious_copper_04.jpg",
+        "defect_type": "Spurious_copper",
+        "status": "success",
+        "otsu_threshold": 13.0,
+        "mean_difference": 1.09292239900855
+      },
+      {
+        "test_image": "09_spurious_copper_05.jpg",
+        "defect_type": "Spurious_copper",
+        "status": "success",
+        "otsu_threshold": 13.0,
+        "mean_difference": 1.0923428848023569
+      },
+      {
+        "test_image": "09_spurious_copper_06.jpg",
+        "defect_type": "Spurious_copper",
+        "status": "success",
+        "otsu_threshold": 13.0,
+        "mean_difference": 1.0984279508781594
+      },
+      {
+        "test_image": "09_spurious_copper_07.jpg",
+        "defect_type": "Spurious_copper",
+        "status": "success",
+        "otsu_threshold": 13.0,
+        "mean_difference": 1.0961190741459383
+      },
+      {
+        "test_image": "09_spurious_copper_08.jpg",
+        "defect_type": "Spurious_copper",
+        "status": "success",
+        "otsu_threshold": 15.0,
+        "mean_difference": 1.0954205525581162
+      },
+      {
+        "test_image": "09_spurious_copper_09.jpg",
+        "defect_type": "Spurious_copper",
+        "status": "success",
+        "otsu_threshold": 15.0,
+        "mean_difference": 1.0919751803679547
+      },
+      {
+        "test_image": "09_spurious_copper_10.jpg",
+        "defect_type": "Spurious_copper",
+        "status": "success",
+        "otsu_threshold": 14.0,
+        "mean_difference": 1.0890248655325079
+      },
+      {
+        "test_image": "10_spurious_copper_01.jpg",
+        "defect_type": "Spurious_copper",
+        "status": "success",
+        "otsu_threshold": 12.0,
+        "mean_difference": 1.1447921095521543
+      },
+      {
+        "test_image": "10_spurious_copper_02.jpg",
+        "defect_type": "Spurious_copper",
+        "status": "success",
+        "otsu_threshold": 14.0,
+        "mean_difference": 1.1489649766156462
+      },
+      {
+        "test_image": "10_spurious_copper_03.jpg",
+        "defect_type": "Spurious_copper",
+        "status": "success",
+        "otsu_threshold": 13.0,
+        "mean_difference": 1.143046697845805
+      },
+      {
+        "test_image": "10_spurious_copper_04.jpg",
+        "defect_type": "Spurious_copper",
+        "status": "success",
+        "otsu_threshold": 14.0,
+        "mean_difference": 1.1415519593253969
+      },
+      {
+        "test_image": "10_spurious_copper_05.jpg",
+        "defect_type": "Spurious_copper",
+        "status": "success",
+        "otsu_threshold": 13.0,
+        "mean_difference": 1.1509231947987528
+      },
+      {
+        "test_image": "10_spurious_copper_06.jpg",
+        "defect_type": "Spurious_copper",
+        "status": "success",
+        "otsu_threshold": 14.0,
+        "mean_difference": 1.1417107337726757
+      },
+      {
+        "test_image": "11_spurious_copper_01.jpg",
+        "defect_type": "Spurious_copper",
+        "status": "success",
+        "otsu_threshold": 15.0,
+        "mean_difference": 0.952213049051684
+      },
+      {
+        "test_image": "11_spurious_copper_02.jpg",
+        "defect_type": "Spurious_copper",
+        "status": "success",
+        "otsu_threshold": 15.0,
+        "mean_difference": 0.9562054965208143
+      },
+      {
+        "test_image": "11_spurious_copper_03.jpg",
+        "defect_type": "Spurious_copper",
+        "status": "success",
+        "otsu_threshold": 13.0,
+        "mean_difference": 0.9549893020107854
+      },
+      {
+        "test_image": "11_spurious_copper_04.jpg",
+        "defect_type": "Spurious_copper",
+        "status": "success",
+        "otsu_threshold": 16.0,
+        "mean_difference": 0.9588698572457824
+      },
+      {
+        "test_image": "11_spurious_copper_05.jpg",
+        "defect_type": "Spurious_copper",
+        "status": "success",
+        "otsu_threshold": 15.0,
+        "mean_difference": 0.9588273615889165
+      },
+      {
+        "test_image": "11_spurious_copper_06.jpg",
+        "defect_type": "Spurious_copper",
+        "status": "success",
+        "otsu_threshold": 16.0,
+        "mean_difference": 0.9616513734284404
+      },
+      {
+        "test_image": "11_spurious_copper_07.jpg",
+        "defect_type": "Spurious_copper",
+        "status": "success",
+        "otsu_threshold": 15.0,
+        "mean_difference": 0.9573246137963515
+      },
+      {
+        "test_image": "11_spurious_copper_08.jpg",
+        "defect_type": "Spurious_copper",
+        "status": "success",
+        "otsu_threshold": 15.0,
+        "mean_difference": 0.9675762036797341
+      },
+      {
+        "test_image": "11_spurious_copper_09.jpg",
+        "defect_type": "Spurious_copper",
+        "status": "success",
+        "otsu_threshold": 15.0,
+        "mean_difference": 0.9669590419841495
+      },
+      {
+        "test_image": "11_spurious_copper_10.jpg",
+        "defect_type": "Spurious_copper",
+        "status": "success",
+        "otsu_threshold": 16.0,
+        "mean_difference": 0.9680914147856815
+      },
+      {
+        "test_image": "12_spurious_copper_01.jpg",
+        "defect_type": "Spurious_copper",
+        "status": "success",
+        "otsu_threshold": 11.0,
+        "mean_difference": 1.064785718862773
+      },
+      {
+        "test_image": "12_spurious_copper_02.jpg",
+        "defect_type": "Spurious_copper",
+        "status": "success",
+        "otsu_threshold": 10.0,
+        "mean_difference": 1.0621191022088439
+      },
+      {
+        "test_image": "12_spurious_copper_03.jpg",
+        "defect_type": "Spurious_copper",
+        "status": "success",
+        "otsu_threshold": 10.0,
+        "mean_difference": 1.0598633714524168
+      },
+      {
+        "test_image": "12_spurious_copper_04.jpg",
+        "defect_type": "Spurious_copper",
+        "status": "success",
+        "otsu_threshold": 10.0,
+        "mean_difference": 1.0618166814360532
+      },
+      {
+        "test_image": "12_spurious_copper_05.jpg",
+        "defect_type": "Spurious_copper",
+        "status": "success",
+        "otsu_threshold": 11.0,
+        "mean_difference": 1.0647438331950168
+      },
+      {
+        "test_image": "12_spurious_copper_06.jpg",
+        "defect_type": "Spurious_copper",
+        "status": "success",
+        "otsu_threshold": 10.0,
+        "mean_difference": 1.0633492592644689
+      },
+      {
+        "test_image": "12_spurious_copper_07.jpg",
+        "defect_type": "Spurious_copper",
+        "status": "success",
+        "otsu_threshold": 11.0,
+        "mean_difference": 1.0616471069975635
+      },
+      {
+        "test_image": "12_spurious_copper_08.jpg",
+        "defect_type": "Spurious_copper",
+        "status": "success",
+        "otsu_threshold": 11.0,
+        "mean_difference": 1.0630112044161246
+      },
+      {
+        "test_image": "12_spurious_copper_09.jpg",
+        "defect_type": "Spurious_copper",
+        "status": "success",
+        "otsu_threshold": 10.0,
+        "mean_difference": 1.0664334822775177
+      },
+      {
+        "test_image": "12_spurious_copper_10.jpg",
+        "defect_type": "Spurious_copper",
+        "status": "success",
+        "otsu_threshold": 10.0,
+        "mean_difference": 1.0605512028844846
+      }
+    ],
+    "Missing_hole": [
+      {
+        "test_image": "01_missing_hole_01.jpg",
+        "defect_type": "Missing_hole",
+        "status": "success",
+        "otsu_threshold": 44.0,
+        "mean_difference": 1.3532875830956599
+      },
+      {
+        "test_image": "01_missing_hole_02.jpg",
+        "defect_type": "Missing_hole",
+        "status": "success",
+        "otsu_threshold": 43.0,
+        "mean_difference": 1.3576070611256537
+      },
+      {
+        "test_image": "01_missing_hole_03.jpg",
+        "defect_type": "Missing_hole",
+        "status": "success",
+        "otsu_threshold": 40.0,
+        "mean_difference": 1.3526019945452172
+      },
+      {
+        "test_image": "01_missing_hole_04.jpg",
+        "defect_type": "Missing_hole",
+        "status": "success",
+        "otsu_threshold": 33.0,
+        "mean_difference": 1.3490491537272824
+      },
+      {
+        "test_image": "01_missing_hole_05.jpg",
+        "defect_type": "Missing_hole",
+        "status": "success",
+        "otsu_threshold": 37.0,
+        "mean_difference": 1.368614924092733
+      },
+      {
+        "test_image": "01_missing_hole_06.jpg",
+        "defect_type": "Missing_hole",
+        "status": "success",
+        "otsu_threshold": 42.0,
+        "mean_difference": 1.354370310088023
+      },
+      {
+        "test_image": "01_missing_hole_07.jpg",
+        "defect_type": "Missing_hole",
+        "status": "success",
+        "otsu_threshold": 44.0,
+        "mean_difference": 1.3664621469499518
+      },
+      {
+        "test_image": "01_missing_hole_08.jpg",
+        "defect_type": "Missing_hole",
+        "status": "success",
+        "otsu_threshold": 37.0,
+        "mean_difference": 1.3541043042242562
+      },
+      {
+        "test_image": "01_missing_hole_09.jpg",
+        "defect_type": "Missing_hole",
+        "status": "success",
+        "otsu_threshold": 40.0,
+        "mean_difference": 1.367446992097132
+      },
+      {
+        "test_image": "01_missing_hole_10.jpg",
+        "defect_type": "Missing_hole",
+        "status": "success",
+        "otsu_threshold": 36.0,
+        "mean_difference": 1.3498621341484196
+      },
+      {
+        "test_image": "01_missing_hole_11.jpg",
+        "defect_type": "Missing_hole",
+        "status": "success",
+        "otsu_threshold": 43.0,
+        "mean_difference": 1.3632191613998892
+      },
+      {
+        "test_image": "01_missing_hole_12.jpg",
+        "defect_type": "Missing_hole",
+        "status": "success",
+        "otsu_threshold": 37.0,
+        "mean_difference": 1.3464730531903664
+      },
+      {
+        "test_image": "01_missing_hole_13.jpg",
+        "defect_type": "Missing_hole",
+        "status": "success",
+        "otsu_threshold": 43.0,
+        "mean_difference": 1.359263363261764
+      },
+      {
+        "test_image": "01_missing_hole_14.jpg",
+        "defect_type": "Missing_hole",
+        "status": "success",
+        "otsu_threshold": 33.0,
+        "mean_difference": 1.3481416165342595
+      },
+      {
+        "test_image": "01_missing_hole_15.jpg",
+        "defect_type": "Missing_hole",
+        "status": "success",
+        "otsu_threshold": 40.0,
+        "mean_difference": 1.3486171020157425
+      },
+      {
+        "test_image": "01_missing_hole_16.jpg",
+        "defect_type": "Missing_hole",
+        "status": "success",
+        "otsu_threshold": 41.0,
+        "mean_difference": 1.3532711655462555
+      },
+      {
+        "test_image": "01_missing_hole_17.jpg",
+        "defect_type": "Missing_hole",
+        "status": "success",
+        "otsu_threshold": 39.0,
+        "mean_difference": 1.3554025375296868
+      },
+      {
+        "test_image": "01_missing_hole_18.jpg",
+        "defect_type": "Missing_hole",
+        "status": "success",
+        "otsu_threshold": 39.0,
+        "mean_difference": 1.3513972789262674
+      },
+      {
+        "test_image": "01_missing_hole_19.jpg",
+        "defect_type": "Missing_hole",
+        "status": "success",
+        "otsu_threshold": 35.0,
+        "mean_difference": 1.3519951686684992
+      },
+      {
+        "test_image": "01_missing_hole_20.jpg",
+        "defect_type": "Missing_hole",
+        "status": "success",
+        "otsu_threshold": 36.0,
+        "mean_difference": 1.3492149917579745
+      },
+      {
+        "test_image": "04_missing_hole_01.jpg",
+        "defect_type": "Missing_hole",
+        "status": "success",
+        "otsu_threshold": 41.0,
+        "mean_difference": 1.1036595828092064
+      },
+      {
+        "test_image": "04_missing_hole_02.jpg",
+        "defect_type": "Missing_hole",
+        "status": "success",
+        "otsu_threshold": 38.0,
+        "mean_difference": 1.1010081827531109
+      },
+      {
+        "test_image": "04_missing_hole_03.jpg",
+        "defect_type": "Missing_hole",
+        "status": "success",
+        "otsu_threshold": 37.0,
+        "mean_difference": 1.1019715314136125
+      },
+      {
+        "test_image": "04_missing_hole_04.jpg",
+        "defect_type": "Missing_hole",
+        "status": "success",
+        "otsu_threshold": 34.0,
+        "mean_difference": 1.1003064548344326
+      },
+      {
+        "test_image": "04_missing_hole_05.jpg",
+        "defect_type": "Missing_hole",
+        "status": "success",
+        "otsu_threshold": 40.0,
+        "mean_difference": 1.099298484565173
+      },
+      {
+        "test_image": "04_missing_hole_06.jpg",
+        "defect_type": "Missing_hole",
+        "status": "success",
+        "otsu_threshold": 39.0,
+        "mean_difference": 1.1004533342965934
+      },
+      {
+        "test_image": "04_missing_hole_07.jpg",
+        "defect_type": "Missing_hole",
+        "status": "success",
+        "otsu_threshold": 37.0,
+        "mean_difference": 1.099958379725641
+      },
+      {
+        "test_image": "04_missing_hole_08.jpg",
+        "defect_type": "Missing_hole",
+        "status": "success",
+        "otsu_threshold": 40.0,
+        "mean_difference": 1.100901144013055
+      },
+      {
+        "test_image": "04_missing_hole_09.jpg",
+        "defect_type": "Missing_hole",
+        "status": "success",
+        "otsu_threshold": 34.0,
+        "mean_difference": 1.0988978197032027
+      },
+      {
+        "test_image": "04_missing_hole_10.jpg",
+        "defect_type": "Missing_hole",
+        "status": "success",
+        "otsu_threshold": 36.0,
+        "mean_difference": 1.0981713905368191
+      },
+      {
+        "test_image": "04_missing_hole_11.jpg",
+        "defect_type": "Missing_hole",
+        "status": "success",
+        "otsu_threshold": 41.0,
+        "mean_difference": 1.1011065893367105
+      },
+      {
+        "test_image": "04_missing_hole_12.jpg",
+        "defect_type": "Missing_hole",
+        "status": "success",
+        "otsu_threshold": 29.0,
+        "mean_difference": 1.0981667424525736
+      },
+      {
+        "test_image": "04_missing_hole_13.jpg",
+        "defect_type": "Missing_hole",
+        "status": "success",
+        "otsu_threshold": 26.0,
+        "mean_difference": 1.0962753705718364
+      },
+      {
+        "test_image": "04_missing_hole_14.jpg",
+        "defect_type": "Missing_hole",
+        "status": "success",
+        "otsu_threshold": 29.0,
+        "mean_difference": 1.0974581088087305
+      },
+      {
+        "test_image": "04_missing_hole_15.jpg",
+        "defect_type": "Missing_hole",
+        "status": "success",
+        "otsu_threshold": 39.0,
+        "mean_difference": 1.102308849527436
+      },
+      {
+        "test_image": "04_missing_hole_16.jpg",
+        "defect_type": "Missing_hole",
+        "status": "success",
+        "otsu_threshold": 38.0,
+        "mean_difference": 1.1025164196896036
+      },
+      {
+        "test_image": "04_missing_hole_17.jpg",
+        "defect_type": "Missing_hole",
+        "status": "success",
+        "otsu_threshold": 40.0,
+        "mean_difference": 1.1030131006918473
+      },
+      {
+        "test_image": "04_missing_hole_18.jpg",
+        "defect_type": "Missing_hole",
+        "status": "success",
+        "otsu_threshold": 39.0,
+        "mean_difference": 1.1028359422808867
+      },
+      {
+        "test_image": "04_missing_hole_19.jpg",
+        "defect_type": "Missing_hole",
+        "status": "success",
+        "otsu_threshold": 39.0,
+        "mean_difference": 1.1012566560566397
+      },
+      {
+        "test_image": "04_missing_hole_20.jpg",
+        "defect_type": "Missing_hole",
+        "status": "success",
+        "otsu_threshold": 39.0,
+        "mean_difference": 1.1008797628255254
+      },
+      {
+        "test_image": "05_missing_hole_01.jpg",
+        "defect_type": "Missing_hole",
+        "status": "success",
+        "otsu_threshold": 41.0,
+        "mean_difference": 1.1363953600308048
+      },
+      {
+        "test_image": "05_missing_hole_02.jpg",
+        "defect_type": "Missing_hole",
+        "status": "success",
+        "otsu_threshold": 38.0,
+        "mean_difference": 1.1358106600273041
+      },
+      {
+        "test_image": "05_missing_hole_03.jpg",
+        "defect_type": "Missing_hole",
+        "status": "success",
+        "otsu_threshold": 38.0,
+        "mean_difference": 1.1478866203428197
+      },
+      {
+        "test_image": "05_missing_hole_04.jpg",
+        "defect_type": "Missing_hole",
+        "status": "success",
+        "otsu_threshold": 38.0,
+        "mean_difference": 1.147749698078202
+      },
+      {
+        "test_image": "05_missing_hole_05.jpg",
+        "defect_type": "Missing_hole",
+        "status": "success",
+        "otsu_threshold": 36.0,
+        "mean_difference": 1.1461522108843538
+      },
+      {
+        "test_image": "05_missing_hole_06.jpg",
+        "defect_type": "Missing_hole",
+        "status": "success",
+        "otsu_threshold": 35.0,
+        "mean_difference": 1.1450575620471173
+      },
+      {
+        "test_image": "05_missing_hole_07.jpg",
+        "defect_type": "Missing_hole",
+        "status": "success",
+        "otsu_threshold": 38.0,
+        "mean_difference": 1.1483143428898146
+      },
+      {
+        "test_image": "05_missing_hole_08.jpg",
+        "defect_type": "Missing_hole",
+        "status": "success",
+        "otsu_threshold": 38.0,
+        "mean_difference": 1.144474502922953
+      },
+      {
+        "test_image": "05_missing_hole_09.jpg",
+        "defect_type": "Missing_hole",
+        "status": "success",
+        "otsu_threshold": 32.0,
+        "mean_difference": 1.1427446514626434
+      },
+      {
+        "test_image": "05_missing_hole_10.jpg",
+        "defect_type": "Missing_hole",
+        "status": "success",
+        "otsu_threshold": 39.0,
+        "mean_difference": 1.1510555229810622
+      },
+      {
+        "test_image": "06_missing_hole_01.jpg",
+        "defect_type": "Missing_hole",
+        "status": "success",
+        "otsu_threshold": 42.0,
+        "mean_difference": 1.2141316365686041
+      },
+      {
+        "test_image": "06_missing_hole_02.jpg",
+        "defect_type": "Missing_hole",
+        "status": "success",
+        "otsu_threshold": 37.0,
+        "mean_difference": 1.211646047265641
+      },
+      {
+        "test_image": "06_missing_hole_03.jpg",
+        "defect_type": "Missing_hole",
+        "status": "success",
+        "otsu_threshold": 38.0,
+        "mean_difference": 1.2122089557092375
+      },
+      {
+        "test_image": "06_missing_hole_04.jpg",
+        "defect_type": "Missing_hole",
+        "status": "success",
+        "otsu_threshold": 38.0,
+        "mean_difference": 1.210561481224542
+      },
+      {
+        "test_image": "06_missing_hole_05.jpg",
+        "defect_type": "Missing_hole",
+        "status": "success",
+        "otsu_threshold": 40.0,
+        "mean_difference": 1.213183469310575
+      },
+      {
+        "test_image": "06_missing_hole_06.jpg",
+        "defect_type": "Missing_hole",
+        "status": "success",
+        "otsu_threshold": 38.0,
+        "mean_difference": 1.2182889389921063
+      },
+      {
+        "test_image": "06_missing_hole_07.jpg",
+        "defect_type": "Missing_hole",
+        "status": "success",
+        "otsu_threshold": 41.0,
+        "mean_difference": 1.214850214263519
+      },
+      {
+        "test_image": "06_missing_hole_08.jpg",
+        "defect_type": "Missing_hole",
+        "status": "success",
+        "otsu_threshold": 40.0,
+        "mean_difference": 1.2136447561442683
+      },
+      {
+        "test_image": "06_missing_hole_09.jpg",
+        "defect_type": "Missing_hole",
+        "status": "success",
+        "otsu_threshold": 41.0,
+        "mean_difference": 1.213742764541375
+      },
+      {
+        "test_image": "06_missing_hole_10.jpg",
+        "defect_type": "Missing_hole",
+        "status": "success",
+        "otsu_threshold": 39.0,
+        "mean_difference": 1.2149486743122249
+      },
+      {
+        "test_image": "07_missing_hole_01.jpg",
+        "defect_type": "Missing_hole",
+        "status": "success",
+        "otsu_threshold": 38.0,
+        "mean_difference": 1.0491977892597835
+      },
+      {
+        "test_image": "07_missing_hole_02.jpg",
+        "defect_type": "Missing_hole",
+        "status": "success",
+        "otsu_threshold": 40.0,
+        "mean_difference": 1.0466399717204222
+      },
+      {
+        "test_image": "07_missing_hole_03.jpg",
+        "defect_type": "Missing_hole",
+        "status": "success",
+        "otsu_threshold": 37.0,
+        "mean_difference": 1.0499825762236439
+      },
+      {
+        "test_image": "07_missing_hole_04.jpg",
+        "defect_type": "Missing_hole",
+        "status": "success",
+        "otsu_threshold": 34.0,
+        "mean_difference": 1.0448117300017352
+      },
+      {
+        "test_image": "07_missing_hole_05.jpg",
+        "defect_type": "Missing_hole",
+        "status": "success",
+        "otsu_threshold": 39.0,
+        "mean_difference": 1.0473636320614694
+      },
+      {
+        "test_image": "07_missing_hole_06.jpg",
+        "defect_type": "Missing_hole",
+        "status": "success",
+        "otsu_threshold": 39.0,
+        "mean_difference": 1.0505456223299676
+      },
+      {
+        "test_image": "07_missing_hole_07.jpg",
+        "defect_type": "Missing_hole",
+        "status": "success",
+        "otsu_threshold": 34.0,
+        "mean_difference": 1.0470960014225832
+      },
+      {
+        "test_image": "07_missing_hole_08.jpg",
+        "defect_type": "Missing_hole",
+        "status": "success",
+        "otsu_threshold": 37.0,
+        "mean_difference": 1.045184046704325
+      },
+      {
+        "test_image": "07_missing_hole_09.jpg",
+        "defect_type": "Missing_hole",
+        "status": "success",
+        "otsu_threshold": 37.0,
+        "mean_difference": 1.047118946313258
+      },
+      {
+        "test_image": "07_missing_hole_10.jpg",
+        "defect_type": "Missing_hole",
+        "status": "success",
+        "otsu_threshold": 37.0,
+        "mean_difference": 1.0506671585477605
+      },
+      {
+        "test_image": "08_missing_hole_01.jpg",
+        "defect_type": "Missing_hole",
+        "status": "success",
+        "otsu_threshold": 35.0,
+        "mean_difference": 1.1658352524345916
+      },
+      {
+        "test_image": "08_missing_hole_02.jpg",
+        "defect_type": "Missing_hole",
+        "status": "success",
+        "otsu_threshold": 38.0,
+        "mean_difference": 1.1695275662363371
+      },
+      {
+        "test_image": "08_missing_hole_03.jpg",
+        "defect_type": "Missing_hole",
+        "status": "success",
+        "otsu_threshold": 34.0,
+        "mean_difference": 1.164874776329211
+      },
+      {
+        "test_image": "08_missing_hole_04.jpg",
+        "defect_type": "Missing_hole",
+        "status": "success",
+        "otsu_threshold": 31.0,
+        "mean_difference": 1.1523387795088111
+      },
+      {
+        "test_image": "08_missing_hole_05.jpg",
+        "defect_type": "Missing_hole",
+        "status": "success",
+        "otsu_threshold": 34.0,
+        "mean_difference": 1.1643859565874224
+      },
+      {
+        "test_image": "08_missing_hole_06.jpg",
+        "defect_type": "Missing_hole",
+        "status": "success",
+        "otsu_threshold": 37.0,
+        "mean_difference": 1.1678613724039129
+      },
+      {
+        "test_image": "08_missing_hole_07.jpg",
+        "defect_type": "Missing_hole",
+        "status": "success",
+        "otsu_threshold": 35.0,
+        "mean_difference": 1.1689100211580703
+      },
+      {
+        "test_image": "08_missing_hole_08.jpg",
+        "defect_type": "Missing_hole",
+        "status": "success",
+        "otsu_threshold": 37.0,
+        "mean_difference": 1.1670301264402514
+      },
+      {
+        "test_image": "08_missing_hole_09.jpg",
+        "defect_type": "Missing_hole",
+        "status": "success",
+        "otsu_threshold": 37.0,
+        "mean_difference": 1.1659145068574426
+      },
+      {
+        "test_image": "08_missing_hole_10.jpg",
+        "defect_type": "Missing_hole",
+        "status": "success",
+        "otsu_threshold": 34.0,
+        "mean_difference": 1.1512426790619912
+      },
+      {
+        "test_image": "09_missing_hole_01.jpg",
+        "defect_type": "Missing_hole",
+        "status": "success",
+        "otsu_threshold": 37.0,
+        "mean_difference": 1.1033322901409979
+      },
+      {
+        "test_image": "09_missing_hole_02.jpg",
+        "defect_type": "Missing_hole",
+        "status": "success",
+        "otsu_threshold": 35.0,
+        "mean_difference": 1.1061085170395035
+      },
+      {
+        "test_image": "09_missing_hole_03.jpg",
+        "defect_type": "Missing_hole",
+        "status": "success",
+        "otsu_threshold": 36.0,
+        "mean_difference": 1.1055957671427796
+      },
+      {
+        "test_image": "09_missing_hole_04.jpg",
+        "defect_type": "Missing_hole",
+        "status": "success",
+        "otsu_threshold": 41.0,
+        "mean_difference": 1.1189032293061936
+      },
+      {
+        "test_image": "09_missing_hole_05.jpg",
+        "defect_type": "Missing_hole",
+        "status": "success",
+        "otsu_threshold": 36.0,
+        "mean_difference": 1.1099574794804068
+      },
+      {
+        "test_image": "09_missing_hole_06.jpg",
+        "defect_type": "Missing_hole",
+        "status": "success",
+        "otsu_threshold": 36.0,
+        "mean_difference": 1.1115896999361565
+      },
+      {
+        "test_image": "09_missing_hole_07.jpg",
+        "defect_type": "Missing_hole",
+        "status": "success",
+        "otsu_threshold": 36.0,
+        "mean_difference": 1.1194670538996616
+      },
+      {
+        "test_image": "09_missing_hole_08.jpg",
+        "defect_type": "Missing_hole",
+        "status": "success",
+        "otsu_threshold": 32.0,
+        "mean_difference": 1.1012479083993674
+      },
+      {
+        "test_image": "09_missing_hole_09.jpg",
+        "defect_type": "Missing_hole",
+        "status": "success",
+        "otsu_threshold": 36.0,
+        "mean_difference": 1.1030632299738368
+      },
+      {
+        "test_image": "09_missing_hole_10.jpg",
+        "defect_type": "Missing_hole",
+        "status": "success",
+        "otsu_threshold": 38.0,
+        "mean_difference": 1.1061944760879452
+      },
+      {
+        "test_image": "10_missing_hole_01.jpg",
+        "defect_type": "Missing_hole",
+        "status": "success",
+        "otsu_threshold": 39.0,
+        "mean_difference": 1.2072801516439908
+      },
+      {
+        "test_image": "10_missing_hole_02.jpg",
+        "defect_type": "Missing_hole",
+        "status": "success",
+        "otsu_threshold": 37.0,
+        "mean_difference": 1.2020312942885487
+      },
+      {
+        "test_image": "10_missing_hole_03.jpg",
+        "defect_type": "Missing_hole",
+        "status": "success",
+        "otsu_threshold": 43.0,
+        "mean_difference": 1.2405406303146258
+      },
+      {
+        "test_image": "10_missing_hole_04.jpg",
+        "defect_type": "Missing_hole",
+        "status": "success",
+        "otsu_threshold": 38.0,
+        "mean_difference": 1.2280784970238094
+      },
+      {
+        "test_image": "10_missing_hole_05.jpg",
+        "defect_type": "Missing_hole",
+        "status": "success",
+        "otsu_threshold": 43.0,
+        "mean_difference": 1.2676680307539683
+      },
+      {
+        "test_image": "11_missing_hole_01.jpg",
+        "defect_type": "Missing_hole",
+        "status": "success",
+        "otsu_threshold": 39.0,
+        "mean_difference": 1.0288978264056317
+      },
+      {
+        "test_image": "11_missing_hole_02.jpg",
+        "defect_type": "Missing_hole",
+        "status": "success",
+        "otsu_threshold": 38.0,
+        "mean_difference": 1.0209209237698091
+      },
+      {
+        "test_image": "11_missing_hole_03.jpg",
+        "defect_type": "Missing_hole",
+        "status": "success",
+        "otsu_threshold": 36.0,
+        "mean_difference": 1.024396210790934
+      },
+      {
+        "test_image": "11_missing_hole_04.jpg",
+        "defect_type": "Missing_hole",
+        "status": "success",
+        "otsu_threshold": 37.0,
+        "mean_difference": 1.0230088640482065
+      },
+      {
+        "test_image": "11_missing_hole_05.jpg",
+        "defect_type": "Missing_hole",
+        "status": "success",
+        "otsu_threshold": 35.0,
+        "mean_difference": 1.0129849573172063
+      },
+      {
+        "test_image": "11_missing_hole_06.jpg",
+        "defect_type": "Missing_hole",
+        "status": "success",
+        "otsu_threshold": 37.0,
+        "mean_difference": 1.015706433764476
+      },
+      {
+        "test_image": "11_missing_hole_07.jpg",
+        "defect_type": "Missing_hole",
+        "status": "success",
+        "otsu_threshold": 36.0,
+        "mean_difference": 0.9800631041011038
+      },
+      {
+        "test_image": "11_missing_hole_08.jpg",
+        "defect_type": "Missing_hole",
+        "status": "success",
+        "otsu_threshold": 38.0,
+        "mean_difference": 1.0014883226613354
+      },
+      {
+        "test_image": "11_missing_hole_09.jpg",
+        "defect_type": "Missing_hole",
+        "status": "success",
+        "otsu_threshold": 39.0,
+        "mean_difference": 1.003505306888819
+      },
+      {
+        "test_image": "11_missing_hole_10.jpg",
+        "defect_type": "Missing_hole",
+        "status": "success",
+        "otsu_threshold": 37.0,
+        "mean_difference": 1.0050758917850047
+      },
+      {
+        "test_image": "12_missing_hole_01.jpg",
+        "defect_type": "Missing_hole",
+        "status": "success",
+        "otsu_threshold": 38.0,
+        "mean_difference": 1.0658086356368888
+      },
+      {
+        "test_image": "12_missing_hole_02.jpg",
+        "defect_type": "Missing_hole",
+        "status": "success",
+        "otsu_threshold": 38.0,
+        "mean_difference": 1.067065049379764
+      },
+      {
+        "test_image": "12_missing_hole_03.jpg",
+        "defect_type": "Missing_hole",
+        "status": "success",
+        "otsu_threshold": 38.0,
+        "mean_difference": 1.072290911591546
+      },
+      {
+        "test_image": "12_missing_hole_04.jpg",
+        "defect_type": "Missing_hole",
+        "status": "success",
+        "otsu_threshold": 44.0,
+        "mean_difference": 1.0690327380254658
+      },
+      {
+        "test_image": "12_missing_hole_05.jpg",
+        "defect_type": "Missing_hole",
+        "status": "success",
+        "otsu_threshold": 40.0,
+        "mean_difference": 1.0712215767453273
+      },
+      {
+        "test_image": "12_missing_hole_06.jpg",
+        "defect_type": "Missing_hole",
+        "status": "success",
+        "otsu_threshold": 40.0,
+        "mean_difference": 1.0672602553462835
+      },
+      {
+        "test_image": "12_missing_hole_07.jpg",
+        "defect_type": "Missing_hole",
+        "status": "success",
+        "otsu_threshold": 41.0,
+        "mean_difference": 1.0682195621697401
+      },
+      {
+        "test_image": "12_missing_hole_08.jpg",
+        "defect_type": "Missing_hole",
+        "status": "success",
+        "otsu_threshold": 39.0,
+        "mean_difference": 1.068127976343975
+      },
+      {
+        "test_image": "12_missing_hole_09.jpg",
+        "defect_type": "Missing_hole",
+        "status": "success",
+        "otsu_threshold": 40.0,
+        "mean_difference": 1.067049576689063
+      },
+      {
+        "test_image": "12_missing_hole_10.jpg",
+        "defect_type": "Missing_hole",
+        "status": "success",
+        "otsu_threshold": 41.0,
+        "mean_difference": 1.0686871812664789
+      }
+    ]
+  }
+}
