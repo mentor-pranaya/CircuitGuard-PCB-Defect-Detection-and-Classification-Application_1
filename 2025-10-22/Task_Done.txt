@@ -1,3 +1,0 @@
-Hello Mam'm 👋,
-  My work today involved implementing 
-  Finished the data preparation for classification by running contour detection, cropping over 3,000 defects, and saving them as labeled 128×128 images for the EfficientNet model.😊
