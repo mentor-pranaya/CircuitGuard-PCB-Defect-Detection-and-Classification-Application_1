@@ -12,3 +12,8 @@ template image i.e the Golden PCB and the test image i.e the PCB with defects.
 21/10/2025
 Finished pre-processing the images.
 applied image subtraction and otsu thresholding.
+
+22/10/2025
+Started doing contouring on the output from image subtraction. 
+
+
