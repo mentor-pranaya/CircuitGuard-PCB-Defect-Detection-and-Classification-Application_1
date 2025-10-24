@@ -1,0 +1,2 @@
+Hello mam,
+  My work today involve implementing and Finish the data preparation for classification by performing contour detection,covers 3,000 defects, and save them as labeled 128×128 images for the model.

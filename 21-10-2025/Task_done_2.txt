@@ -1,0 +1,3 @@
+Hello mam
+  My work today involve implement
+  image subtraction and Otsu's thresholding to generate the final defect mask images for the different defects.

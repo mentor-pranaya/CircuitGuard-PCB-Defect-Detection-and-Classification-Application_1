@@ -1,0 +1,4 @@
+Hello mam,
+  My work today involved implementing 
+  a template-matching approach for PCB defect detection using two test images.
+ 
