@@ -1,0 +1,20 @@
+CircuitGuard Project Progress Log (Milestone 1)
+
+14th Oct (Mon):
+Module 1: Got the DeepPCB data ready, unpacked it, and checked how the folders are set up.
+
+15th Oct (Tue):
+Module 1: Wrote a Python script to load the pictures, turn them gray, and make sure the template and test pictures are the exact same size.
+
+17th Oct (Thu):
+Module 1: Compared the test picture against the good template picture, pixel by pixel, to find the exact spots where a problem (defect) might be.
+
+18th Oct (Fri):
+Module 1 (Done): Used Otsu's Thresholding to turn the difference picture into a clean black-and-white mask. Then used cleaning filters (Dilation/Erosion) to remove any tiny spots of noise. The first step of defect detection is complete.
+
+22nd Oct (Tue):
+Module 2: Used the contour-finding code to draw lines around the edges of every single defect in the mask.
+
+23rd Oct (Wed):
+Module 2: Started ROI Extraction. Worked on finding the box around each defect (Bounding Box) and cutting out these small defect pictures.
+
