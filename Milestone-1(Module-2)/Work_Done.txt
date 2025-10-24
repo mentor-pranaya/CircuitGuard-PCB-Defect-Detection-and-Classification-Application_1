@@ -1,0 +1,15 @@
+Hello Ma'am 👋,
+
+I have successfully completed the tasks for Milestone 1, Module 2: Contour Detection and ROI Extraction. This crucial module finalized the data preparation phase by transforming the detected defects into the structured dataset needed for CNN training.
+
+Key Steps and Deliverables:
+
+  --Contour Detection: I used the Defect Masks (from Module 1) to run OpenCV's contour detection, which accurately determined the precise perimeter and boundaries of every individual anomaly.
+
+  --ROI Extraction and Cropping: Using the boundary coordinates, I calculated a bounding box and then cropped the specific defect area from the original color test image.
+
+  --Standardization and Labeling: I resized all cropped patches to a uniform 128 x 128 (the required input size for EfficientNet-B4) and automatically labeled them based on their source folder.
+
+  --Deliverable: The script successfully extracted and saved over 3,000 final, labeled, and standardized image patches into a folder.
+
+😊
