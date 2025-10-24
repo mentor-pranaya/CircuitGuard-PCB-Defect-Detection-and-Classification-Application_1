@@ -1,2 +1,5 @@
 10/17/2025-exploring the given dataset
 10/18/2025-applying preprocessing steps to the given dataset
+10/19/2025-working on subtraction part
+10/20/2025-implementation of code for image subtraction
+10/22/2025-working on Contour Detection
