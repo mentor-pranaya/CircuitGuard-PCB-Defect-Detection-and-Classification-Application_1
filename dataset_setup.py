@@ -1,139 +1,119 @@
 import os
 import cv2
-import csv
 import numpy as np
 import matplotlib.pyplot as plt
 
-#PATH SETUP 
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-TEMPLATE_ROOT = os.path.join(BASE_DIR, "..", "template")
-TEST_DIR = os.path.join(BASE_DIR, "..", "test")
-OUTPUT_ROOT = os.path.join(BASE_DIR, "..", "output")
-ROI_ROOT = os.path.join(OUTPUT_ROOT, "rois")
+# ===========================================
+#  MODULE 1: PROCESS ALL IMAGE PAIRS
+# ===========================================
 
-os.makedirs(OUTPUT_ROOT, exist_ok=True)
-os.makedirs(ROI_ROOT, exist_ok=True)
-
-#  MODULE 1: IMAGE PREPROCESSING & SUBTRACTION 
-
-def align_images(template, image):
-    """Optional feature-based alignment using ORB."""
-    orb = cv2.ORB_create(2000)
-    k1, d1 = orb.detectAndCompute(template, None)
-    k2, d2 = orb.detectAndCompute(image, None)
-    if d1 is None or d2 is None:
-        return image
-    bf = cv2.BFMatcher(cv2.NORM_HAMMING)
-    matches = bf.knnMatch(d1, d2, k=2)
-    good = []
-    for m, n in matches:
-        if m.distance < 0.75 * n.distance:
-            good.append(m)
-    if len(good) > 10:
-        src_pts = np.float32([k1[m.queryIdx].pt for m in good]).reshape(-1, 1, 2)
-        dst_pts = np.float32([k2[m.trainIdx].pt for m in good]).reshape(-1, 1, 2)
-        M, _ = cv2.findHomography(dst_pts, src_pts, cv2.RANSAC, 5.0)
-        h, w = template.shape
-        aligned = cv2.warpPerspective(image, M, (w, h))
-        return aligned
-    return image
+base_dir = os.path.dirname(os.path.abspath(__file__))  # points to scripts/
+template_root = os.path.join(base_dir, "..", "template")  # go up 1 level to AI_PCB/template
+test_dir = os.path.join(base_dir, "..", "test")          # go up 1 level to AI_PCB/test
+output_root = os.path.join(base_dir, "..", "output")     # go up 1 level to AI_PCB/output
 
 
-def process_pair(template_path, test_path, out_mask_path, kernel_size=(3,3)):
-    """Compute subtraction mask between template and test images."""
-    templ = cv2.imread(template_path, cv2.IMREAD_GRAYSCALE)
-    test = cv2.imread(test_path, cv2.IMREAD_GRAYSCALE)
-    if templ is None or test is None:
-        raise ValueError(f"Error reading {template_path} or {test_path}")
+# ✅ Ensure directories exist
+if not os.path.exists(template_root):
+    raise FileNotFoundError(f"❌ Template folder not found: {template_root}")
+if not os.path.exists(test_dir):
+    raise FileNotFoundError(f"❌ Test folder not found: {test_dir}")
+os.makedirs(output_root, exist_ok=True)
 
-    test = cv2.resize(test, (templ.shape[1], templ.shape[0]))
-    test = align_images(templ, test)
+# ✅ Collect defect folders
+defect_folders = [f for f in os.listdir(template_root) if os.path.isdir(os.path.join(template_root, f))]
+if not defect_folders:
+    raise ValueError("⚠️ No defect subfolders found inside template!")
 
-    # Gaussian blur
-    templ_b = cv2.GaussianBlur(templ, (5,5), 0)
-    test_b  = cv2.GaussianBlur(test, (5,5), 0)
+print(f"✅ Found defect types: {defect_folders}")
+print("🔄 Starting batch processing...")
 
-    # Absolute difference
-    diff = cv2.absdiff(templ_b, test_b)
+# Loop through each defect category
+for defect in defect_folders:
+    defect_path = os.path.join(template_root, defect)
+    output_dir = os.path.join(output_root, defect)
+    os.makedirs(output_dir, exist_ok=True)
 
-    # Contrast enhancement
-    clahe = cv2.createCLAHE(clipLimit=2.0, tileGridSize=(8,8))
-    diff_cl = clahe.apply(diff)
+    template_images = sorted([
+        f for f in os.listdir(defect_path)
+        if f.lower().endswith(('.jpg', '.jpeg', '.png'))
+    ])
+    test_images = sorted([
+        f for f in os.listdir(test_dir)
+        if f.lower().endswith(('.jpg', '.jpeg', '.png'))
+    ])
 
-    # Otsu thresholding
-    _, th = cv2.threshold(diff_cl, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)
+    if not template_images or not test_images:
+        print(f"⚠️ Skipping {defect}: missing images.")
+        continue
 
-    # Morphological cleaning
-    kernel = cv2.getStructuringElement(cv2.MORPH_RECT, kernel_size)
-    mask = cv2.morphologyEx(th, cv2.MORPH_OPEN, kernel, iterations=1)
-    mask = cv2.morphologyEx(mask, cv2.MORPH_CLOSE, kernel, iterations=1)
+    # Process each template image (paired by index)
+    for idx, temp_name in enumerate(template_images):
+        if idx >= len(test_images):
+            break
 
-    cv2.imwrite(out_mask_path, mask)
-    return templ, test, diff, mask
+        temp_path = os.path.join(defect_path, temp_name)
+        test_path = os.path.join(test_dir, test_images[idx])
 
+        template = cv2.imread(temp_path, cv2.IMREAD_GRAYSCALE)
+        test = cv2.imread(test_path, cv2.IMREAD_GRAYSCALE)
 
-#  MODULE 2: CONTOUR DETECTION & ROI EXTRACTION
-
-def extract_rois_from_mask(mask, orig_image, min_area=80, pad=8):
-    contours, _ = cv2.findContours(mask, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
-    rois = []
-    for cnt in contours:
-        area = cv2.contourArea(cnt)
-        if area < min_area:
+        if template is None or test is None:
+            print(f"⚠️ Error reading pair {temp_name} / {test_images[idx]}")
             continue
-        x, y, w, h = cv2.boundingRect(cnt)
-        # pad and clip
-        x1 = max(0, x - pad)
-        y1 = max(0, y - pad)
-        x2 = min(orig_image.shape[1], x + w + pad)
-        y2 = min(orig_image.shape[0], y + h + pad)
-        roi = orig_image[y1:y2, x1:x2].copy()
-        rois.append(((x1, y1, x2, y2), roi, area))
-    return rois
 
+        # Resize test to match template
+        test = cv2.resize(test, (template.shape[1], template.shape[0]))
 
-def run_pipeline():
-    """Runs Module 1 + 2 together."""
-    categories = [d for d in os.listdir(TEMPLATE_ROOT) if os.path.isdir(os.path.join(TEMPLATE_ROOT, d))]
-    csv_path = os.path.join(ROI_ROOT, "rois_metadata.csv")
+        # Gaussian blur
+        template_blur = cv2.GaussianBlur(template, (5, 5), 0)
+        test_blur = cv2.GaussianBlur(test, (5, 5), 0)
 
-    with open(csv_path, "w", newline="") as f:
-        writer = csv.writer(f)
-        writer.writerow(["category", "mask_path", "test_image", "roi_name", "x1", "y1", "x2", "y2", "area"])
+        # Subtraction
+        diff = cv2.absdiff(template_blur, test_blur)
 
-        for cat in categories:
-            print(f"\n=== Processing category: {cat} ===")
-            t_dir = os.path.join(TEMPLATE_ROOT, cat)
-            test_imgs = sorted([f for f in os.listdir(TEST_DIR) if f.lower().endswith(('.jpg','.png','.jpeg'))])
-            t_imgs = sorted([f for f in os.listdir(t_dir) if f.lower().endswith(('.jpg','.png','.jpeg'))])
+        # Otsu Thresholding
+        _, thresh = cv2.threshold(diff, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)
 
-            out_cat = os.path.join(OUTPUT_ROOT, cat)
-            os.makedirs(out_cat, exist_ok=True)
-            roi_cat = os.path.join(ROI_ROOT, cat)
-            os.makedirs(roi_cat, exist_ok=True)
+        # Morphological filtering
+        kernel = cv2.getStructuringElement(cv2.MORPH_RECT, (3, 3))
+        mask = cv2.morphologyEx(thresh, cv2.MORPH_OPEN, kernel)
+        mask = cv2.morphologyEx(mask, cv2.MORPH_CLOSE, kernel)
 
-            for i, tname in enumerate(t_imgs):
-                if i >= len(test_imgs):
-                    break
-                tpath = os.path.join(t_dir, tname)
-                testpath = os.path.join(TEST_DIR, test_imgs[i])
-                mask_path = os.path.join(out_cat, f"mask_{i+1:03d}.png")
+        # Save output
+        output_name = f"mask_{idx+1:03d}.png"
+        output_path = os.path.join(output_dir, output_name)
+        cv2.imwrite(output_path, mask)
 
-                templ, test, diff, mask = process_pair(tpath, testpath, mask_path)
-                print(f"  -> Saved mask: {mask_path}")
+        print(f"✅ Saved: {output_path}")
 
-                # ROI extraction
-                rois = extract_rois_from_mask(mask, test, min_area=100, pad=10)
-                for j, (bbox, roi_img, area) in enumerate(rois):
-                    roi_name = f"{os.path.splitext(tname)[0]}_roi_{j+1:02d}.png"
-                    roi_path = os.path.join(roi_cat, roi_name)
-                    cv2.imwrite(roi_path, roi_img)
-                    x1, y1, x2, y2 = bbox
-                    writer.writerow([cat, mask_path, test_imgs[i], roi_name, x1, y1, x2, y2, area])
+print("\n🎯 All image pairs processed successfully!")
+print(f"🗂️ Output masks stored in: {output_root}")
 
-    print("\n✅ Pipeline complete.")
-    print(f"ROI metadata saved at: {csv_path}")
+# ===========================================
+# Optional: Show 1 sample from each defect type
+# ===========================================
+for defect in defect_folders:
+    sample_dir = os.path.join(output_root, defect)
+    masks = sorted([f for f in os.listdir(sample_dir) if f.lower().endswith('.png')])
+    template_images = sorted([f for f in os.listdir(os.path.join(template_root, defect)) if f.lower().endswith(('.jpg', '.jpeg', '.png'))])
+    test_images = sorted([f for f in os.listdir(test_dir) if f.lower().endswith(('.jpg', '.jpeg', '.png'))])
 
+    if not masks or not template_images or not test_images:
+        continue
 
-if __name__ == "__main__":
-    run_pipeline()
+    mask_path = os.path.join(sample_dir, masks[0])
+    temp_path = os.path.join(template_root, defect, template_images[0])
+    test_path = os.path.join(test_dir, test_images[0])
+
+    template = cv2.imread(temp_path, cv2.IMREAD_GRAYSCALE)
+    test = cv2.imread(test_path, cv2.IMREAD_GRAYSCALE)
+    mask = cv2.imread(mask_path, cv2.IMREAD_GRAYSCALE)
+
+    plt.figure(figsize=(10, 4))
+    plt.suptitle(f"Defect Type: {defect}", fontsize=14)
+    plt.subplot(1, 3, 1); plt.imshow(template, cmap='gray'); plt.title('Template'); plt.axis('off')
+    plt.subplot(1, 3, 2); plt.imshow(test, cmap='gray'); plt.title('Test'); plt.axis('off')
+    plt.subplot(1, 3, 3); plt.imshow(mask, cmap='gray'); plt.title('Defect Mask'); plt.axis('off')
+    plt.tight_layout()
+    plt.show()
