@@ -16,4 +16,5 @@ applied image subtraction and otsu thresholding.
 22/10/2025
 Started doing contouring on the output from image subtraction. 
 
-
+24/10/2025
+I've finished contouring and roi extraction and have uploaded the file on git.
