@@ -1,0 +1,14 @@
+Hello Ma'am 👋,
+
+I have successfully completed the tasks for Milestone 1, Module 1: Image Preprocessing and Subtraction using the project code. This module achieved the crucial goal of defect detection and localization across the entire DeepPCB dataset.
+
+Key Steps and Deliverables:
+  --Automated Data Pairing: I structured the code to automatically loop through all test images and correctly pair each one with its defect-free template image (e.g., matching the 01 group test image with the 01 template).
+
+  --Image Alignment (Critical Step): I implemented an image registration technique using OpenCV’s ORB features and Homography to precisely align every test image. This step is vital to prevent false defects caused by camera shifts.
+
+  --Defect Localization: I performed absolute image subtraction between the aligned images. This difference map was then processed using Otsu Thresholding to create a sharp, binary image called the Defect Mask. This mask successfully isolated the defect regions as clear white spots.
+
+  --Deliverable: The script automatically generated and saved every single Defect Mask into categorized folders, fulfilling the requirement for accurate defect mask generation.
+
+😊
