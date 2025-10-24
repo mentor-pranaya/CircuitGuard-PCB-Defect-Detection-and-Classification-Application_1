@@ -1,5 +1,16 @@
 # My Project Learning Log 📝
 
+## October 24, 2025
+
+* **Objective:** Extracted individual defect regions from binary masks using contour detection for model training preparation.
+* **Key Learnings:**
+    * **Contour Detection:** Used cv2.findContours() to detect boundaries of defect regions in binary masks - each white region produces one contour representing the defect outline.
+    * **Bounding Box Extraction:** Applied cv2.boundingRect() to get rectangular coordinates (x, y, width, height) around each contour for precise defect localization.
+    * **ROI Cropping:** Extracted individual defect regions from original test images using bounding box coordinates with 10-pixel padding for context preservation.
+    * **Image Resizing:** Resized all cropped defects to standardized 128×128 pixel dimensions required for EfficientNet model input.
+    * **Noise Filtering:** Implemented minimum area threshold (50 pixels) to filter out small noise artifacts and focus only on actual defect regions.
+    * **Batch Processing Setup:** Prepared automated pipeline to process all 694 masks and extract individual defect ROIs organized by category in defect_crops/ folder.
+
 ## October 23, 2025
 
 * **Objective:** Finalized processing outputs and uploaded notebook to repository.
