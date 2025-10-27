@@ -3,7 +3,7 @@ import cv2
 import numpy as np
 
 TEMPLATE_ROOT = 'PCB_USED' 
-DEFECT_ROOT = 'images'     # Changed from '.' to 'images'
+DEFECT_ROOT = 'images'     
 OUTPUT_DIR = 'Result' 
 
 def align_and_subtract_grayscale(template_path, test_path, max_features=500, good_match_percent=0.15):
