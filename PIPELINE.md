@@ -1,5 +1,19 @@
 # My Project Learning Log 📝
 
+## October 29, 2025
+
+* **Objective:** Prepared for Module 3 implementation by studying EfficientNet-B4 architecture and model training requirements.
+
+* **Key Learnings:**
+
+    * **EfficientNet-B4 Architecture:** Studied Google's efficient CNN architecture with 19M parameters using compound scaling to balance depth, width, and resolution. Features MBConv blocks with squeeze-and-excitation mechanisms and Swish activation for optimal performance on 380×380 images achieving 82.9% ImageNet accuracy.
+    
+    * **Model Selection - B4 vs B0-B3:** B0-B3 variants (5.3M-12M params) are too simple for complex PCB defect patterns and would underfit our ~3,200 image dataset. B4's 19M parameters provide optimal feature extraction depth matching our dataset size perfectly for transfer learning.
+    
+    * **Model Selection - B4 vs B5-B7:** B5-B7 variants (30M-66M params) would overfit our dataset and exceed Colab GPU memory limits with 6+ hour training times. B4 offers best accuracy-efficiency trade-off with manageable 2-3 hour training.
+    
+    * **Model Inputs:** Two primary inputs required - image tensors of shape (batch_size, 3, 128, 128) after converting grayscale ROIs to RGB and normalizing, plus label tensors of shape (batch_size,) containing integer class indices (0-5) for six defect categories.
+    
 ## October 24, 2025
 
 * **Objective:** Extracted individual defect regions from binary masks using contour detection for model training preparation.
