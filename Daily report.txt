@@ -5,3 +5,5 @@
 10/22/2025-working on Contour Detection
 10/23/2025-working ROI-extraction
 10/24/2025-fixing the error  in the results of roi-extraction
+10/28/2025-Analysing on Model Training with EfficientNet
+
