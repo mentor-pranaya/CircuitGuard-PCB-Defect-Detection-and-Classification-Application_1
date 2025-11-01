@@ -1,0 +1,14 @@
+Hello Ma'am 👋
+
+I have successfully completed Milestone 2, Module 3: EfficientNet Model Training this week.
+
+Key Steps and Deliverables:
+
+  --PyTorch Setup and Training: Set up the PyTorch environment and ran the training loop for the EfficientNet-B4 model using prepared 128×128 defect images.
+  --Model Building: Successfully built and trained the EfficientNet-B4 architecture to learn features from the defect dataset.
+  --Performance Validation: The validation accuracy rapidly increased during training and meets/exceeds the ≥97% accuracy target.
+  --Model Saving: Generated and saved the file best_efficientnet_b4.pth, which contains the model weights for defect classification.
+
+This module created the application's "brain"—the trained model file that will be used for classifying defects in the final deployment stage later.
+
+😊 
