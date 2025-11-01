@@ -1,0 +1,20 @@
+Hello Ma'am 👋
+
+During Milestone 2, Module 3: EfficientNet Model Training, I encountered and resolved a major technical issue.
+
+The Problem:
+
+  --Windows DLL Initialization Failure: The PyTorch library couldn’t load due to a system-level error.
+  --Error Code: OSError: [WinError 1114] DLL initialization routine failed (torch\lib\c10.dll).
+  --Cause: The issue was traced to missing/corrupted graphics dependencies on Windows, which affected PyTorch even in CPU-only mode and blocked our entire training pipeline.
+
+My Solution (The Data Link Layer Fix):
+
+  --Isolation: Created a clean Python virtual environment (circuitguard_env) to isolate from system-wide conflicts.
+  --Clean Install: Installed CPU-only PyTorch inside this new environment, avoiding any GPU library issues.
+  --Kernel Link: Manually linked the VS Code kernel to our clean environment.
+  --Result: This resolved the environment conflict and allowed the training code to run successfully.
+
+This disrupted our workflow initially, but the fix established a stable "data link layer" between My code and all required libraries. Training was then completed without further issues.
+
+😊 
