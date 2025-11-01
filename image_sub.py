@@ -15,7 +15,6 @@ class PCBDefectPreprocessor:
         self.templates = ['01','04','05','06','07','08','09','10','11','12']
 
 def preprocess(self, img):
-        """Resize, denoise, and improve contrast."""
         gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
         resized = cv2.resize(gray, (512, 512))
         blurred = cv2.medianBlur(resized, 3)
