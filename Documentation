@@ -13,3 +13,10 @@
 17-10-2025 (Friday)
                 Dataset preprocessing started,
                 Began analysing the dataset.
+18th Oct (saturday)
+                Applied Otsu’s Thresholding and morphological filters (dilation, erosion) to generate a clean binary defect 
+                mask for initial defect detection.
+22nd Oct (Tuesday)
+                Used OpenCV contour detection to outline each defect in the binary mask.
+23rd Oct (Wednesday)  
+                Implemented bounding box extraction to crop and save Regions of Interest (ROIs) for each detected defect.
