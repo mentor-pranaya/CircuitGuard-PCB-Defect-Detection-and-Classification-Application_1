@@ -3,3 +3,4 @@ Anaconda - Python management
 ---------------------------------------
 22/10/2025 - performed preprocessing and image subtraction on the faulty circuit images and compared them to PCB_used.
 ---------------------------------------
+4/11/2025 - completed module 1 as well as module 2 finishing model training.
