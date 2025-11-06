@@ -259,3 +259,4 @@ if __name__ == "__main__":
         
 
         train_model(model, train_loader, val_loader, criterion, optimizer, NUM_EPOCHS, MODEL_CHECKPOINT_PATH)
+
