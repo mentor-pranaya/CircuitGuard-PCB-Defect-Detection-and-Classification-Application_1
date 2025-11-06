@@ -1,6 +1,6 @@
 # I have updated the learning rate(1e-4 -> 5e-5) and no. of epochs (20 -> 30) after acheiving 96.99% accuracy 
 # also removed augmentation for the later epochs ran after 96.99% accuracy 
-# currentlt best accuracy acheived is 97.5%
+# currently best accuracy acheived is 97.5%
 import torch
 import torch.nn as nn
 import torch.optim as optim
@@ -259,4 +259,5 @@ if __name__ == "__main__":
         
 
         train_model(model, train_loader, val_loader, criterion, optimizer, NUM_EPOCHS, MODEL_CHECKPOINT_PATH)
+
 
