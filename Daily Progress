@@ -18,3 +18,17 @@ Module 2: Used the contour-finding code to draw lines around the edges of every 
 23rd Oct (Wed):
 Module 2: Started ROI Extraction. Worked on finding the box around each defect (Bounding Box) and cutting out these small defect pictures.
 
+27th Oct (Sun): 
+Module 3: Reviewed the final batch of defect images, making sure all sizes are uniform and ready for the training script.
+
+28th Oct (Mon):
+Module 3: Started preparing all the cut-out defect pictures, resizing and getting them ready for the AI model.
+
+29th Oct (Tue): 
+Module 3: Set up the EfficientNet-B4 AI model structure in the code, connecting it to the PyTorch system.
+
+31st Oct (Thu): 
+Module 3: Started the model training runs. Watching the accuracy improve on the validation set.
+
+
+
