@@ -15,3 +15,35 @@ Today, I have done the code compares of defect images to golden images, detects 
 22-10-2025
 Today, I have done loading mask images, detecting defect contours using OpenCV, and visualizing them to verify the defect regions clearly and accurately.
 
+23-10-2025
+Today, I have generated Regions of Interest (ROI) from the binary defect masks obtained in Module 2 and extracted individual defect patches from PCB images.
+
+24-10-2025
+Today, I have organized the extracted ROI images into separate folders according to defect types and ensured correct labeling of each defect category.
+
+28-10-2025
+Today, I have merged minor defect subfolders into main defect categories to simplify the dataset, resulting in a clean folder structure ready for training in Module 3.
+
+29-10-2025
+Today, I have implemented EfficientNet-B4 in PyTorch and prepared the model architecture for training on the ROI dataset.
+
+30-10-2025
+Today, I have performed data augmentation and preprocessing on the ROI images to improve model robustness and ensure uniform input size for EfficientNet-B4.
+
+31-10-2025
+Today, I have set up the training pipeline using Adam optimizer and cross-entropy loss, and started initial training on the prepared dataset.
+
+01-11-2025
+Today, I have monitored training progress, adjusted hyperparameters for better convergence, and logged accuracy and loss metrics during each epoch.
+
+04-11-2025
+Today, I have completed the EfficientNet-B4 model training, saved the best-performing model checkpoint, and generated training plots for accuracy and loss.
+
+05-11-2025
+Today, I have evaluated the trained model on the test set, calculated classification accuracy, and visualized results with confusion matrices and other evaluation plots.
+
+06-11-2025
+Today, I have analyzed model performance across different defect categories, identified areas of improvement, and ensured repeatable training results with stable accuracy.
+
+07-11-2025
+Today, I have exported the trained EfficientNet-B4 model along with evaluation metrics and plots, making it ready for deployment or further inference on a different machine.
