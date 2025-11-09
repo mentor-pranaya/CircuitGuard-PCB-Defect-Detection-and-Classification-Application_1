@@ -1,0 +1,14 @@
+Hello Ma'am 👋
+
+I have successfully completed Milestone 2, Module 4: Evaluation and Prediction Testing this week.
+
+Key Steps and Deliverables:
+
+-- Model Loading and Setup: Loaded the previously trained best_efficientnet_b4.pth model and configured the evaluation environment in PyTorch (CPU-based setup).
+-- Inference Pipeline: Implemented a full inference loop using the EfficientNet-B4 model to predict defect classes on unseen test images.
+-- Performance Evaluation: Generated a detailed classification report including precision, recall, and F1-score, along with a confusion matrix visualization for better analysis of class-wise accuracy.
+-- Result Visualization: Displayed multiple test image predictions with true vs. predicted defect labels to verify model accuracy.
+
+This module validated the model’s real-world performance, confirming that the trained network can accurately classify PCB defects on new, unseen data — marking the successful completion of the evaluation stage.
+
+😊
