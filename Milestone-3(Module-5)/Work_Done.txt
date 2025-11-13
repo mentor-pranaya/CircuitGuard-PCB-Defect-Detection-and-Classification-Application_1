@@ -1,1 +1,15 @@
+Hello Ma'am 👋
 
+I have successfully completed Milestone 2, Module 5: Web-Based UI for Defect Classification this week.
+
+Key Steps and Deliverables:
+
+-- Interactive Web Application: Developed a fully functional Streamlit-based web interface for PCB defect classification.
+-- Model Integration: Integrated the trained EfficientNet-B4 model into the web app to enable real-time inference directly through the browser.
+-- Image Upload & Prediction: Implemented an intuitive upload system that allows users to submit PCB defect ROI images and instantly receive predictions.
+-- Enhanced UI/UX: Designed a modern, clean, and professional user interface using custom HTML/CSS within Streamlit to improve usability and presentation quality.
+-- Result Display: Added visual result cards showing predicted defect class, confidence score, and class-wise probability breakdown for better interpretability.
+
+This module enabled the transition from backend model evaluation to a user-friendly, interactive application—bringing the defect classification system closer to a deployable, real-world tool.
+
+😊
