@@ -1,172 +1,234 @@
-# =============================
-# MODULE 3: Model Training with EfficientNet-B4
-# =============================
-
 import torch
 import torch.nn as nn
 import torch.optim as optim
-from torchvision import datasets, transforms, models
-from torch.utils.data import DataLoader
-from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay, classification_report
-import matplotlib.pyplot as plt
+from torch.utils.data import Dataset, DataLoader
+from torchvision import transforms
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import confusion_matrix
+import timm
 import numpy as np
-import os, time
+import matplotlib.pyplot as plt
+import os
+import glob
+import seaborn as sns
+from PIL import Image
+
+DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+ROOT_DATA_DIR = "../Data"
+ROIS_DIR = os.path.join(ROOT_DATA_DIR, "CLASSIFICATION_ROIS_128x128")
+MODEL_SAVE_PATH = os.path.join(ROOT_DATA_DIR, "best_efficientnet_b4.pth")
+
+TARGET_SIZE = (128, 128)
+BATCH_SIZE = 32
+NUM_EPOCHS = 20
+LEARNING_RATE = 1e-4
 
 
-data_dir = "dataset"  # Folder with 'train' and 'test'
-batch_size = 32
-num_classes = 6
-num_epochs = 20
-learning_rate = 1e-4
-device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-best_model_path = "best_efficientnet_b4_pcb.pth"
+# =============================================
+# DATASET
+# =============================================
+class PCBDefectDataset(Dataset):
+    def __init__(self, file_list, labels, transform=None):
+        self.file_list = file_list
+        self.labels = labels
+        self.transform = transform
 
-torch.manual_seed(42)
-if torch.cuda.is_available():
-    torch.cuda.manual_seed_all(42)
+        # Create mapping like ImageFolder
+        self.label_map = {label: i for i, label in enumerate(sorted(set(labels)))}
+        self.num_classes = len(self.label_map)
 
+    def __len__(self):
+        return len(self.file_list)
 
-train_transforms = transforms.Compose([
-    transforms.Resize((128, 128)),
-    transforms.RandomHorizontalFlip(),
-    transforms.RandomRotation(15),
-    transforms.ColorJitter(brightness=0.15, contrast=0.15, saturation=0.15),
-    transforms.ToTensor(),
-    transforms.Normalize([0.485, 0.456, 0.406],
-                         [0.229, 0.224, 0.225])
-])
+    def __getitem__(self, idx):
+        img_path = self.file_list[idx]
+        image = Image.open(img_path).convert("RGB")
+        label = self.label_map[self.labels[idx]]
 
-test_transforms = transforms.Compose([
-    transforms.Resize((128, 128)),
-    transforms.ToTensor(),
-    transforms.Normalize([0.485, 0.456, 0.406],
-                         [0.229, 0.224, 0.225])
-])
+        if self.transform:
+            image = self.transform(image)
 
-train_dataset = datasets.ImageFolder(os.path.join(data_dir, "train"), transform=train_transforms)
-test_dataset = datasets.ImageFolder(os.path.join(data_dir, "test"), transform=test_transforms)
-
-train_loader = DataLoader(train_dataset, batch_size=batch_size, shuffle=True,
-                          num_workers=2, pin_memory=True)
-test_loader = DataLoader(test_dataset, batch_size=batch_size, shuffle=False,
-                         num_workers=2, pin_memory=True)
+        return image, label
 
 
-model = models.efficientnet_b4(weights="IMAGENET1K_V1")
+
+def load_data_paths():
+    all_files = glob.glob(os.path.join(ROIS_DIR, "*", "*.png"))
+    all_labels = [os.path.basename(os.path.dirname(f)) for f in all_files]
+    return all_files, all_labels
 
 
-for name, param in model.features.named_parameters():
-    if "6." in name or "7." in name:  # fine-tune last 2 blocks
-        param.requires_grad = True
+def get_transforms(is_train):
+    if is_train:
+        return transforms.Compose([
+            transforms.Resize(TARGET_SIZE),
+            transforms.RandomHorizontalFlip(),
+            transforms.RandomRotation(15),
+            transforms.ColorJitter(brightness=0.15, contrast=0.15, saturation=0.15),
+            transforms.ToTensor(),
+            transforms.Normalize([0.485, 0.456, 0.406],
+                                 [0.229, 0.224, 0.225])
+        ])
     else:
-        param.requires_grad = False
+        return transforms.Compose([
+            transforms.Resize(TARGET_SIZE),
+            transforms.ToTensor(),
+            transforms.Normalize([0.485, 0.456, 0.406],
+                                 [0.229, 0.224, 0.225])
+        ])
 
+def train_model(model, criterion, optimizer, scheduler, train_loader, val_loader, num_epochs):
+    best_acc = 0.0
+    history = {"train_loss": [], "val_loss": [], "val_acc": []}
 
-model.classifier[1] = nn.Linear(model.classifier[1].in_features, num_classes)
-model = model.to(device)
+    print(f"🚀 Training on {DEVICE} for {num_epochs} epochs...")
 
-criterion = nn.CrossEntropyLoss()
-optimizer = optim.Adam(filter(lambda p: p.requires_grad, model.parameters()), lr=learning_rate)
-scheduler = optim.lr_scheduler.ReduceLROnPlateau(optimizer, mode='max', patience=2, factor=0.5)
+    for epoch in range(num_epochs):
+        model.train()
+        running_loss, running_corrects, total_train = 0.0, 0, 0
 
-# ===============================
-# Training Loop
-# ===============================
-train_losses, val_losses, val_accuracies = [], [], []
-best_val_acc = 0.0
-start_time = time.time()
+        for images, labels in train_loader:
+            images, labels = images.to(DEVICE), labels.to(DEVICE)
 
-print(f"🚀 Training on {device} for {num_epochs} epochs...")
-
-for epoch in range(num_epochs):
-    model.train()
-    running_loss = 0.0
-
-    for images, labels in train_loader:
-        images, labels = images.to(device), labels.to(device)
-        optimizer.zero_grad()
-        outputs = model(images)
-        loss = criterion(outputs, labels)
-        loss.backward()
-        optimizer.step()
-        running_loss += loss.item() * images.size(0)
-
-    
-    model.eval()
-    val_loss, correct, total = 0.0, 0, 0
-    with torch.no_grad():
-        for images, labels in test_loader:
-            images, labels = images.to(device), labels.to(device)
+            optimizer.zero_grad()
             outputs = model(images)
             loss = criterion(outputs, labels)
-            val_loss += loss.item() * images.size(0)
-            _, predicted = torch.max(outputs, 1)
-            total += labels.size(0)
-            correct += (predicted == labels).sum().item()
+            loss.backward()
+            optimizer.step()
 
-    epoch_train_loss = running_loss / len(train_loader.dataset)
-    epoch_val_loss = val_loss / len(test_loader.dataset)
-    epoch_val_acc = correct / total
+            running_loss += loss.item() * images.size(0)
+            running_corrects += (outputs.argmax(1) == labels).sum().item()
+            total_train += labels.size(0)
 
-    train_losses.append(epoch_train_loss)
-    val_losses.append(epoch_val_loss)
-    val_accuracies.append(epoch_val_acc * 100)
+        train_loss = running_loss / total_train
+        train_acc = running_corrects / total_train
 
-    scheduler.step(epoch_val_acc)
+        # ========= Validation ==========
+        model.eval()
+        val_loss, val_correct, total_val = 0.0, 0, 0
 
-    print(f"Epoch [{epoch+1}/{num_epochs}] "
-          f"Train Loss: {epoch_train_loss:.4f} | Val Loss: {epoch_val_loss:.4f} | "
-          f"Val Acc: {epoch_val_acc*100:.2f}%")
+        with torch.no_grad():
+            for images, labels in val_loader:
+                images, labels = images.to(DEVICE), labels.to(DEVICE)
+                outputs = model(images)
+                loss = criterion(outputs, labels)
 
-    # Save best model
-    if epoch_val_acc > best_val_acc:
-        best_val_acc = epoch_val_acc
-        torch.save(model.state_dict(), best_model_path)
-        print(f"💾 Model saved with Val Acc: {best_val_acc*100:.2f}%")
+                val_loss += loss.item() * images.size(0)
+                val_correct += (outputs.argmax(1) == labels).sum().item()
+                total_val += labels.size(0)
 
-end_time = time.time()
-print(f"\n✅ Training completed in {(end_time - start_time)/60:.2f} min")
-print(f"🏆 Best Validation Accuracy: {best_val_acc*100:.2f}%")
+        val_loss /= total_val
+        val_acc = val_correct / total_val
+        history["train_loss"].append(train_loss)
+        history["val_loss"].append(val_loss)
+        history["val_acc"].append(val_acc * 100)
 
+        scheduler.step(val_acc)
 
-plt.figure(figsize=(10, 5))
-plt.plot(train_losses, label='Train Loss')
-plt.plot(val_losses, label='Validation Loss')
-plt.title("Loss Curves")
-plt.xlabel("Epoch")
-plt.ylabel("Loss")
-plt.legend()
-plt.show()
+        print(f"Epoch [{epoch+1}/{num_epochs}] "
+              f"Train Loss: {train_loss:.4f} | Val Loss: {val_loss:.4f} | Val Acc: {val_acc*100:.2f}%")
 
-plt.figure(figsize=(8, 5))
-plt.plot(val_accuracies, label='Validation Accuracy')
-plt.title("Validation Accuracy (%)")
-plt.xlabel("Epoch")
-plt.ylabel("Accuracy")
-plt.legend()
-plt.show()
+        if val_acc > best_acc:
+            best_acc = val_acc
+            torch.save(model.state_dict(), MODEL_SAVE_PATH)
+            print(f"💾 Model saved with Val Acc: {best_acc*100:.2f}%")
+
+    return history, best_acc
 
 
-model.load_state_dict(torch.load(best_model_path))
-model.eval()
-all_preds, all_labels = [], []
 
-with torch.no_grad():
-    for images, labels in test_loader:
-        images = images.to(device)
-        outputs = model(images)
-        _, preds = torch.max(outputs, 1)
-        all_preds.extend(preds.cpu().numpy())
-        all_labels.extend(labels.numpy())
+def evaluate_model(model, loader):
+    model.eval()
+    preds, labs = [], []
+
+    with torch.no_grad():
+        for images, labels in loader:
+            images = images.to(DEVICE)
+            outputs = model(images)
+            preds.extend(outputs.argmax(1).cpu().numpy())
+            labs.extend(labels.cpu().numpy())
+
+    return labs, preds
+
+def plot_history(history):
+    plt.figure(figsize=(10, 4))
+    plt.plot(history["train_loss"], label="Train Loss")
+    plt.plot(history["val_loss"], label="Val Loss")
+    plt.legend()
+    plt.title("Loss Curve")
+    plt.show()
+
+    plt.figure(figsize=(10, 4))
+    plt.plot(history["val_acc"], label="Val Accuracy")
+    plt.legend()
+    plt.title("Validation Accuracy (%)")
+    plt.show()
 
 
-cm = confusion_matrix(all_labels, all_preds)
-disp = ConfusionMatrixDisplay(confusion_matrix=cm, display_labels=train_dataset.classes)
-disp.plot(cmap=plt.cm.Blues)
-plt.title("Confusion Matrix")
-plt.show()
+def plot_confusion_matrix(true_classes, pred_classes, class_names):
+    cm = confusion_matrix(true_classes, pred_classes)
+    plt.figure(figsize=(7, 6))
+    sns.heatmap(cm, annot=True, fmt="d", cmap="Blues",
+                xticklabels=class_names, yticklabels=class_names)
+    plt.title("Confusion Matrix")
+    plt.xlabel("Predicted")
+    plt.ylabel("True")
+    plt.show()
 
-# Classification Report
-print("\n📊 Classification Report:\n")
-print(classification_report(all_labels, all_preds, target_names=train_dataset.classes))
 
+# =============================================
+# MAIN
+# =============================================
+files, labels = load_data_paths()
+
+if not files:
+    print(f"❌ No ROI images found in: {ROIS_DIR}")
+    exit()
+
+# Train/Test split
+train_f, val_f, train_l, val_l = train_test_split(
+    files, labels, test_size=0.2, stratify=labels, random_state=42
+)
+
+train_ds = PCBDefectDataset(train_f, train_l, transform=get_transforms(True))
+val_ds = PCBDefectDataset(val_f, val_l, transform=get_transforms(False))
+
+train_loader = DataLoader(train_ds, batch_size=BATCH_SIZE, shuffle=True)
+val_loader = DataLoader(val_ds, batch_size=BATCH_SIZE, shuffle=False)
+
+num_classes = train_ds.num_classes
+class_names = sorted(set(labels))
+
+print(f"📂 Training samples: {len(train_ds)} | Classes: {num_classes}")
+
+
+model = timm.create_model("efficientnet_b4", pretrained=True, num_classes=num_classes)
+
+
+for param in model.parameters():
+    param.requires_grad = False
+
+for name, param in model.named_parameters():
+    if "blocks.6" in name or "blocks.7" in name or "classifier" in name:
+        param.requires_grad = True
+
+model = model.to(DEVICE)
+
+criterion = nn.CrossEntropyLoss()
+optimizer = optim.Adam(filter(lambda p: p.requires_grad, model.parameters()), lr=LEARNING_RATE)
+scheduler = optim.lr_scheduler.ReduceLROnPlateau(optimizer, mode="max", patience=2, factor=0.5)
+
+# =============================================
+# TRAIN
+# =============================================
+history, best_acc = train_model(model, criterion, optimizer, scheduler, train_loader, val_loader, NUM_EPOCHS)
+
+print(f"\n🏆 Best Validation Accuracy: {best_acc*100:.2f}%")
+
+plot_history(history)
+
+model.load_state_dict(torch.load(MODEL_SAVE_PATH))
+
+true_l, pred_l = evaluate_model(model, val_loader)
+
+plot_confusion_matrix(true_l, pred_l, class_names)
