@@ -1,0 +1,6 @@
+Successfully developed and deployed an automated computer vision pipeline to detect and extract defects from the DeepPCB dataset. 
+
+- The system begins by pairing each test image with its correct template through a recursive folder search that matches files using board IDs, ensuring accurate template selection even when images are stored across multiple defect categories.
+- It then performs image alignment using ORB feature descriptors and a homography transformation, enabling the pipeline to correct for camera shifts, rotations, and minor perspective changes before comparison.
+- After alignment, the method applies reference-based subtraction followed by Otsu’s thresholding to generate a binary defect mask. Morphological operations are used to remove noise and sharpen defect boundaries for more reliable detection.
+- Contour detection is applied to identify defect regions on the processed mask. Bounding boxes are drawn for visualization, and each defect is cropped into a clean Region of Interest (ROI), creating a refined dataset suitable for further analysis or machine learning workflows.
