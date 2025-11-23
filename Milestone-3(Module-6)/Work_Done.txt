@@ -1,1 +1,39 @@
+Hello Ma'am 👋
 
+I have successfully completed Milestone 2, Module 6: Backend Pipeline for Image Inference this week.
+
+Key Steps and Deliverables:
+
+-- Backend Image Inference Pipeline:
+Implemented a complete backend pipeline that processes full PCB images and performs defect classification using the trained EfficientNet-B4 model.
+
+-- Model Integration:
+Integrated the EfficientNet-B4 checkpoint (trained in Module-3) into the backend system with strict state-dict loading to ensure correct predictions.
+
+-- Pre-processing & Prediction Logic:
+Added image preprocessing, softmax probability computation, and Top-1 + Top-2 defect prediction to improve clarity and reliability of outputs.
+
+-- Annotated Output Generation:
+Implemented automatic creation of annotated PCB images displaying predicted defect types along with confidence scores.
+
+-- Batch Inference + Logging:
+Enabled inference on multiple test images at once and generated a consolidated CSV log file with prediction results.
+
+-- Web-Based UI (Streamlit):
+Built a simple and interactive web interface where users can upload PCB images and instantly see:
+
+Predicted defect class
+
+Confidence score
+
+Top-2 probabilities
+
+Annotated result image
+
+Downloadable logs and output images
+
+-- Smooth Execution & Usability:
+Ensured minimal lag, clean UI flow, and clear visualization, making the system ready for practical demonstration.
+
+
+😊
