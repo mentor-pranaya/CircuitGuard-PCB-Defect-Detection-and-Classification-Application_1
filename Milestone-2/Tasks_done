@@ -1,1 +1,57 @@
+1. Summary
+The objective of Milestone 2 was to develop, train, and validate a deep learning model capable of classifying printed circuit board (PCB) defects into six distinct categories. Using the ROI images generated in Milestone 1, an EfficientNet-B0 model was trained and achieved an accuracy of 96.53%, surpassing the project requirement of 94%.
 
+2. Phase 1: Model Training (Module 3)
+Objective: Train a convolutional neural network (CNN) to recognize PCB defect patterns.
+
+Model Architecture:
+
+Selection: EfficientNet-B0 was chosen for its balance between speed and accuracy.
+
+Configuration: A custom fully connected layer was added to produce outputs for six defect classes:
+Missing_hole, Mouse_bite, Open_circuit, Short, Spur, Spurious_copper.
+
+Training Pipeline:
+
+Data Split: 80% training, 20% validation.
+
+Augmentation: Random rotations, horizontal flips, and color jitter were applied to reduce overfitting.
+
+Hyperparameters:
+
+20 epochs
+
+Adam optimizer (lr = 1e-4)
+
+Cross-Entropy Loss
+
+Outcome:
+The model showed stable convergence, with validation accuracy stabilizing in the final epochs.
+The best-performing weights were stored as best_efficientnet_b0.pth.
+
+3. Phase 2: Evaluation & Testing (Module 4)
+Objective: Evaluate the trained model on a separate, unseen test dataset to assess real-world performance.
+
+Inference Setup:
+
+Test Data: 634 images selected using stratified sampling from a dataset of 3,168 images.
+
+Speed: Achieved ~2.09 iterations/second on GPU.
+
+Performance Metrics:
+
+Overall Accuracy: 96.53%
+
+Class-wise Precision:
+
+Missing_hole: 100%
+
+Short: 99%
+
+Spur: 90% (lowest but still strong)
+
+Error Analysis:
+
+Total Misclassifications: 22 out of 634 images (3.47% error rate).
+
+Common Confusions: “Spurious_copper” and “Spur” were occasionally mixed due to similar visual patterns.
