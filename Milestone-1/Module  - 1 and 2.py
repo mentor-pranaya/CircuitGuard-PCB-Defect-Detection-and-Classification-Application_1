@@ -7,7 +7,6 @@ import glob
 BASE_DIR = "."
 INPUT_DIR = os.path.join(BASE_DIR, "images")
 
-# Locations where templates might exist
 TEMPLATE_DIRS = [
     os.path.join(BASE_DIR, "PCB_USED"),
     os.path.join(BASE_DIR, "templates"),
