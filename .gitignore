@@ -1,0 +1,19 @@
+# Datasets
+PCB_DATASET/
+yolo_dataset/
+processed_data/
+processed_data.zip
+
+# Training Artifacts
+yolo_training/
+runs/
+evaluation_results/
+
+# Python
+__pycache__/
+*.pyc
+venv/
+.env
+
+# Logs
+log.txt

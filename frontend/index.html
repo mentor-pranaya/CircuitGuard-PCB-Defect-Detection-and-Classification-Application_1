@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CircuitGuard | AI PCB Defect Detection</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <header class="glass-header">
+            <div class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="#4F46E5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M2 17L12 22L22 17" stroke="#4F46E5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M2 12L12 17L22 12" stroke="#4F46E5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <h1>CircuitGuard</h1>
+            </div>
+            <p class="subtitle">Automated PCB Defect Detection & Classification</p>
+        </header>
+
+        <main>
+            <!-- Mode Selection -->
+            <div class="mode-selector">
+                <label>
+                    <input type="radio" name="mode" value="reference" checked> Reference Mode (Template)
+                </label>
+                <label>
+                    <input type="radio" name="mode" value="ai"> AI Mode (Single Image)
+                </label>
+            </div>
+
+            <section class="upload-section">
+                <div class="upload-card glass-panel" id="template-card">
+                    <h3>1. Reference Template</h3>
+                    <p>Upload the defect-free PCB image</p>
+                    <div class="drop-zone" id="drop-zone-template">
+                        <input type="file" id="template-input" accept="image/*" hidden>
+                        <div class="drop-content">
+                            <span class="icon">📄</span>
+                            <span class="text" id="template-name">Click or Drag Image</span>
+                        </div>
+                        <img id="template-preview" class="preview-img" hidden>
+                    </div>
+                </div>
+
+                <div class="upload-card glass-panel">
+                    <h3>2. Test Image</h3>
+                    <p>Upload the PCB image to inspect</p>
+                    <div class="drop-zone" id="drop-zone-test">
+                        <input type="file" id="test-input" accept="image/*" hidden>
+                        <div class="drop-content">
+                            <span class="icon">🔍</span>
+                            <span class="text" id="test-name">Click or Drag Image</span>
+                        </div>
+                        <img id="test-preview" class="preview-img" hidden>
+                    </div>
+                </div>
+            </section>
+
+            <div class="action-bar">
+                <button id="analyze-btn" class="primary-btn" disabled>
+                    <span class="btn-text">Analyze Circuit</span>
+                    <div class="loader" hidden></div>
+                </button>
+            </div>
+
+            <section class="results-section" id="results-section" hidden>
+                <div class="glass-panel result-card">
+                    <div class="result-header">
+                        <h2>Analysis Results</h2>
+                        <button id="export-btn" class="secondary-btn">Download Report</button>
+                    </div>
+                    <div class="canvas-container">
+                        <canvas id="result-canvas"></canvas>
+                    </div>
+                    <div class="defects-list" id="defects-list">
+                        <!-- Defect items will be injected here -->
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
