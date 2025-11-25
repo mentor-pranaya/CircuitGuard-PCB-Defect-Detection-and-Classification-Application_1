@@ -4,13 +4,6 @@ The objective of Milestone 2 was to develop, train, and validate a deep learning
 2. Phase 1: Model Training (Module 3)
 Objective: Train a convolutional neural network (CNN) to recognize PCB defect patterns.
 
-Model Architecture:
-
-Selection: EfficientNet-B0 was chosen for its balance between speed and accuracy.
-
-Configuration: A custom fully connected layer was added to produce outputs for six defect classes:
-Missing_hole, Mouse_bite, Open_circuit, Short, Spur, Spurious_copper.
-
 Training Pipeline:
 
 Data Split: 80% training, 20% validation.
@@ -48,7 +41,7 @@ Missing_hole: 100%
 
 Short: 99%
 
-Spur: 90% (lowest but still strong)
+Spur: 90% 
 
 Error Analysis:
 
