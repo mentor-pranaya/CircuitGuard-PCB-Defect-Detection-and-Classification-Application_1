@@ -22,8 +22,8 @@ app.add_middleware(
 )
 
 # Configuration
-MODEL_PATH = "best_model.pth"
-YOLO_PATH = "best_yolo.pt"
+MODEL_PATH = r"models\efficientnet_b4.pth"
+YOLO_PATH = r"models\yolov8_best.pt"
 NUM_CLASSES = 6
 CLASS_NAMES = ['Missing_hole', 'Mouse_bite', 'Open_circuit', 'Short', 'Spur', 'Spurious_copper']
 DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -70,20 +70,40 @@ async def predict(
     template: UploadFile = File(None), 
     mode: str = Form("reference")
 ):
-    # Read Test Image
+    # 1. Read Test Image
     img_test_bytes = await test.read()
     img_test = read_imagefile(img_test_bytes)
     img_test_cv = cv2.cvtColor(img_test, cv2.COLOR_RGB2BGR)
     
+    # Initialize processing variables
+    img_processing = img_test_cv # Default to raw image
+    img_template_cv = None
+
+    # 2. Handle Template & Alignment (Unified Step)
+    if template:
+        try:
+            img_template_bytes = await template.read()
+            img_template = read_imagefile(img_template_bytes)
+            img_template_cv = cv2.cvtColor(img_template, cv2.COLOR_RGB2BGR)
+            
+            # Align test image to template
+            # This benefits both modes:
+            # - AI Mode: Gets a standard orientation/position
+            # - Ref Mode: Required for subtraction
+            img_processing = preprocessing.align_images(img_test_cv, img_template_cv)
+        except Exception as e:
+            return {"error": f"Alignment/Template processing failed: {str(e)}"}
+
     results = []
 
+    # 3. Branch based on Mode
     if mode == "ai":
         # --- AI MODE (YOLO) ---
         if yolo_model is None:
             return {"error": "YOLO model not loaded."}
         
-        # Run Inference
-        yolo_results = yolo_model(img_test_cv)
+        # Run Inference on the processed image (aligned or raw)
+        yolo_results = yolo_model(img_processing)
         
         for r in yolo_results:
             boxes = r.boxes
@@ -102,16 +122,13 @@ async def predict(
 
     else:
         # --- REFERENCE MODE (Original) ---
-        if not template:
+        if img_template_cv is None:
             return {"error": "Template image required for Reference Mode"}
             
-        img_template = read_imagefile(await template.read())
-        img_template_cv = cv2.cvtColor(img_template, cv2.COLOR_RGB2BGR)
-
+        # We use img_processing which is already aligned here
         try:
-            img_aligned = preprocessing.align_images(img_test_cv, img_template_cv)
-            mask = preprocessing.subtract_images(img_aligned, img_template_cv)
-            rois = preprocessing.extract_rois(img_aligned, mask, min_area=100)
+            mask = preprocessing.subtract_images(img_processing, img_template_cv)
+            rois = preprocessing.extract_rois(img_processing, mask, min_area=100)
         except Exception as e:
             return {"error": f"Preprocessing failed: {str(e)}"}
 
@@ -119,13 +136,13 @@ async def predict(
         for (x, y, w, h) in rois:
             # Pad crop
             pad = 10
-            h_img, w_img = img_aligned.shape[:2]
+            h_img, w_img = img_processing.shape[:2]
             x1 = max(0, x - pad)
             y1 = max(0, y - pad)
             x2 = min(w_img, x + w + pad)
             y2 = min(h_img, y + h + pad)
             
-            crop = img_aligned[y1:y2, x1:x2]
+            crop = img_processing[y1:y2, x1:x2]
             crop_pil = Image.fromarray(cv2.cvtColor(crop, cv2.COLOR_BGR2RGB))
             input_tensor = transform(crop_pil).unsqueeze(0).to(DEVICE)
             

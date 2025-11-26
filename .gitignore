@@ -1,19 +1,52 @@
-# Datasets
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.env
+venv/
+.venv/
+
+# Datasets & Training Logs (Huge files)
 PCB_DATASET/
-yolo_dataset/
 processed_data/
 processed_data.zip
-
-# Training Artifacts
+yolo_dataset/
 yolo_training/
 runs/
 evaluation_results/
 
-# Python
-__pycache__/
-*.pyc
-venv/
-.env
+# Models (Ignore all except the specific ones we want to track if they are small enough, 
+# but usually large models are ignored. User wanted "essential", so we might track them 
+# if they are under 100MB, but best_model.pth is ~70MB. GitHub limit is 100MB.
+# We will un-ignore the specific final models in the models/ folder)
+*.pth
+*.pt
+!models/efficientnet_b4.pth
+!models/yolov8_best.pt
+
+# Temporary/Debug Scripts
+test_*.py
+debug_*.py
+verify_*.py
+check_dims.py
+read_pdf.py
+prepare_yolo_data.py
+process_dataset.py
+kaggle_train.py
+train_yolo.py
+evaluate_pipeline.py
 
 # Logs
+*.log
 log.txt
+verification_results.txt
+test_write.txt
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
