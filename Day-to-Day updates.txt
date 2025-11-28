@@ -47,3 +47,48 @@ Today, I have analyzed model performance across different defect categories, ide
 
 07-11-2025
 Today, I have exported the trained EfficientNet-B4 model along with evaluation metrics and plots, making it ready for deployment or further inference on a different machine.
+
+08-11-2025
+Today, I have started building the frontend structure for the web UI using Streamlit and set up the basic layout for user interaction.
+
+11-11-2025
+Today, I have added upload fields to the frontend, enabling users to upload both template and test PCB images directly through the interface.
+
+12-11-2025
+Today, I have worked on displaying the uploaded images on the UI and prepared placeholders for showing output images with bounding boxes and defect labels.
+
+13-11-2025
+Today, I have implemented the visual output section in the frontend to ensure that annotated images can be rendered clearly and consistently after prediction.
+
+14-11-2025
+Today, I have finalized the Streamlit-based frontend, ensuring responsiveness, smooth rendering, and proper integration of all UI components for image upload and preview.
+
+16-11-2025
+Today, I have started modularizing the backend pipeline by separating image preprocessing, model loading, and inference functions into clean modules.
+
+17-11-2025
+Today, I have integrated the EfficientNet-B4 trained model checkpoint into the backend and verified that the model loads correctly for inference.
+
+18-11-2025
+Today, I have connected the backend inference pipeline with the frontend upload inputs, enabling real-time processing of user-submitted images.
+
+19-11-2025
+Today, I have implemented the generation of annotated images in the backend, adding bounding boxes and labels to the defect regions detected by the model.
+
+20-11-2025
+Today, I have optimized the backend pipeline to reduce processing time and ensured that annotated outputs and logs are returned smoothly to the UI.
+
+21-11-2025
+Today, I have tested the complete frontend–backend workflow, confirming that uploaded images are processed with minimal lag and results are displayed correctly.
+
+24-11-2025
+Today, I have added the feature to download labeled output images and prediction logs directly from the UI for user convenience.
+
+25-11-2025
+Today, I have tested the web application using multiple sets of PCB template–test image pairs to validate consistency and robustness of predictions.
+
+27-11-2025
+Today, I have optimized the overall pipeline for faster inference and smoother UI performance, ensuring the app meets expected usability standards.
+
+28-11-2025
+Today, I have finalized the complete web application with export functionality, verified annotated outputs and CSV logs, and prepared the system for final delivery.
