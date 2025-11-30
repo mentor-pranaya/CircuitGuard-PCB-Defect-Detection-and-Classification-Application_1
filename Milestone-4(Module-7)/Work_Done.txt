@@ -1,0 +1,40 @@
+Hello Ma'am 👋
+
+I have successfully completed Milestone 4, Module 7: Testing, Evaluation, and Exporting Results this week.
+
+Key Steps and Deliverables:
+
+-- Complete Full-Board Testing Pipeline:
+Implemented a full testing workflow that takes an entire PCB board image, finds the correct template, aligns the image, extracts defect regions (ROIs), and classifies each defect using the EfficientNet-B4 model.
+
+-- Template Matching & Alignment:
+Used ORB keypoint matching and homography to automatically identify the correct PCB template and align the uploaded board with high accuracy, even for rotated or scaled images.
+
+-- ROI Extraction & Defect Localization:
+Performed image subtraction, Otsu thresholding, and morphological filtering to automatically detect defective regions on the full PCB and extract them for classification.
+
+-- Deep-Learning Classification:
+Used the trained EfficientNet-B4 checkpoint (from Module-3) to classify every ROI with Top-1 and Top-2 predictions, along with softmax confidence scores.
+
+-- Annotated Board Output:
+Generated fully annotated PCB images showing bounding boxes around defects with color-coded labels, making it easy to visually understand defect positions.
+
+-- Export Features (Images + Logs):
+Added options to download:
+
+Annotated PCB image
+
+CSV log containing defect coordinates, class predictions, confidence values, and template index used
+
+-- Streamlit-Based Final UI:
+Developed a polished, dark-themed Streamlit UI where users can:
+
+Upload a full PCB image
+
+View aligned and annotated results
+
+Review defect summaries
+
+Download outputs with a single click
+
+😊
