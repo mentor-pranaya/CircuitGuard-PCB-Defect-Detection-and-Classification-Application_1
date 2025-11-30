@@ -1,13 +1,2 @@
-Will use Jupyter Notebook for:
-
-Prototyping image processing and model training
-
-Visual debugging and experimentation
-
-Then will switch to VS Code or PyCharm for:
-
-Building the web app
-
-Integrating backend logic
-
-Finalizing and deploying the full system
+The entire project was developed using Jupyter Notebook within an Anaconda environment, providing an interactive, flexible, and visual workflow ideal for image-based defect detection. 
+The combination of Jupyter, Anaconda, and Streamlit enabled smooth experimentation, reliable model training, and a fully functional web-based interface.
