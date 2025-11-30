@@ -1,11 +1,44 @@
-13-10-2025 : Introduction class
+Week 1 – Dataset Setup & Initial Image Processing
 
-14-10-2025 : project related documents was shared along with a link to download a dataset
+a] Set up the DeepPCB dataset and explored its structure.
+b] Implemented template–test alignment and performed image subtraction, Otsu thresholding, and basic morphological filtering to generate clean defect masks.
 
-15-10-2025 : dataset downloaded
+Week 2 – Contour Detection & ROI Extraction
 
-16-10-2025 : no classes
+a] Developed an ROI extraction pipeline using OpenCV contour detection.
+b] Extracted bounding boxes, cropped defect regions, and generated labeled samples for model training.
+c] Verified bounding box quality visually.
 
-17-10-2025 : dataset preprocessing started 
+Week 3 – EfficientNet Model Training
 
-18-10-2025 : data preprocessing in process
+a] Implemented EfficientNet (CPU-optimized) and trained it on all defect classes. 
+b] Preprocessed ROIs to 128×128, applied augmentations, and trained using Adam/CE-loss. 
+c] Logged accuracy, loss, and model checkpoints.
+
+Week 4 – Model Evaluation & Inference Testing
+
+a] Tested the trained model using unseen images and validated predictions.
+b] Generated annotated output images, prediction logs, and confusion matrix. 
+c] Evaluated model performance on all defect categories.
+
+Week 5 – Frontend (Streamlit) Development
+
+a] Created a Streamlit web interface (app.py) for uploading template & test images.
+b] Displayed annotated predictions, bounding boxes, and confidence scores.
+c] Ensured real-time response and UI usability.
+
+Week 6 – Backend Inference Pipeline
+
+a] Modularized the entire processing pipeline inside module06_backend.py, integrating preprocessing, ROI extraction, EfficientNet inference, and annotation generation.
+b] Connected backend with the Streamlit UI.
+
+Week 7 – Testing, Optimization & Export Features
+
+a] Performed end-to-end testing on full dataset batches.
+b] Added export options including CSV logs and annotated images. 
+c] Optimized image processing pipeline for faster CPU inference.
+
+Week 8 – Final Documentation & Presentation Prep
+
+a] Completed README, module-wise documentation, and final evaluation results.
+b] Organized GitHub repository.
