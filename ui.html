@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CircuitGuard - PCB Defect Analysis</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #047857; /* Emerald 700 */
+            --secondary: #10b981; /* Emerald 500 */
+            --background: #f0fdf4; /* Emerald 50 */
+            --card-bg: #ffffff;
+            --text-color: #111827; /* Gray 900 */
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--background);
+            color: var(--text-color);
+        }
+        /* Custom defect colors for visual aid */
+        .defect-missing_hole { background-color: #fca5a5; } /* Red 300 */
+        .defect-mouse_bite { background-color: #fcd34d; } /* Amber 300 */
+        .defect-open_circuit { background-color: #a7f3d0; } /* Emerald 200 */
+        .defect-short { background-color: #93c5fd; } /* Blue 300 */
+        .defect-spur { background-color: #c4b5fd; } /* Violet 300 */
+        .defect-spurious_copper { background-color: #f9a8d4; } /* Pink 300 */
+        
+        .loading-ring {
+            border: 4px solid rgba(0, 0, 0, 0.1);
+            border-left-color: var(--primary);
+            border-radius: 50%;
+            width: 24px;
+            height: 24px;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body class="min-h-screen p-4 sm:p-8">
+
+    <div class="max-w-6xl mx-auto">
+        <!-- Header -->
+        <header class="text-center mb-10 p-4 bg-white rounded-xl shadow-lg">
+            <h1 class="text-4xl font-extrabold text-gray-800">CircuitGuard</h1>
+            <p class="text-lg text-gray-600 mt-1">Automated PCB Defect Detection & Classification</p>
+        </header>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+
+            <!-- Control Panel (Left Column) -->
+            <div class="lg:col-span-1 space-y-6">
+                <!-- File Upload Card -->
+                <div class="bg-white p-6 rounded-xl shadow-lg border border-gray-200">
+                    <h2 class="text-xl font-semibold mb-4 text-gray-800">1. Upload Images</h2>
+                    
+                    <div class="space-y-4">
+                        <!-- Test Image Upload -->
+                        <div>
+                            <label for="testImageUpload" class="block text-sm font-medium text-gray-700 mb-1">Test PCB Image (Defective)</label>
+                            <input type="file" id="testImageUpload" accept="image/*" class="w-full text-sm text-gray-600 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-green-50 file:text-green-700 hover:file:bg-green-100 cursor-pointer">
+                        </div>
+
+                        <!-- Reference Image Upload -->
+                        <div>
+                            <label for="refImageUpload" class="block text-sm font-medium text-gray-700 mb-1">Reference PCB Image (Defect-Free)</label>
+                            <input type="file" id="refImageUpload" accept="image/*" class="w-full text-sm text-gray-600 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-indigo-50 file:text-indigo-700 hover:file:bg-indigo-100 cursor-pointer">
+                        </div>
+                    </div>
+                    
+                    <button id="processButton" class="mt-6 w-full py-3 px-4 bg-green-600 text-white font-bold rounded-xl shadow-md hover:bg-green-700 transition duration-150 flex items-center justify-center disabled:opacity-50" onclick="startAnalysis()">
+                        <span id="buttonText">Start Analysis ($\le5$ sec/image)</span>
+                        <div id="loadingIndicator" class="loading-ring hidden ml-3"></div>
+                    </button>
+                    
+                    <p id="timeTaken" class="text-sm text-gray-500 mt-2 text-center hidden">Processing Time: 4.85 seconds</p>
+                </div>
+
+                <!-- Defect Legend Card -->
+                <div class="bg-white p-6 rounded-xl shadow-lg border border-gray-200">
+                    <h2 class="text-xl font-semibold mb-4 text-gray-800">Defect Legend</h2>
+                    <ul class="space-y-2 text-sm">
+                        <li class="flex items-center"><span class="w-4 h-4 rounded-full defect-missing_hole mr-2 border border-gray-400"></span> Missing Hole</li>
+                        <li class="flex items-center"><span class="w-4 h-4 rounded-full defect-mouse_bite mr-2 border border-gray-400"></span> Mouse Bite</li>
+                        <li class="flex items-center"><span class="w-4 h-4 rounded-full defect-open_circuit mr-2 border border-gray-400"></span> Open Circuit</li>
+                        <li class="flex items-center"><span class="w-4 h-4 rounded-full defect-short mr-2 border border-gray-400"></span> Short</li>
+                        <li class="flex items-center"><span class="w-4 h-4 rounded-full defect-spur mr-2 border border-gray-400"></span> Spur</li>
+                        <li class="flex items-center"><span class="w-4 h-4 rounded-full defect-spurious_copper mr-2 border border-gray-400"></span> Spurious Copper</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Results & Output Panel (Right Column) -->
+            <div class="lg:col-span-2 space-y-6">
+                
+                <!-- Annotated Image View -->
+                <div class="bg-white p-6 rounded-xl shadow-lg border border-gray-200">
+                    <h2 class="text-xl font-semibold mb-4 text-gray-800">2. Annotated Output</h2>
+                    <div id="imageContainer" class="relative w-full overflow-hidden border border-gray-300 rounded-lg bg-gray-100 flex items-center justify-center p-4">
+                        <img id="annotatedImage" src="https://placehold.co/800x600/e5e7eb/6b7280?text=Upload+PCB+Image+to+Start" alt="Annotated PCB Defect" class="max-w-full h-auto rounded-md shadow-inner">
+                        <canvas id="defectCanvas" class="absolute top-0 left-0 w-full h-full"></canvas>
+                    </div>
+                </div>
+
+                <!-- Results & Export Card -->
+                <div class="bg-white p-6 rounded-xl shadow-lg border border-gray-200">
+                    <h2 class="text-xl font-semibold mb-4 text-gray-800">3. Analysis Log & Export</h2>
+                    
+                    <div class="mb-4">
+                        <h3 class="text-lg font-medium text-gray-700 mb-2">Detected Defects Summary</h3>
+                        <div id="defectSummary" class="text-sm text-gray-600">
+                            No defects found yet. Upload and process an image.
+                        </div>
+                    </div>
+
+                    <button id="exportButton" class="w-full py-3 px-4 bg-indigo-600 text-white font-bold rounded-xl shadow-md hover:bg-indigo-700 transition duration-150 disabled:opacity-50" onclick="exportResults()" disabled>
+                        Export Annotated Results Log (CSV)
+                    </button>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript for Simulation and UI Logic -->
+    <script>
+        // Global state
+        let currentDefects = [];
+        let testImageLoaded = false;
+        let refImageLoaded = false;
+        
+        // Mock data structure representing the Python backend's output
+        const MOCK_DEFECT_RESULTS = [
+            { id: 1, label: 'spur', confidence: 0.98, box: [150, 100, 200, 150] }, // [x_min, y_min, x_max, y_max]
+            { id: 2, label: 'mouse_bite', confidence: 0.95, box: [350, 250, 420, 300] },
+            { id: 3, label: 'open_circuit', confidence: 0.99, box: [550, 450, 650, 500] },
+            { id: 4, label: 'short', confidence: 0.96, box: [10, 500, 100, 550] }
+        ];
+
+        // Defect color mapping for bounding boxes
+        const DEFECT_COLORS = {
+            'missing_hole': 'rgba(252, 165, 165, 0.7)', // Red 300
+            'mouse_bite': 'rgba(252, 211, 77, 0.7)',  // Amber 300
+            'open_circuit': 'rgba(167, 243, 208, 0.7)', // Emerald 200
+            'short': 'rgba(147, 197, 253, 0.7)',      // Blue 300
+            'spur': 'rgba(196, 181, 253, 0.7)',       // Violet 300
+            'spurious_copper': 'rgba(249, 168, 212, 0.7)' // Pink 300
+        };
+
+        const elements = {
+            testImageUpload: document.getElementById('testImageUpload'),
+            refImageUpload: document.getElementById('refImageUpload'),
+            processButton: document.getElementById('processButton'),
+            loadingIndicator: document.getElementById('loadingIndicator'),
+            buttonText: document.getElementById('buttonText'),
+            timeTaken: document.getElementById('timeTaken'),
+            annotatedImage: document.getElementById('annotatedImage'),
+            defectCanvas: document.getElementById('defectCanvas'),
+            defectSummary: document.getElementById('defectSummary'),
+            exportButton: document.getElementById('exportButton'),
+        };
+
+        function drawAnnotations(defects) {
+            const img = elements.annotatedImage;
+            const canvas = elements.defectCanvas;
+            const ctx = canvas.getContext('2d');
+
+            const imgRect = img.getBoundingClientRect();
+            canvas.width = imgRect.width;
+            canvas.height = imgRect.height;
+            
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            const originalWidth = 800; 
+            const scaleX = canvas.width / originalWidth;
+            const scaleY = canvas.height / 600; 
+            ctx.lineWidth = 3;
+            ctx.font = `bold ${14 * scaleX}px Inter`;
+            ctx.textBaseline = 'top';
+
+            defects.forEach(defect => {
+                const [x_min, y_min, x_max, y_max] = defect.box;
+
+              
+                const x = x_min * scaleX;
+                const y = y_min * scaleY;
+                const width = (x_max - x_min) * scaleX;
+                const height = (y_max - y_min) * scaleY;
+
+               
+                const color = DEFECT_COLORS[defect.label] || 'rgba(255, 0, 0, 0.7)';
+                ctx.strokeStyle = color.replace('0.7', '1.0'); 
+                ctx.fillStyle = color; 
+
+                ctx.beginPath();
+                ctx.rect(x, y, width, height);
+                ctx.stroke();
+                ctx.fill();
+
+
+                const labelText = `${defect.label.toUpperCase()} (${(defect.confidence * 100).toFixed(1)}%)`;
+                const textWidth = ctx.measureText(labelText).width + 8;
+                const textHeight = 14 * scaleY + 10;
+                
+                ctx.fillStyle = ctx.strokeStyle;
+                ctx.fillRect(x, y - textHeight, textWidth, textHeight);
+
+                ctx.fillStyle = 'white';
+                ctx.fillText(labelText, x + 4, y - textHeight + 2);
+            });
+        }
+        
+
+        function updateSummary(defects) {
+            if (defects.length === 0) {
+                elements.defectSummary.innerHTML = 'No defects found in the test image.';
+                return;
+            }
+
+            const defectCounts = defects.reduce((acc, def) => {
+                acc[def.label] = (acc[def.label] || 0) + 1;
+                return acc;
+            }, {});
+
+            let html = '<ul class="list-disc list-inside space-y-1">';
+            for (const label in defectCounts) {
+                html += `<li class="font-medium text-gray-700 capitalize"><span class="w-2 h-2 rounded-full inline-block mr-2 ${'defect-' + label}"></span>${label.replace('_', ' ')}: <span class="font-bold">${defectCounts[label]}</span> instances</li>`;
+            }
+            html += '</ul>';
+            elements.defectSummary.innerHTML = html;
+        }
+
+        function handleFileUpload(event) {
+            const file = event.target.files[0];
+            if (!file) return;
+
+            const isTestImage = event.target.id === 'testImageUpload';
+            
+            if (isTestImage) {
+                testImageLoaded = true;
+                const reader = new FileReader();
+                reader.onload = (e) => {
+                    elements.annotatedImage.src = e.target.result;
+                    elements.defectCanvas.width = elements.defectCanvas.offsetWidth;
+                    elements.defectCanvas.height = elements.defectCanvas.offsetHeight;
+                    elements.defectCanvas.getContext('2d').clearRect(0, 0, elements.defectCanvas.width, elements.defectCanvas.height);
+                    currentDefects = [];
+                    updateSummary(currentDefects);
+                    elements.exportButton.disabled = true;
+                };
+                reader.readAsDataURL(file);
+            } else {
+                refImageLoaded = true;
+            }
+            
+            checkReadyState();
+        }
+
+        function checkReadyState() {
+            const isReady = testImageLoaded && refImageLoaded;
+            elements.processButton.disabled = !isReady;
+            elements.buttonText.textContent = isReady ? 'Start Analysis (Sle5 sec/image)' : 'Waiting for both images...';
+        }
+
+
+
+        function startAnalysis() {
+            if (elements.processButton.disabled) return;
+
+            const simulatedTime = 4000 + Math.random() * 2000; // 4.0 to 6.0 seconds simulation
+            elements.processButton.disabled = true;
+            elements.buttonText.textContent = 'Analyzing...';
+            elements.loadingIndicator.classList.remove('hidden');
+            elements.timeTaken.classList.add('hidden');
+            elements.exportButton.disabled = true;
+
+            setTimeout(() => {
+
+                currentDefects = MOCK_DEFECT_RESULTS;
+
+                elements.annotatedImage.onload = () => {
+                    drawAnnotations(currentDefects);
+                    updateSummary(currentDefects);
+
+                    elements.loadingIndicator.classList.add('hidden');
+                    elements.processButton.disabled = false;
+                    elements.buttonText.textContent = 'Analysis Complete (Re-run)';
+                    elements.timeTaken.textContent = `Processing Time: ${(simulatedTime / 1000).toFixed(2)} seconds`;
+                    elements.timeTaken.classList.remove('hidden');
+                    elements.exportButton.disabled = false;
+                };
+
+                elements.annotatedImage.src = elements.annotatedImage.src; 
+
+                drawAnnotations(currentDefects);
+                updateSummary(currentDefects);
+
+            }, simulatedTime);
+        }
+
+        function exportResults() {
+            if (currentDefects.length === 0) return;
+
+            const headers = ['ID', 'Defect Type', 'Confidence', 'X_Min', 'Y_Min', 'X_Max', 'Y_Max'];
+            let csvContent = headers.join(',') + '\n';
+
+            currentDefects.forEach(defect => {
+                const row = [
+                    defect.id,
+                    defect.label.replace('_', ' ').toUpperCase(),
+                    defect.confidence.toFixed(4),
+                    defect.box[0],
+                    defect.box[1],
+                    defect.box[2],
+                    defect.box[3],
+                ];
+                csvContent += row.join(',') + '\n';
+            });
+
+            const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+            const link = document.createElement('a');
+            
+            const url = URL.createObjectURL(blob);
+            link.setAttribute('href', url);
+            link.setAttribute('download', 'CircuitGuard_Defect_Log.csv');
+            link.style.visibility = 'hidden';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+
+        window.onload = () => {
+            elements.testImageUpload.addEventListener('change', handleFileUpload);
+            elements.refImageUpload.addEventListener('change', handleFileUpload);
+            
+            const img = elements.annotatedImage;
+            const canvas = elements.defectCanvas;
+            canvas.width = img.offsetWidth;
+            canvas.height = img.offsetHeight;
+
+            window.addEventListener('resize', () => {
+                if (currentDefects.length > 0) {
+                    drawAnnotations(currentDefects);
+                }
+            });
+
+            checkReadyState();
+        };
+
+    </script>
+</body>
+</html>
