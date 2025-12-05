@@ -1,0 +1,21 @@
+The final module adds robust export features, session-based logging, and performance optimizations. Users can now run multiple scans, review results, and download both annotated images and session-wide reports. The inference pipeline was also optimized to avoid unnecessary recomputation.
+
+Key Work Done
+
+Added downloadable annotated images directly after each analysis.
+
+Implemented session history logging (timestamp, filename, predicted defect, confidence).
+
+Enabled CSV export of the complete session log for external analysis.
+
+Optimized performance using Streamlit’s caching to load the model only once.
+
+Enabled smooth multi-image evaluation with persistent session logs.
+
+Deliverables
+
+Downloadable annotated images and full session report.
+
+Faster, more efficient inference pipeline with caching.
+
+Stable multi-image testing workflow supporting cumulative evaluation.
