@@ -1,19 +1,19 @@
-A reliable Python backend was built to handle the full inference workflow for PCB defect detection using EfficientNet-B4. It preprocesses images, runs predictions, and outputs annotated results for the frontend.
+A polished Streamlit interface was created with a custom enterprise-style dark theme, supporting direct image upload and side-by-side result visualization.
 
 Key Work Done
 
-Modularized the image pipeline in backend_inference.py.
+Designed app.py with modern UI styling (custom fonts, color gradients, responsive layout).
 
-Added preprocess_image() for resizing, tensor conversion, and correct scaling (fixing the “black input” issue).
+Added drag-and-drop upload fields with validation.
 
-Integrated EfficientNet-B4 with dynamic checkpoint loading and automatic GPU/CPU selection.
+Implemented a two-column display for raw input vs. analysis output.
 
-Connected the backend with the frontend’s uploaded images.
+Built a custom PASS/DEFECT result card with confidence indicators.
 
-Outputs prediction class, confidence, full probability distribution, and annotated images.
+Ensured compatibility across Streamlit versions with a stable image renderer.
 
 Deliverables
 
-Fully functional backend inference script.
+Fully operational frontend interface.
 
-Complete prediction pipeline with bounding-box visualization.
+Real-time visualization of defects and model confidence after analysis.
