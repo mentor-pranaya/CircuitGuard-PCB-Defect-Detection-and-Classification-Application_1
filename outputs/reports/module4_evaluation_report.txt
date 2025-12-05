@@ -1,0 +1,46 @@
+
+======================================================================
+CircuitGuard - Module 4: Evaluation Report
+======================================================================
+
+1. OVERALL PERFORMANCE
+======================================================================
+  Total Test Samples:     446
+  Correctly Classified:   436 (97.76%)
+  Misclassified:          10 (2.24%)
+  
+  Accuracy:               97.76%
+  Precision (Weighted):   0.9776
+  Recall (Weighted):      0.9776
+  F1-Score (Weighted):    0.9775
+
+2. PER-CLASS PERFORMANCE
+======================================================================
+Class                |  Precision |     Recall |   F1-Score |    Support |     Errors
+------------------------------------------------------------------------------------------
+missing_hole         |     0.9867 |     0.9867 |     0.9867 |         75 |          1
+mouse_bite           |     0.9610 |     1.0000 |     0.9801 |         74 |          0
+open_circuit         |     0.9863 |     0.9863 |     0.9863 |         73 |          1
+short                |     0.9726 |     0.9595 |     0.9660 |         74 |          3
+spur                 |     0.9718 |     0.9324 |     0.9517 |         74 |          5
+spurious_copper      |     0.9870 |     1.0000 |     0.9935 |         76 |          0
+
+3. CONFIDENCE ANALYSIS
+======================================================================
+  Correct Predictions:
+    Mean Confidence:   0.9871
+    Median Confidence: 0.9999
+    Std Dev:           0.0462
+
+  Misclassifications:
+    Mean Confidence:   0.7085
+    Median Confidence: 0.6126
+    Std Dev:           0.2025
+
+4. TARGET ACHIEVEMENT
+======================================================================
+  ✅ TARGET MET: Accuracy (97.76%) ≥ 97%
+
+======================================================================
+Report generated for Module 4: Evaluation and Prediction Testing
+======================================================================

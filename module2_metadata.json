@@ -1,0 +1,96 @@
+{
+    "module": "Module_2_ROI_Extraction",
+    "extraction_stats": {
+        "total_images": 693,
+        "total_rois_extracted": 2953,
+        "by_category": {
+            "missing_hole": {
+                "images_processed": 115,
+                "rois_extracted": 497,
+                "avg_rois_per_image": 4.321739130434783
+            },
+            "mouse_bite": {
+                "images_processed": 115,
+                "rois_extracted": 492,
+                "avg_rois_per_image": 4.278260869565218
+            },
+            "open_circuit": {
+                "images_processed": 116,
+                "rois_extracted": 482,
+                "avg_rois_per_image": 4.155172413793103
+            },
+            "short": {
+                "images_processed": 116,
+                "rois_extracted": 491,
+                "avg_rois_per_image": 4.232758620689655
+            },
+            "spur": {
+                "images_processed": 115,
+                "rois_extracted": 488,
+                "avg_rois_per_image": 4.243478260869566
+            },
+            "spurious_copper": {
+                "images_processed": 116,
+                "rois_extracted": 503,
+                "avg_rois_per_image": 4.336206896551724
+            }
+        },
+        "contour_detection": {
+            "with_contours": 0,
+            "without_contours": 0
+        },
+        "bbox_comparison": {
+            "xml_bboxes": 2953,
+            "detected_bboxes": 0,
+            "matched_bboxes": 0
+        }
+    },
+    "split_stats": {
+        "missing_hole": {
+            "total": 497,
+            "train": 347,
+            "val": 75,
+            "test": 75
+        },
+        "mouse_bite": {
+            "total": 492,
+            "train": 344,
+            "val": 74,
+            "test": 74
+        },
+        "open_circuit": {
+            "total": 482,
+            "train": 336,
+            "val": 73,
+            "test": 73
+        },
+        "short": {
+            "total": 491,
+            "train": 343,
+            "val": 74,
+            "test": 74
+        },
+        "spur": {
+            "total": 488,
+            "train": 340,
+            "val": 74,
+            "test": 74
+        },
+        "spurious_copper": {
+            "total": 503,
+            "train": 351,
+            "val": 76,
+            "test": 76
+        }
+    },
+    "dataset_paths": {
+        "roi_crops": "/content/drive/MyDrive/CircuitGuard_Project/outputs/roi_crops",
+        "train": "/content/drive/MyDrive/CircuitGuard_Project/training_dataset/train",
+        "val": "/content/drive/MyDrive/CircuitGuard_Project/training_dataset/val",
+        "test": "/content/drive/MyDrive/CircuitGuard_Project/training_dataset/test"
+    },
+    "total_rois": 2953,
+    "train_size": 2061,
+    "val_size": 446,
+    "test_size": 446
+}

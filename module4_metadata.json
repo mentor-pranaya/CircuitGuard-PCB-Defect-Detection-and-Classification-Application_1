@@ -1,0 +1,70 @@
+{
+    "module": "Module_4_Evaluation",
+    "test_results": {
+        "total_samples": 446,
+        "correct": 436,
+        "incorrect": 10,
+        "accuracy": 0.9775784753363229,
+        "precision": 0.9776187574604096,
+        "recall": 0.9775784753363229,
+        "f1_score": 0.9774521271357286
+    },
+    "per_class_metrics": {
+        "missing_hole": {
+            "precision": 0.9866666666666667,
+            "recall": 0.9866666666666667,
+            "f1_score": 0.9866666666666667,
+            "support": 75,
+            "errors": 1
+        },
+        "mouse_bite": {
+            "precision": 0.961038961038961,
+            "recall": 1.0,
+            "f1_score": 0.9801324503311258,
+            "support": 74,
+            "errors": 0
+        },
+        "open_circuit": {
+            "precision": 0.9863013698630136,
+            "recall": 0.9863013698630136,
+            "f1_score": 0.9863013698630136,
+            "support": 73,
+            "errors": 1
+        },
+        "short": {
+            "precision": 0.9726027397260274,
+            "recall": 0.9594594594594594,
+            "f1_score": 0.9659863945578231,
+            "support": 74,
+            "errors": 3
+        },
+        "spur": {
+            "precision": 0.971830985915493,
+            "recall": 0.9324324324324325,
+            "f1_score": 0.9517241379310345,
+            "support": 74,
+            "errors": 5
+        },
+        "spurious_copper": {
+            "precision": 0.987012987012987,
+            "recall": 1.0,
+            "f1_score": 0.9934640522875817,
+            "support": 76,
+            "errors": 0
+        }
+    },
+    "confidence_stats": {
+        "correct_mean": 0.9870766065672997,
+        "incorrect_mean": 0.70846608877182
+    },
+    "target_achievement": {
+        "target_accuracy": 97.0,
+        "achieved_accuracy": 97.75784753363229,
+        "target_met": true
+    },
+    "output_paths": {
+        "predictions_csv": "/content/drive/MyDrive/CircuitGuard_Project/outputs/predictions/test_predictions.csv",
+        "report": "/content/drive/MyDrive/CircuitGuard_Project/outputs/reports/module4_evaluation_report.txt",
+        "visualizations": "/content/drive/MyDrive/CircuitGuard_Project/outputs/visualizations"
+    }
+}

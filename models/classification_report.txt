@@ -1,0 +1,20 @@
+CircuitGuard - EfficientNet-B4 Classification Report
+======================================================================
+
+Test Accuracy: 97.76%
+Precision: 0.9776
+Recall: 0.9776
+F1-Score: 0.9775
+
+                 precision    recall  f1-score   support
+
+   missing_hole     0.9867    0.9867    0.9867        75
+     mouse_bite     0.9610    1.0000    0.9801        74
+   open_circuit     0.9863    0.9863    0.9863        73
+          short     0.9726    0.9595    0.9660        74
+           spur     0.9718    0.9324    0.9517        74
+spurious_copper     0.9870    1.0000    0.9935        76
+
+       accuracy                         0.9776       446
+      macro avg     0.9776    0.9775    0.9774       446
+   weighted avg     0.9776    0.9776    0.9775       446

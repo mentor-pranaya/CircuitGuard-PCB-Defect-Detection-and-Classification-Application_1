@@ -1,0 +1,47 @@
+{
+    "module": "Module_2_Preprocessing",
+    "statistics": {
+        "total_processed": 30,
+        "successful_alignments": 30,
+        "failed_alignments": 0,
+        "by_category": {
+            "missing_hole": {
+                "processed": 5,
+                "successful": 5,
+                "failed": 0
+            },
+            "mouse_bite": {
+                "processed": 5,
+                "successful": 5,
+                "failed": 0
+            },
+            "open_circuit": {
+                "processed": 5,
+                "successful": 5,
+                "failed": 0
+            },
+            "short": {
+                "processed": 5,
+                "successful": 5,
+                "failed": 0
+            },
+            "spur": {
+                "processed": 5,
+                "successful": 5,
+                "failed": 0
+            },
+            "spurious_copper": {
+                "processed": 5,
+                "successful": 5,
+                "failed": 0
+            }
+        },
+        "by_pcb_id": {
+            "01": 30
+        }
+    },
+    "paths": {
+        "aligned_images": "/content/drive/MyDrive/CircuitGuard_Project/outputs/aligned_images",
+        "defect_masks": "/content/drive/MyDrive/CircuitGuard_Project/outputs/defect_masks"
+    }
+}

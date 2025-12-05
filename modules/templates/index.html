@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CircuitGuard - PCB Defect Detection</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+
+        .main-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            padding: 40px;
+        }
+
+        .upload-section, .results-section {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            color: #2a5298;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+        }
+
+        .upload-area {
+            border: 3px dashed #2a5298;
+            border-radius: 15px;
+            padding: 40px;
+            text-align: center;
+            background: white;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .upload-area:hover {
+            border-color: #667eea;
+            background: #f0f4ff;
+        }
+
+        .upload-area.dragover {
+            background: #e3f2fd;
+            border-color: #1976d2;
+        }
+
+        #imageInput {
+            display: none;
+        }
+
+        .upload-icon {
+            font-size: 4em;
+            color: #2a5298;
+            margin-bottom: 20px;
+        }
+
+        .preview-container {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        #imagePreview {
+            max-width: 100%;
+            max-height: 300px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            display: none;
+        }
+
+        .btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            font-size: 1.1em;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin-top: 20px;
+            display: inline-block;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+        }
+
+        .btn:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .result-card {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .result-card.success {
+            border-left: 5px solid #28a745;
+        }
+
+        .result-card.warning {
+            border-left: 5px solid #ffc107;
+        }
+
+        .result-label {
+            font-size: 1.1em;
+            color: #666;
+            margin-bottom: 5px;
+        }
+
+        .result-value {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #2a5298;
+            margin-bottom: 15px;
+        }
+
+        .confidence-bar {
+            width: 100%;
+            height: 30px;
+            background: #e0e0e0;
+            border-radius: 15px;
+            overflow: hidden;
+            margin-top: 10px;
+        }
+
+        .confidence-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #28a745, #20c997);
+            transition: width 1s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+        }
+
+        .probabilities {
+            margin-top: 20px;
+        }
+
+        .prob-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            margin-bottom: 10px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .prob-label {
+            font-weight: 500;
+            color: #333;
+        }
+
+        .prob-value {
+            font-weight: bold;
+            color: #2a5298;
+        }
+
+        .loading {
+            display: none;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .loading.active {
+            display: block;
+        }
+
+        .spinner {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #2a5298;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .model-info {
+            background: #e3f2fd;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 30px;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .info-item {
+            text-align: center;
+            padding: 15px;
+            background: white;
+            border-radius: 8px;
+        }
+
+        .info-value {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #2a5298;
+        }
+
+        .info-label {
+            font-size: 0.9em;
+            color: #666;
+            margin-top: 5px;
+        }
+
+        @media (max-width: 768px) {
+            .main-content {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🔬 CircuitGuard</h1>
+            <p>AI-Powered PCB Defect Detection System</p>
+        </div>
+
+        <div class="main-content">
+            <!-- Upload Section -->
+            <div class="upload-section">
+                <h2>📤 Upload PCB Image</h2>
+                <div class="upload-area" id="uploadArea">
+                    <div class="upload-icon">📁</div>
+                    <p style="font-size: 1.2em; color: #666;">Click or drag image here</p>
+                    <p style="color: #999; margin-top: 10px;">Supports: JPG, PNG (128×128 recommended)</p>
+                </div>
+                <input type="file" id="imageInput" accept="image/*">
+                
+                <div class="preview-container">
+                    <img id="imagePreview" alt="Preview">
+                </div>
+
+                <div style="text-align: center;">
+                    <button class="btn" id="analyzeBtn" disabled>🔍 Analyze Defect</button>
+                </div>
+
+                <div class="loading" id="loading">
+                    <div class="spinner"></div>
+                    <p style="margin-top: 15px; color: #666;">Analyzing image...</p>
+                </div>
+            </div>
+
+            <!-- Results Section -->
+            <div class="results-section">
+                <h2>📊 Detection Results</h2>
+                <div id="resultsContainer">
+                    <p style="text-align: center; color: #999; padding: 40px;">
+                        Upload an image and click "Analyze Defect" to see results
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Model Info -->
+        <div style="padding: 0 40px 40px 40px;">
+            <div class="model-info">
+                <h3 style="color: #2a5298; margin-bottom: 15px;">🤖 Model Information</h3>
+                <div class="info-grid" id="modelInfo">
+                    <!-- Will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const uploadArea = document.getElementById('uploadArea');
+        const imageInput = document.getElementById('imageInput');
+        const imagePreview = document.getElementById('imagePreview');
+        const analyzeBtn = document.getElementById('analyzeBtn');
+        const loading = document.getElementById('loading');
+        const resultsContainer = document.getElementById('resultsContainer');
+        const modelInfo = document.getElementById('modelInfo');
+
+        let selectedFile = null;
+
+        // Load model info
+        fetch('/api/model-info')
+            .then(res => res.json())
+            .then(data => {
+                modelInfo.innerHTML = `
+                    <div class="info-item">
+                        <div class="info-value">${data.accuracy}%</div>
+                        <div class="info-label">Accuracy</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-value">${data.classes}</div>
+                        <div class="info-label">Classes</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-value">${data.model}</div>
+                        <div class="info-label">Model</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-value">${data.samples}</div>
+                        <div class="info-label">Training Samples</div>
+                    </div>
+                `;
+            });
+
+        // Upload area click
+        uploadArea.addEventListener('click', () => imageInput.click());
+
+        // Drag and drop
+        uploadArea.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            uploadArea.classList.add('dragover');
+        });
+
+        uploadArea.addEventListener('dragleave', () => {
+            uploadArea.classList.remove('dragover');
+        });
+
+        uploadArea.addEventListener('drop', (e) => {
+            e.preventDefault();
+            uploadArea.classList.remove('dragover');
+            const files = e.dataTransfer.files;
+            if (files.length > 0) {
+                handleFile(files[0]);
+            }
+        });
+
+        // File input change
+        imageInput.addEventListener('change', (e) => {
+            if (e.target.files.length > 0) {
+                handleFile(e.target.files[0]);
+            }
+        });
+
+        function handleFile(file) {
+            if (!file.type.match('image.*')) {
+                alert('Please select an image file');
+                return;
+            }
+
+            selectedFile = file;
+            
+            // Show preview
+            const reader = new FileReader();
+            reader.onload = (e) => {
+                imagePreview.src = e.target.result;
+                imagePreview.style.display = 'block';
+                analyzeBtn.disabled = false;
+            };
+            reader.readAsDataURL(file);
+        }
+
+        // Analyze button
+        analyzeBtn.addEventListener('click', async () => {
+            if (!selectedFile) return;
+
+            analyzeBtn.disabled = true;
+            loading.classList.add('active');
+            resultsContainer.innerHTML = '<p style="text-align: center; color: #999;">Processing...</p>';
+
+            const formData = new FormData();
+            formData.append('image', selectedFile);
+
+            try {
+                const response = await fetch('/api/predict', {
+                    method: 'POST',
+                    body: formData
+                });
+
+                const result = await response.json();
+
+                if (result.error) {
+                    throw new Error(result.error);
+                }
+
+                displayResults(result);
+            } catch (error) {
+                resultsContainer.innerHTML = `
+                    <div class="result-card warning">
+                        <p style="color: #d9534f;">❌ Error: ${error.message}</p>
+                    </div>
+                `;
+            } finally {
+                loading.classList.remove('active');
+                analyzeBtn.disabled = false;
+            }
+        });
+
+        function displayResults(result) {
+            const isHighConfidence = result.confidence >= 0.9;
+            const cardClass = isHighConfidence ? 'success' : 'warning';
+            const statusIcon = isHighConfidence ? '✅' : '⚠️';
+            const statusText = isHighConfidence ? 'High Confidence' : 'Review Recommended';
+
+            let html = `
+                <div class="result-card ${cardClass}">
+                    <div class="result-label">Detected Defect Type:</div>
+                    <div class="result-value">${result.predicted_class}</div>
+                    
+                    <div class="result-label">Confidence Score:</div>
+                    <div class="confidence-bar">
+                        <div class="confidence-fill" style="width: ${result.confidence * 100}%">
+                            ${(result.confidence * 100).toFixed(2)}%
+                        </div>
+                    </div>
+                    
+                    <p style="margin-top: 15px; color: #666;">
+                        ${statusIcon} Status: <strong>${statusText}</strong>
+                    </p>
+                </div>
+
+                <div class="result-card">
+                    <h3 style="color: #2a5298; margin-bottom: 15px;">Class Probabilities</h3>
+                    <div class="probabilities">
+            `;
+
+            // Sort probabilities
+            const probs = Object.entries(result.probabilities)
+                .sort((a, b) => b[1] - a[1]);
+
+            probs.forEach(([className, prob]) => {
+                html += `
+                    <div class="prob-item">
+                        <span class="prob-label">${className}</span>
+                        <span class="prob-value">${(prob * 100).toFixed(2)}%</span>
+                    </div>
+                `;
+            });
+
+            html += `
+                    </div>
+                </div>
+            `;
+
+            resultsContainer.innerHTML = html;
+        }
+    </script>
+</body>
+</html>
