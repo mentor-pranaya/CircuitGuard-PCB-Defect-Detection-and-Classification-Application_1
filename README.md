@@ -44,7 +44,6 @@ The model is trained to identify the following 6 PCB defect types:
 * **Data Handling**: Pandas (Session logging and CSV export)
 
 ---
-
 ## Project Structure
 
 ```text
@@ -56,19 +55,3 @@ CircuitGuard/
 ├── requirements.txt           # Python Dependencies
 └── README.md                  # Project Documentation
 
-## Installation and Setup
-
-Follow these steps to configure the deployment environment.
-
-### 1. System Requirements
-* **Operating System**: Windows 10/11, macOS, or Linux
-* **Python Version**: Python 3.8 or higher
-* **Hardware**: GPU recommended (NVIDIA CUDA) but not required (CPU supported)
-
-### 2. Environment Configuration
-
-**Step 1: Clone the Repository**
-Open your terminal or command prompt and run:
-```bash
-git clone [https://github.com/yourusername/CircuitGuard.git](https://github.com/yourusername/CircuitGuard.git)
-cd CircuitGuard
