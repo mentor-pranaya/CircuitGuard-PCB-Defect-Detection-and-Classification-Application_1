@@ -1,87 +1,114 @@
 import streamlit as st
 from PIL import Image
 import cv2
+import numpy as np
 import time
+import pandas as pd
 from backend import CircuitGuardBackend
 
-st.set_page_config(page_title="CircuitGuard AI", page_icon="⚡", layout="wide")
+st.set_page_config(
+    page_title="CircuitGuard AOI",
+    page_icon="⚡",
+    layout="wide"
+)
 
 st.markdown("""
 <style>
-.main { background-color: #f5f5f5; }
-div.stButton > button { width: 100%; background-color: #007bff; color: white; border-radius: 8px; }
+html, body, [class*="css"] {
+    background-color: #0d1117 !important;
+    color: #e6edf3 !important;
+}
+h1, h2, h3 {
+    color: #58a6ff !important;
+    text-shadow: 0 0 12px rgba(88,166,255,0.6);
+}
+.section-box {
+    background: #161b22;
+    padding: 18px 22px;
+    border-radius: 12px;
+    border: 1px solid #21262d;
+    box-shadow: 0px 0px 12px rgba(88,166,255,0.08);
+}
+.stFileUploader {
+    background: #0d1117 !important;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px dashed #30363d;
+}
+div.stButton > button {
+    background: linear-gradient(90deg, #238636, #2ea043);
+    color: #ffffff;
+    border-radius: 10px;
+    padding: 10px 18px;
+    border: none;
+    font-size: 17px;
+    font-weight: bold;
+    box-shadow: 0px 0px 8px rgba(35,134,54,0.5);
+}
+div.stButton > button:hover {
+    background: linear-gradient(90deg, #2ea043, #3fb950);
+    box-shadow: 0px 0px 12px rgba(35,134,54,0.9);
+}
+.dataframe th, .dataframe td {
+    color: #e6edf3 !important;
+    background-color: #161b22 !important;
+    border: 1px solid #30363d !important;
+}
 </style>
 """, unsafe_allow_html=True)
 
-st.title("⚡ CircuitGuard: PCB Defect Detector")
-st.markdown("**Powered by EfficientNet-B4** • Automated Optical Inspection (AOI)")
-st.markdown("---")
+st.markdown("<h1>⚡ CircuitGuard AOI System</h1>", unsafe_allow_html=True)
+st.markdown("<h3>Smart PCB Defect Detection • EfficientNet-B4 Powered</h3>", unsafe_allow_html=True)
 
 if "backend" not in st.session_state:
-    with st.spinner("🧠 Initializing AI Engine..."):
-        try:
-            st.session_state.backend = CircuitGuardBackend()
-            st.success("System Online: AI Model Loaded")
-        except Exception as e:
-            st.error(f"Failed to load backend: {e}")
+    with st.spinner("Booting AI Engine..."):
+        st.session_state.backend = CircuitGuardBackend()
+    st.success("AI Engine Ready ✓")
 
-col1, col2 = st.columns(2)
+col1, col2 = st.columns([1, 2])
 
 with col1:
-    st.subheader("📂 Reference Template")
-    temp_file = st.file_uploader("Upload Clean PCB", type=['jpg', 'jpeg', 'png'], key="temp")
-    if temp_file:
-        t_img = Image.open(temp_file).convert('RGB')
-        st.image(t_img, use_column_width=True, caption="Reference Standard")
+    st.markdown("<div class='section-box'>", unsafe_allow_html=True)
+    st.subheader("📂 Upload PCB Image")
+    test_file = st.file_uploader("Choose a PCB Image", type=['png', 'jpg', 'jpeg'])
+
+    if test_file:
+        img_pil = Image.open(test_file).convert('RGB')
+        st.image(img_pil, caption="Uploaded Image", use_column_width=True)
+
+        if st.button("🔍 START INSPECTION"):
+            with st.spinner("Analyzing Image..."):
+                start = time.time()
+                viz, results, msg = st.session_state.backend.run_pipeline(img_pil)
+                end = time.time()
+                st.session_state.viz = viz
+                st.session_state.results = results
+                st.session_state.msg = msg
+                st.session_state.time = round(end - start, 2)
+
+    st.markdown("</div>", unsafe_allow_html=True)
 
 with col2:
-    st.subheader("📂 Inspection Target")
-    test_file = st.file_uploader("Upload Defective PCB", type=['jpg', 'jpeg', 'png'], key="test")
-    if test_file:
-        test_img = Image.open(test_file).convert('RGB')
-        st.image(test_img, use_column_width=True, caption="Test Unit")
+    st.markdown("<div class='section-box'>", unsafe_allow_html=True)
+    st.subheader("🎯 Inspection Results")
 
-if temp_file and test_file:
-    st.markdown("---")
-    
-    if st.button("🚀 START INSPECTION"):
-        bar = st.progress(0)
-        status = st.empty()
-        
-        status.text("Phase 1: Geometric Alignment...")
-        bar.progress(25)
-        time.sleep(0.2)
-        
-        status.text("Phase 2: Defect Extraction & Masking...")
-        bar.progress(50)
-        
-        status.text("Phase 3: AI Classification (EfficientNet-B4)...")
-        bar.progress(85)
-
-        try:
-            annotated_img, data, msg = st.session_state.backend.run_pipeline(t_img, test_img)
-        except Exception as e:
-            status.error(f"❌ Pipeline Error: {e}")
-            st.stop()
-
-        bar.progress(100)
-        
-        if msg == "Success":
-            status.success("✅ Inspection Complete")
-            
-            res_c1, res_c2 = st.columns([2, 1])
-            
-            with res_c1:
-                st.subheader("🎯 Defect Localization Map")
-                viz_rgb = cv2.cvtColor(annotated_img, cv2.COLOR_BGR2RGB)
-                st.image(viz_rgb, use_column_width=True, caption="AI Annotated Result")
-                
-            with res_c2:
-                st.subheader("📊 Defect Report")
-                if data:
-                    st.error(f"⚠️ Found {len(data)} Defects")
-                    st.table(data)
-                else:
-                    st.success("✅ Board Passed. No Defects Found.")
+    if "viz" in st.session_state:
+        if st.session_state.msg != "Success":
+            st.error(f"❌ {st.session_state.msg}")
         else:
-            status.error(f"❌ Inspection Failed: {msg}")
+            viz_rgb = cv2.cvtColor(st.session_state.viz, cv2.COLOR_BGR2RGB)
+            st.image(viz_rgb, caption="Detected Defects", use_column_width=True)
+
+            count = len(st.session_state.results)
+            m1, m2, m3 = st.columns(3)
+            m1.metric("Board Status", "FAIL" if count > 0 else "PASS")
+            m2.metric("Defects Found", count)
+            m3.metric("Processing Time", f"{st.session_state.time}s")
+
+            if count > 0:
+                df = pd.DataFrame(st.session_state.results)
+                st.table(df)
+            else:
+                st.success("No defects detected ✓")
+
+    st.markdown("</div>", unsafe_allow_html=True)
