@@ -2,22 +2,33 @@
 
 # Overview
 CircuitGuard is a comprehensive PCB defect detection system that combines:
+
 Reference-based image subtraction to identify defect regions
+
 Contour detection to extract regions of interest
+
 EfficientNet-B4 deep learning model for accurate defect classification
+
 Interactive web interface for real-time prediction and visualization
 
 # The system can detect and classify 6 types of PCB defects:
 Missing Hole
+
 Mouse Bite
+
 Open Circuit
+
 Short
+
 Spur
+
 Spurious Copper
 
 # Features
 Two Detection Modes:
+
 Classification Only: Direct classification of pre-cropped defect images
+
 Full Pipeline: Complete workflow with template comparison, defect detection, and classification
 
 # Key Capabilities:
@@ -32,9 +43,13 @@ Full Pipeline: Complete workflow with template comparison, defect detection, and
 
 # Tech Stack
 PyTorch, timm (EfficientNet-B4)
+
 OpenCV, NumPy
+
 Streamlit(Web Framework)
+
 Adam Optimizer, Cross-Entropy Loss(Training)
+
 Pandas, PIL(Data Processing)
 
 # Install Dependencies:
