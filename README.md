@@ -39,38 +39,39 @@ Implemented in Flask, the backend performs image decoding, preprocessing, ROI ex
 ## 3. Project Structure
 ProjectRoot/
 │
-├── Milestone1/                               # Initial image preprocessing and ROI extraction
-│   ├── B&W.py                                # Grayscale conversion and simple preprocessing tests
-│   ├── contour_and_roi.py                    # Contour detection and ROI extraction experiments
-│   ├── image_subtraction.py                  # Golden–test image subtraction experiments
+├── Milestone1/                     # Initial image preprocessing and ROI extraction
+│   ├── B&W.py                      # Grayscale + simple preprocessing tests
+│   ├── contour_and_roi.py          # Contour detection & ROI extraction experiments
+│   └── image_subtraction.py        # Golden–test image subtraction experiments
 │
-├── Milestone2/                               # Model training and evaluation workflow
-│   ├── train_model.py                        # EfficientNet-B4 training script
-│   ├── train_test_split.py                   # Dataset split into train/test folders
-│   ├── pcb_defect_pipeline.py                # Early unified defect detection pipeline
-│   ├── model_Evaluation.py                   # Evaluation script producing metrics and reports
-│   ├── Accuracy_curve.png                    # Training accuracy graph
-│   ├── loss_curve.png                        # Training loss graph
-│   ├── confusion_matrix.png                  # Final confusion matrix
+├── Milestone2/                     # Model training and evaluation workflow
+│   ├── train_model.py              # EfficientNet-B4 training script
+│   ├── train_test_split.py         # Dataset split into train/test folders
+│   ├── pcb_defect_pipeline.py      # Early unified defect detection pipeline
+│   ├── model_Evaluation.py         # Evaluation script producing metrics/reports
+│   ├── Accuracy_curve.png          # Training accuracy plot
+│   ├── loss_curve.png              # Training loss plot
+│   └── confusion_matrix.png        # Final confusion matrix
 │
-├── Milestone3/                               # Early frontend-backend integration (Streamlit)
-│   ├── app.py                                # Streamlit-based defect detection UI
-│   ├── index.html                            # Basic frontend experiment (early HTML version)
+├── Milestone3/                     # Early frontend/backend integration (Streamlit)
+│   ├── app.py                      # Streamlit-based defect detection UI
+│   └── index.html                  # Early HTML test UI
 │
-├── Milestone4/                               # Final production-ready deployment (Flask + HTML/JS)
-│   ├── app.py                                # Flask backend with model inference and API routes
-│   ├── golden_pcb_detection.py               # ORB-based automatic golden PCB identification
-│   ├── index.html                            # Fully styled frontend UI (HTML/CSS/JS)
-│   ├── pcb_defect_result.jpg                 # Example annotated output image
-│   ├── golden/                               # Folder containing all golden reference PCB images
-│   │     ├── golden1.jpg
-│   │     ├── golden2.jpg
-│   │     ├── ...
-│   │     └── goldenN.jpg
-│   └── efficientnet_b4_pcb.pth              # Trained model weights (placed here manually)
+├── Milestone4/                     # Final production-ready deployment (Flask + HTML/CSS/JS)
+│   ├── app.py                      # Flask server with full pipeline + API
+│   ├── golden_pcb_detection.py     # ORB-based automatic golden PCB identification
+│   ├── index.html                  # Final modern frontend UI
+│   ├── pcb_defect_result.jpg       # Example annotated output image
+│   └── golden/                     # Folder containing all golden reference PCBs
+│       ├── golden1.jpg
+│       ├── golden2.jpg
+│       └── goldenN.jpg
 │
-├── README.md                                 # Project documentation
-└── LICENSE                                   # (Optional) License information
+├── efficientnet_b4_pcb.pth         # Trained EfficientNet-B4 model weights
+│
+├── README.md                       # Project documentation
+└── LICENSE                         # Optional license file
+
 
 
 ## 4. System Workflow
@@ -126,13 +127,12 @@ The final model achieved the following metrics on the test dataset:
 
 Download the Milestone4 folder from the repository.
 Your folder should contain:
-
-Milestone4/
-    app.py
-    index.html
-    golden_pcb_detection.py
-    golden/
-    efficientnet_b4_pcb.pth      ← add this model file
+* app.py
+* index.html
+* golden_pcb_detection.py
+* golden/images
+* efficientnet_b4_pcb.pth      ← add this model file
+* requirements.txt
 
 Make sure the golden/ folder contains all golden PCB reference images.
 
