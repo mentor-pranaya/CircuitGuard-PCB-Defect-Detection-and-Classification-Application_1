@@ -1,0 +1,60 @@
+Running the Application
+1. Download Milestone 4
+
+Download the Milestone4 folder from the repository.
+Your folder should contain:
+* app.py
+* index.html
+* golden_pcb_detection.py
+* golden/images
+* efficientnet_b4_pcb.pth      ← add this model file
+* requirements.txt
+
+Make sure the golden/ folder contains all golden PCB reference images.
+
+2. Install Requirements
+
+Open a terminal inside the Milestone4 folder and install dependencies:
+```
+pip install -r requirements.txt
+```
+
+3. Start the Backend Server
+
+Run:
+```
+python app.py
+```
+
+You should see:
+
+Model loaded.
+Golden PCBs loaded.
+Server running at http://localhost:5000
+
+Keep this terminal open.
+
+4. Open the Frontend
+
+Simply open index.html in your web browser.
+No additional server is required for the UI.
+
+5. Run PCB Defect Detection
+   
+Manual Mode
+Upload Golden PCB
+Upload Test PCB
+Click Run Detection
+
+Automatic Golden Identification Mode
+Upload only the Test PCB
+
+The system automatically selects the correct golden PCB from the golden/ folder
+Defects are detected and classified
+
+6. View & Export Results
+You can download:
+
+Annotated defect image
+CSV defect log
+JSON defect log
