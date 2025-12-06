@@ -21,24 +21,19 @@ High Accuracy: Achieve ≥97% classification accuracy on test set
 Application Development: Build web-based interface
 # Dataset
 PCB_DATASET/
-
 ├── PCB_USED/           # 10 template (defect-free) images
-
 ├── images/             # defect images organized by type
-
 │   ├── missing_hole/    
 │   ├── mouse_bite/     
 │   ├── open_circuit/   
 │   ├── short/          
 │   ├── spur/           
 │   └── spurious_copper/# 116 images
-
 ├── Annotations/        # Bounding box annotations (XML)
-
 └── rotation/           # Augmented rotated versions
 # Dataset Defect Catagory
 Missing Hole - Absent drilled holes where connections should exist
-Mouse Bite - Small notches or irregularities on board edges
+Mouse Bite - Small notches or irregularities on board edges 
 Open Circuit - Incomplete electrical pathways or broken traces 
 Short Circuit - Unintended connections between conductors 
 Spur - Unwanted copper protrusions extending from traces
@@ -49,8 +44,13 @@ Training Set: 2,061 samples (70%)
 Validation Set: 446 samples (15%)
 Test Set: 446 samples (15%)
 #  Overall Pipeline
-Input Image → Preprocessing → Defect Detection → ROI Extraction → 
-Classification → Results Display → Export
+Input Image 
+→ Preprocessing 
+→ Defect Detection 
+→ ROI Extraction 
+→ Classification 
+→ Results Display
+→ Export
 
 # Module 1: Data Preparation
 Dataset loading and verification
