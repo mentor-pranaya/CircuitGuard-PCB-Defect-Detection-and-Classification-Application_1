@@ -37,7 +37,7 @@ Users can upload PCB images, run detections, view results, and download CSV/JSON
 Implemented in Flask, the backend performs image decoding, preprocessing, ROI extraction, model inference, and response generation.
 
 ## 3. Project Structure
-'''bash
+```bash
 ProjectRoot/
 │
 ├── Milestone1/                     # Initial image preprocessing and ROI extraction
@@ -72,7 +72,7 @@ ProjectRoot/
 │
 ├── README.md                       # Project documentation
 └── LICENSE                         # Optional license file
-'''
+```
 
 
 ## 4. System Workflow
@@ -140,15 +140,16 @@ Make sure the golden/ folder contains all golden PCB reference images.
 2. Install Requirements
 
 Open a terminal inside the Milestone4 folder and install dependencies:
-
+```
 pip install -r requirements.txt
+```
 
 3. Start the Backend Server
 
 Run:
-
+```
 python app.py
-
+```
 
 You should see:
 
