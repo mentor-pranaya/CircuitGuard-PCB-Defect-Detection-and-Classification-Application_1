@@ -1,0 +1,4 @@
+Timestamp,Defect_Region,Predicted_Class,Confidence,Top_2,Top_3
+2025-12-06 16:32:17,Region_1,missing_hole,0.8846,mouse_bite: 0.1032,short: 0.0073
+2025-12-06 16:32:17,Region_2,missing_hole,0.8408,mouse_bite: 0.1191,open_circuit: 0.0337
+2025-12-06 16:32:17,Region_3,missing_hole,0.9959,mouse_bite: 0.0020,open_circuit: 0.0010
