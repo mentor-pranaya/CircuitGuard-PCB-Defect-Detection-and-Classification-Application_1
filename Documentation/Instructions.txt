@@ -7,10 +7,12 @@ Your folder should contain:
 * index.html
 * golden_pcb_detection.py
 * golden/images
-* efficientnet_b4_pcb.pth      ← add this model file
 * requirements.txt
 
 Make sure the golden/ folder contains all golden PCB reference images.
+
+Download the model from Here - https://drive.google.com/file/d/1oa95rer3B4t_byAafDEuVAllg5Y-lwp2/view?usp=sharing
+and save it to same folder
 
 2. Install Requirements
 
