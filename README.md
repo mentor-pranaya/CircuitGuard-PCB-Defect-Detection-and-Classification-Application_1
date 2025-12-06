@@ -37,6 +37,7 @@ Users can upload PCB images, run detections, view results, and download CSV/JSON
 Implemented in Flask, the backend performs image decoding, preprocessing, ROI extraction, model inference, and response generation.
 
 ## 3. Project Structure
+'''
 ProjectRoot/
 │
 ├── Milestone1/                     # Initial image preprocessing and ROI extraction
@@ -71,7 +72,7 @@ ProjectRoot/
 │
 ├── README.md                       # Project documentation
 └── LICENSE                         # Optional license file
-
+'''
 
 
 ## 4. System Workflow
