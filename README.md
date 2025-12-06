@@ -44,7 +44,7 @@ Full Pipeline: Complete workflow with template comparison, defect detection, and
 # Tech Stack
 PyTorch, timm (EfficientNet-B4)
 
-OpenCV, NumPy
+OpenCV, NumPy (Libraries)
 
 Streamlit(Web Framework)
 
