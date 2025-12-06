@@ -6,18 +6,27 @@
 CircuitGuard is an automated defect detection and classification system for Printed Circuit Boards (PCBs) developed using deep learning and computer vision techniques. The system leverages EfficientNet-B4 architecture to classify six types of PCB defects with 97.76% accuracy, exceeding the target requirement of 97%.
 # Key Achievements
 Trained EfficientNet-B4 model achieving 97.76% test accuracy
+
 Developed functional web application with real-time inference
 # Requirements
 Detect and localize defects accurately
+
 Classify defects into specific categories
+
 Achieve ≥97% classification accuracy
+
 Provide results in < 5 seconds per image
+
 Offer user-friendly interface for operators
+
 Generate exportable reports and logs
 # Objectives
 Defect Detection: Identify defect locations using reference-based image subtraction
+
 Defect Classification: Classify defects into six categories using deep learning
+
 High Accuracy: Achieve ≥97% classification accuracy on test set
+
 Application Development: Build web-based interface
 # Dataset
 PCB_DATASET/
