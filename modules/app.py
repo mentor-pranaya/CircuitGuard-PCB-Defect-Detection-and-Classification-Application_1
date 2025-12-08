@@ -59,8 +59,8 @@ div.stButton > button:hover {
 </style>
 """, unsafe_allow_html=True)
 
-st.markdown("<h1>⚡ CircuitGuard AOI System</h1>", unsafe_allow_html=True)
-st.markdown("<h3>Smart PCB Defect Detection • EfficientNet-B4 Powered</h3>", unsafe_allow_html=True)
+st.markdown("<h1>⚡  CircuitGuard: Smart PCB Inspection</h1>", unsafe_allow_html=True)
+st.markdown("**<h3>Powered by EfficientNet-B4** • Intelligent Defect Detection", unsafe_allow_html=True)
 
 if "backend" not in st.session_state:
     with st.spinner("Booting AI Engine..."):
