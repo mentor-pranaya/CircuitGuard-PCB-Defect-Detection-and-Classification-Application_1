@@ -4,6 +4,8 @@ import cv2
 import numpy as np
 import time
 import pandas as pd
+import io
+from datetime import datetime
 from backend import CircuitGuardBackend
 
 st.set_page_config(
@@ -65,10 +67,14 @@ if "backend" not in st.session_state:
         st.session_state.backend = CircuitGuardBackend()
     st.success("AI Engine Ready ✓")
 
+if "history" not in st.session_state:
+    st.session_state.history = []
+
 col1, col2 = st.columns([1, 2])
 
 with col1:
     st.markdown("<div class='section-box'>", unsafe_allow_html=True)
+    
     st.subheader("📂 Upload PCB Image")
     test_file = st.file_uploader("Choose a PCB Image", type=['png', 'jpg', 'jpeg'])
 
@@ -81,10 +87,19 @@ with col1:
                 start = time.time()
                 viz, results, msg = st.session_state.backend.run_pipeline(img_pil)
                 end = time.time()
+
                 st.session_state.viz = viz
                 st.session_state.results = results
                 st.session_state.msg = msg
-                st.session_state.time = round(end - start, 2)
+                st.session_state.time = round(end - start, 3)
+
+                log_entry = {
+                    "Timestamp": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+                    "Filename": test_file.name,
+                    "Processing_Time(s)": st.session_state.time,
+                    "Num_Defects": len(results) if results else 0
+                }
+                st.session_state.history.append(log_entry)
 
     st.markdown("</div>", unsafe_allow_html=True)
 
@@ -93,11 +108,13 @@ with col2:
     st.subheader("🎯 Inspection Results")
 
     if "viz" in st.session_state:
+
         if st.session_state.msg != "Success":
             st.error(f"❌ {st.session_state.msg}")
+
         else:
             viz_rgb = cv2.cvtColor(st.session_state.viz, cv2.COLOR_BGR2RGB)
-            st.image(viz_rgb, caption="Detected Defects", use_column_width=True)
+            st.image(viz_rgb, caption="Annotated Defects", use_column_width=True)
 
             count = len(st.session_state.results)
             m1, m2, m3 = st.columns(3)
@@ -110,5 +127,30 @@ with col2:
                 st.table(df)
             else:
                 st.success("No defects detected ✓")
+
+            st.markdown("---")
+
+            st.subheader("📥 Export Results")
+
+            annotated_bytes = io.BytesIO()
+            Image.fromarray(viz_rgb).save(annotated_bytes, format="PNG")
+
+            st.download_button(
+                label="🖼 Download Annotated Image (PNG)",
+                data=annotated_bytes.getvalue(),
+                file_name=f"annotated_{test_file.name}",
+                mime="image/png"
+            )
+
+            if st.session_state.history:
+                df_log = pd.DataFrame(st.session_state.history)
+                csv = df_log.to_csv(index=False).encode('utf-8')
+
+                st.download_button(
+                    label="📄 Download Prediction Log (CSV)",
+                    data=csv,
+                    file_name="circuitguard_prediction_log.csv",
+                    mime="text/csv"
+                )
 
     st.markdown("</div>", unsafe_allow_html=True)
