@@ -1,0 +1,5 @@
+Timestamp,Filename,Processing_Time(s),Num_Defects
+2025-12-08 05:15:00,06_short_04.jpg,3.788,6
+2025-12-08 05:16:25,05_open_circuit_05.jpg,3.095,3
+2025-12-08 05:17:18,12_spurious_copper_08.jpg,2.15,6
+2025-12-08 05:18:12,04_missing_hole_01.jpg,2.173,3
