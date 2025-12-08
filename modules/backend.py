@@ -59,11 +59,11 @@ class CircuitGuardBackend:
         orb = cv2.ORB_create(nfeatures=1000)
         kp_test, des_test = orb.detectAndCompute(gray_test, None)
         if des_test is None: return None
-        
+
         best_match = None
         max_matches = 0
         matcher = cv2.BFMatcher(cv2.NORM_HAMMING, crossCheck=True)
-        
+
         for temp in self.templates:
             kp_temp, des_temp = orb.detectAndCompute(temp['gray'], None)
             if des_temp is None: continue
@@ -120,11 +120,11 @@ class CircuitGuardBackend:
         _, mask = cv2.threshold(gray_diff, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)
         kernel = cv2.getStructuringElement(cv2.MORPH_RECT, (5, 5))
         mask = cv2.morphologyEx(mask, cv2.MORPH_OPEN, kernel, iterations=2)
-        
+
         contours, _ = cv2.findContours(mask, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
         viz_img = aligned.copy()
         results = []
-        
+
         for i, cnt in enumerate(contours):
             if cv2.contourArea(cnt) < 50: continue
             x, y, w, h = cv2.boundingRect(cnt)
@@ -134,11 +134,11 @@ class CircuitGuardBackend:
             x1, x2 = max(0, x-pad), min(W, x+w+pad)
             crop = aligned[y1:y2, x1:x2]
             if crop.size == 0: continue
-            
+
             label, conf = self.predict_roi(crop)
-            
+
             cv2.rectangle(viz_img, (x, y), (x+w, y+h), (0, 0, 255), 2)
             cv2.putText(viz_img, f"{label} {conf:.0%}", (x, y-10), cv2.FONT_HERSHEY_SIMPLEX, 0.6, (0, 0, 255), 2)
             results.append({"ID": i+1, "Defect": label, "Confidence": f"{conf:.1%}"})
-            
+
         return viz_img, results, "Success"
