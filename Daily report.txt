@@ -6,4 +6,6 @@
 10/23/2025-working ROI-extraction
 10/24/2025-fixing the error  in the results of roi-extraction
 10/28/2025-Analysing on Model Training with EfficientNet
+11/01/25-11/18/25-working on UI design
+12/08/25-completed 
 
